@@ -571,7 +571,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow{
-	color = "#6a97b0";
+	color = "#6a97b0"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/locker)
@@ -784,6 +784,7 @@
 /obj/effect/floor_decal/industrial/outline/grey{
 	color = ""
 	},
+/obj/item/clothing/suit/storage/toggle/labcoat,
 /turf/simulated/floor/tiled/white,
 /area/medical/locker)
 "abi" = (
@@ -1065,6 +1066,7 @@
 /obj/effect/floor_decal/industrial/outline/grey{
 	color = ""
 	},
+/obj/item/clothing/suit/storage/toggle/labcoat,
 /turf/simulated/floor/tiled/white,
 /area/medical/locker)
 "abC" = (
@@ -2472,6 +2474,7 @@
 /obj/effect/floor_decal/industrial/outline/grey{
 	color = ""
 	},
+/obj/item/clothing/suit/storage/toggle/labcoat,
 /turf/simulated/floor/tiled/white,
 /area/medical/locker)
 "ael" = (
@@ -2488,7 +2491,7 @@
 	pixel_x = -21
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow{
-	color = "#6a97b0";
+	color = "#6a97b0"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/equipstorage)
@@ -2597,7 +2600,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow{
-	color = "#6a97b0";
+	color = "#6a97b0"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/equipstorage)
@@ -2739,7 +2742,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow{
-	color = "#6a97b0";
+	color = "#6a97b0"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/locker)
@@ -3004,7 +3007,7 @@
 	pixel_y = -28
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow{
-	color = "#6a97b0";
+	color = "#6a97b0"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/locker)
@@ -3068,23 +3071,20 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
 "afe" = (
-/obj/machinery/door/window/northleft{
-	dir = 8;
-	name = "Morgue"
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
 	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/structure/closet/secure_closet/medical_torch,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/effect/floor_decal/industrial/outline/grey{
+	color = ""
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/head/beret/solgov/expedition/medical,
 /turf/simulated/floor/tiled/white,
-/area/medical/morgue/autopsy)
+/area/medical/locker)
 "aff" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3100,16 +3100,21 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
 "afg" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
+/obj/machinery/light,
+/obj/structure/closet/secure_closet/medical_torch,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
 	},
+/obj/effect/floor_decal/industrial/outline/grey{
+	color = ""
+	},
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/head/beret/solgov/expedition/medical,
 /turf/simulated/floor/tiled/white,
-/area/medical/morgue/autopsy)
+/area/medical/locker)
 "afh" = (
 /obj/structure/hygiene/sink{
 	dir = 1;
@@ -3325,16 +3330,18 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/safe_room/firstdeck)
 "afD" = (
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 10
-	},
 /obj/structure/closet/secure_closet/medical_torch,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
 /obj/effect/floor_decal/industrial/outline/grey{
 	color = ""
 	},
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/head/beret/solgov/expedition/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/locker)
 "afE" = (
@@ -3378,19 +3385,23 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/hallway/primary/firstdeck/fore)
 "afK" = (
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 10
+/obj/machinery/door/window/northleft{
+	dir = 8;
+	name = "Morgue"
 	},
-/obj/machinery/light,
-/obj/structure/closet/secure_closet/medical_torch,
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 5
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/industrial/outline/grey{
-	color = ""
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/medical/locker)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/medical/morgue/autopsy)
 "afL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -3602,18 +3613,16 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
 "agb" = (
-/obj/structure/closet/secure_closet/medical_torch,
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 5
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 10
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
 	},
-/obj/effect/floor_decal/industrial/outline/grey{
-	color = ""
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/locker)
+/turf/simulated/floor/tiled/dark,
+/area/medical/morgue/autopsy)
 "agc" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/item/weapon/airlock_brace,
@@ -12614,8 +12623,8 @@
 	dir = 4;
 	id_tag = "operating2"
 	},
-/obj/effect/floor_decal/industrial/hatch/blue{
-	color = "#b19664"
+/obj/effect/floor_decal/industrial/hatch/yellow{
+	color = "#6a97b0"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
@@ -14193,6 +14202,23 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/aft)
+"axy" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/glass/medical{
+	name = "Staff Lounge"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow{
+	color = "#6a97b0"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/lounge)
 "axA" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -19777,21 +19803,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/space)
-"cBx" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock/glass/medical{
-	name = "Staff Lounge"
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/white,
-/area/medical/lounge)
 "cBU" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -51881,7 +51892,7 @@ auD
 avh
 avz
 avL
-cBx
+axy
 mwb
 hTT
 gub
@@ -53074,7 +53085,7 @@ afZ
 abp
 aei
 aeY
-afD
+afe
 aaM
 mpy
 mpy
@@ -53276,7 +53287,7 @@ abf
 abr
 akH
 akS
-afK
+afg
 aaM
 mpy
 mpy
@@ -53478,7 +53489,7 @@ cVb
 abs
 aky
 akA
-agb
+afD
 aaM
 aaa
 mpy
@@ -56119,7 +56130,7 @@ dFb
 atR
 jCM
 aut
-afe
+afK
 jCM
 scr
 uiY
@@ -56321,7 +56332,7 @@ asH
 ahw
 ahw
 auu
-afg
+agb
 avn
 scr
 pWc

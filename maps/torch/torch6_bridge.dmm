@@ -1792,29 +1792,15 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/rd)
 "cT" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+/obj/machinery/computer/modular/preset/cardslot/command,
+/obj/machinery/firealarm{
+	pixel_y = 24
 	},
-/obj/item/device/radio/intercom{
-	dir = 8;
-	pixel_x = 20
+/obj/structure/noticeboard{
+	pixel_x = 32
 	},
-/obj/machinery/camera/network/command{
-	c_tag = "Chief Medical Officer - Office";
-	network = list("Command","Medical")
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/paleblue,
-/obj/structure/flora/pottedplant/orientaltree,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/heads/office/cmo)
+/turf/simulated/floor/tiled/dark,
+/area/bridge/storage)
 "cU" = (
 /obj/machinery/light{
 	dir = 1
@@ -2679,28 +2665,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "et" = (
-/obj/structure/table/steel_reinforced,
-/obj/effect/floor_decal/corner/blue/mono,
-/obj/machinery/door/firedoor,
-/obj/item/weapon/material/bell,
-/obj/machinery/door/window/brigdoor/eastright{
-	dir = 8;
-	name = "Executive Officer's Desk"
+/obj/structure/table/standard{
+	name = "plastic table frame"
 	},
-/obj/item/weapon/paper_bin{
-	pixel_x = -3;
-	pixel_y = 7
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 4
 	},
-/obj/machinery/door/blast/shutters{
-	density = 1;
-	dir = 4;
-	icon_state = "shutter1";
-	id_tag = "hop_office_desk";
-	name = "XO Queue Privacy Shutters";
-	opacity = 1
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/crew_quarters/heads/office/xo)
+/turf/simulated/floor/tiled/dark,
+/area/bridge/storage)
 "eu" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -2948,12 +2921,16 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/meeting_room)
 "eS" = (
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
+/obj/effect/floor_decal/corner/blue/mono,
+/obj/machinery/door/firedoor,
+/obj/item/weapon/material/bell,
+/obj/machinery/door/window/brigdoor/eastright{
+	dir = 8;
+	name = "Executive Officer's Desk"
 	},
-/obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "xo_windows"
+/obj/item/weapon/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
 	},
 /obj/machinery/door/blast/shutters{
 	density = 1;
@@ -2963,7 +2940,7 @@
 	name = "XO Queue Privacy Shutters";
 	opacity = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/xo)
 "eT" = (
 /obj/structure/cable/green{
@@ -5708,19 +5685,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/aquila/mess)
 "jD" = (
-/obj/structure/table/glass,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen/blue,
-/obj/random/clipboard,
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 5
+/obj/machinery/disposal,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 10
+/obj/item/device/radio/intercom{
+	dir = 8;
+	pixel_x = 20
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/heads/office/cmo)
+/turf/simulated/floor/tiled/dark,
+/area/bridge/storage)
 "jE" = (
 /obj/effect/paint/hull,
 /obj/structure/cable{
@@ -7777,14 +7752,26 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters/heads/office/cos)
 "mF" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
 	},
-/mob/living/simple_animal/mouse/white{
-	name = "Gigi"
+/obj/effect/wallframe_spawn/reinforced/polarized{
+	id = "xo_windows"
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/heads/office/cmo)
+/obj/machinery/door/blast/shutters{
+	density = 1;
+	dir = 4;
+	icon_state = "shutter1";
+	id_tag = "hop_office_desk";
+	name = "XO Queue Privacy Shutters";
+	opacity = 1
+	},
+/obj/structure/table/steel_reinforced{
+	step_y = 31
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/heads/office/xo)
 "mG" = (
 /obj/machinery/papershredder,
 /obj/machinery/recharger/wallcharger{
@@ -7834,11 +7821,29 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/cos)
 "mK" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	pixel_x = 20
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "Chief Medical Officer - Office";
+	network = list("Command","Medical")
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue{
-	dir = 6
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue,
+/obj/structure/dogbed,
+/mob/living/simple_animal/mouse/white{
+	name = "Gigi"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
@@ -7862,20 +7867,16 @@
 /area/crew_quarters/heads/office/cmo)
 "mM" = (
 /obj/structure/table/glass,
-/obj/machinery/photocopier/faxmachine{
-	department = "Chief Medical Officer's Office - Torch"
-	},
-/obj/item/weapon/stamp/cmo,
-/obj/item/device/radio{
-	frequency = 1487;
-	name = "medbay emergency radio link"
-	},
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/item/weapon/pen/blue,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
+/obj/item/weapon/material/clipboard/glass,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
 "mN" = (
@@ -8127,12 +8128,9 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
 "nh" = (
-/obj/structure/closet/secure_closet/CMO_torch,
-/obj/item/weapon/book/manual/sol_sop,
-/obj/effect/floor_decal/industrial/outline/yellow{
-	color = "#6a97b0"
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/item/clothing/head/beret/solgov/health,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
 "ni" = (
@@ -8231,6 +8229,15 @@
 /obj/machinery/status_display,
 /turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters_boh/cabin_main/officerbunk)
+"nq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/heads/office/cmo)
 "nr" = (
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
@@ -8298,6 +8305,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/turret_protected/ai_data_chamber)
+"nw" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/bed/chair/comfy/blue{
+	icon_state = "comfychair_preview";
+	dir = 4
+	},
+/turf/simulated/floor/carpet/blue,
+/area/crew_quarters/heads/office/co)
 "nx" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -8312,6 +8331,20 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/turret_protected/ai_data_chamber)
+"ny" = (
+/obj/structure/table/glass,
+/obj/machinery/photocopier/faxmachine{
+	department = "Chief Medical Officer's Office - Torch"
+	},
+/obj/item/weapon/stamp/cmo,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/heads/office/cmo)
 "nz" = (
 /obj/structure/railing/mapped{
 	dir = 4;
@@ -8373,6 +8406,28 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
+"nF" = (
+/obj/structure/closet/secure_closet/CMO_torch,
+/obj/item/weapon/book/manual/sol_sop,
+/obj/effect/floor_decal/industrial/outline/yellow{
+	color = "#6a97b0"
+	},
+/obj/item/clothing/head/beret/solgov/health,
+/obj/item/device/radio{
+	frequency = 1487;
+	name = "medbay emergency radio link"
+	},
+/obj/item/clothing/accessory/armor/helmcover/blue,
+/obj/item/clothing/suit/storage/hooded/wintercoat/medical,
+/obj/item/clothing/suit/armor/pcarrier/blue/sol/light,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/heads/office/cmo)
+"nG" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/heads/office/co)
 "nH" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 4
@@ -27538,7 +27593,7 @@ SJ
 ev
 eP
 UY
-aA
+nw
 Ig
 OM
 tR
@@ -28145,7 +28200,7 @@ vW
 eP
 ls
 rJ
-bf
+nG
 Io
 Kh
 uC
@@ -28329,8 +28384,8 @@ od
 BP
 qO
 cT
-bo
-bt
+et
+jD
 qO
 qO
 yM
@@ -30147,8 +30202,8 @@ YA
 WL
 aO
 aO
-et
 eS
+mF
 aO
 eU
 qg
@@ -33798,9 +33853,9 @@ mS
 oe
 bf
 er
-jD
-mv
 mM
+mv
+ny
 kJ
 tE
 dj
@@ -34203,7 +34258,7 @@ og
 bt
 fu
 lS
-mF
+nh
 mT
 kJ
 oS
@@ -34402,10 +34457,10 @@ kN
 lH
 mV
 kJ
-cT
+mK
 gF
 mr
-mK
+nq
 ng
 kJ
 zI
@@ -34608,7 +34663,7 @@ kJ
 hv
 mu
 mL
-nh
+nF
 kJ
 lV
 OK
