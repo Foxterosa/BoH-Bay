@@ -316,3 +316,16 @@
 	matter = list(MATERIAL_STEEL = 600)
 	max_ammo = 7
 	multiple_sprites = 1
+
+///tk-03 maganize
+
+/obj/item/ammo_magazine/mil_rifle/tk03
+	name = "TK-03 tactic rifle maganize"
+	icon_state = "tk03"
+	origin_tech = list(TECH_COMBAT = 3)
+	mag_type = MAGAZINE
+	caliber = CALIBER_RIFLE_MILITARY
+	matter = list(MATERIAL_STEEL = 1800)
+	ammo_type = /obj/item/ammo_casing/rifle/military/tk03
+	max_ammo = 20
+	multiple_sprites = 1

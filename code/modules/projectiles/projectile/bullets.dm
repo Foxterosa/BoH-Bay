@@ -397,3 +397,15 @@ Thanks a bunch! :n
 			if(prob(33))
 				to_chat(M, "<span class='warning'>The exposed flesh on your feet burns!</span>")
 			M.apply_effect(effective_strength / 2, PAIN, 0)
+
+///TK-03 Bullet
+
+/obj/item/projectile/bullet/rifle/military/tk03
+	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
+	damage = 38
+	armor_penetration = 32
+	shrapnel_chance_multiplier = 1.5
+	arterial_bleed_chance_multiplier = 1
+
+
+

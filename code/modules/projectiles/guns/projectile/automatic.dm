@@ -334,3 +334,34 @@
 		to_chat(user, "<span class='warning'>You need to open the cover to unload [src].</span>")
 		return
 	..()
+
+///TK-03 Tactic Rifle//
+
+/obj/item/weapon/gun/projectile/automatic/assault_rifle/tk03
+	name = "TK-03 Tactic Rifle"
+	desc = "This is a tactic rifle model TK-03, used by the spec ops corp of the army of SolGov. Made by D&L Weapons an Ammo Corp."
+	icon = 'icons/obj/guns/tk-03.dmi'
+	icon_state = "tk-03"
+	force = 11
+	caliber = CALIBER_RIFLE_MILITARY
+	slot_flags = 0 //no sprite for SLOT_BACK
+	origin_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 1, TECH_ESOTERIC = 5)
+	load_method = MAGAZINE
+	ammo_type = /obj/item/ammo_casing/rifle/military/tk03
+	magazine_type = /obj/item/ammo_magazine/mil_rifle/tk03
+	allowed_magazines = /obj/item/ammo_magazine/mil_rifle/tk03
+	one_hand_penalty = 8
+	accuracy_power = 8
+	accuracy = 3
+	wielded_item_state = "tk-03-wielded"
+	auto_eject = TRUE
+	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
+
+/obj/item/weapon/gun/projectile/automatic/assault_rifle/tk03/on_update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "tk-03"
+		wielded_item_state = "tk-03-wielded"
+	else
+		icon_state = "tk-03-empty"
+		wielded_item_state = "tk-03-empty-wielded"

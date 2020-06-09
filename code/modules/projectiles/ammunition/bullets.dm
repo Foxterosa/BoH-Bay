@@ -193,3 +193,11 @@
 	spent_icon = "empshell-spent"
 	projectile_type  = /obj/item/projectile/ion
 	matter = list(MATERIAL_STEEL = 260, MATERIAL_URANIUM = 200)
+
+///TK-03 Ammo
+/obj/item/ammo_casing/rifle/military/tk03
+	desc = "A tk-03 tactic rifle bullet casing."
+	caliber = CALIBER_RIFLE_MILITARY
+	projectile_type = /obj/item/projectile/bullet/rifle/military/tk03
+	icon_state = "rifle_mil"
+	spent_icon = "rifle_mil-spent"
