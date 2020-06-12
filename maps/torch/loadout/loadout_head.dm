@@ -44,7 +44,6 @@
 	allowed_roles = STERILE_ROLES
 
 /datum/gear/head/beret
-	allowed_branches = list(/datum/mil_branch/civilian, /datum/mil_branch/solgov, /datum/mil_branch/marine_corps, /datum/mil_branch/private_security)
 
 /datum/gear/mask/bandana
 	allowed_branches = CASUAL_BRANCHES

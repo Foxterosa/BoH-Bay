@@ -7,7 +7,6 @@
 	path = /obj/item/clothing/under/solgov/utility
 
 /datum/gear/uniform/shortjumpskirt
-	allowed_roles = CASUAL_ROLES
 
 /datum/gear/uniform/blackjumpshorts
 	allowed_roles = CASUAL_ROLES
