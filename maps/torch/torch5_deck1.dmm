@@ -3452,7 +3452,7 @@
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating,
-/area/maintenance/firstdeck/forestarboard)
+/area/shuttle/escape_pod7/station)
 "afW" = (
 /obj/machinery/door/airlock/external/escapepod{
 	icon_state = "closed";
@@ -3461,7 +3461,7 @@
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating,
-/area/maintenance/firstdeck/centralstarboard)
+/area/shuttle/escape_pod8/station)
 "afX" = (
 /obj/machinery/door/airlock/external/escapepod{
 	icon_state = "closed";
@@ -3470,7 +3470,7 @@
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating,
-/area/maintenance/firstdeck/centralstarboard)
+/area/shuttle/escape_pod9/station)
 "afY" = (
 /obj/machinery/camera/network/medbay{
 	c_tag = "Infirmary - Staff Lounge";
@@ -9793,6 +9793,15 @@
 /obj/machinery/ai_status_display,
 /turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters/heads/office/sea/marine)
+"aqG" = (
+/obj/machinery/door/airlock/external/escapepod{
+	icon_state = "closed";
+	id_tag = "escape_pod10_berth_hatch";
+	name = "Escape Pod Ten"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/plating,
+/area/shuttle/escape_pod10/station)
 "aqH" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -11509,6 +11518,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/firstdeck)
+"atx" = (
+/obj/machinery/door/airlock/external/escapepod{
+	icon_state = "closed";
+	id_tag = "escape_pod11_berth_hatch";
+	name = "Escape Pod Eleven"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/plating,
+/area/shuttle/escape_pod11/station)
 "atA" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm{
@@ -15177,24 +15195,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
-"aQI" = (
-/obj/machinery/door/airlock/external/escapepod{
-	icon_state = "closed";
-	id_tag = "escape_pod10_berth_hatch";
-	name = "Escape Pod Ten"
-	},
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/foreport)
-"aQK" = (
-/obj/machinery/door/airlock/external/escapepod{
-	icon_state = "closed";
-	id_tag = "escape_pod11_berth_hatch";
-	name = "Escape Pod Eleven"
-	},
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/centralport)
 "aRb" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -48103,7 +48103,7 @@ alH
 alC
 alC
 aPL
-aQI
+aqG
 aRC
 bTb
 bWb
@@ -49719,7 +49719,7 @@ alH
 alC
 alC
 aPR
-aQK
+atx
 aRG
 bVb
 bYb

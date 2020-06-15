@@ -65,6 +65,16 @@
 /obj/random/torchcloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/fourthdeck/forestarboard)
+"ap" = (
+/obj/machinery/shield_diffuser,
+/obj/machinery/door/airlock/external/escapepod{
+	frequency = 1380;
+	id_tag = "escape_pod1_berth_hatch";
+	locked = 1;
+	name = "Escape Pod One"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/escape_pod1/station)
 "aq" = (
 /turf/simulated/wall/r_wall/hull,
 /area/maintenance/fourthdeck/starboard)
@@ -336,6 +346,17 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/fourthdeck/forestarboard)
+"aT" = (
+/obj/machinery/door/airlock/external/escapepod{
+	frequency = 1380;
+	icon_state = "closed";
+	id_tag = "escape_pod2_berth_hatch";
+	locked = 1;
+	name = "Escape Pod Two"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/plating,
+/area/shuttle/escape_pod2/station)
 "aU" = (
 /obj/item/device/tape/random,
 /obj/random/trash,
@@ -401,6 +422,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/safe_room/fourthdeck)
+"bd" = (
+/obj/machinery/door/airlock/external/escapepod{
+	frequency = 1380;
+	icon_state = "closed";
+	id_tag = "escape_pod3_berth_hatch";
+	locked = 1;
+	name = "Escape Pod Three"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/plating,
+/area/shuttle/escape_pod3/station)
 "be" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4;
@@ -680,6 +712,17 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/maintenance/aux_med)
+"bH" = (
+/obj/machinery/door/airlock/external/escapepod{
+	frequency = 1380;
+	icon_state = "closed";
+	id_tag = "escape_pod4_berth_hatch";
+	locked = 1;
+	name = "Escape Pod Four"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/plating,
+/area/shuttle/escape_pod4/station)
 "bI" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -1270,17 +1313,6 @@
 /obj/random/hostile/maint,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/aux_med)
-"dd" = (
-/obj/machinery/door/airlock/external/escapepod{
-	frequency = 1380;
-	icon_state = "closed";
-	id_tag = "escape_pod2_berth_hatch";
-	locked = 1;
-	name = "Escape Pod Two"
-	},
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/plating,
-/area/hallway/primary/fourthdeck/aft)
 "de" = (
 /obj/machinery/optable,
 /obj/item/weapon/tank/anesthetic,
@@ -10475,17 +10507,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fourthdeck/aft)
-"Gv" = (
-/obj/machinery/door/airlock/external/escapepod{
-	frequency = 1380;
-	icon_state = "closed";
-	id_tag = "escape_pod4_berth_hatch";
-	locked = 1;
-	name = "Escape Pod Four"
-	},
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/plating,
-/area/hallway/primary/fourthdeck/aft)
 "Gw" = (
 /obj/structure/bed/chair/shuttle{
 	tag = "icon-shuttle_chair_preview (NORTH)";
@@ -16657,16 +16678,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/maintenance/fourthdeck/forestarboard)
-"Yw" = (
-/obj/machinery/shield_diffuser,
-/obj/machinery/door/airlock/external/escapepod{
-	frequency = 1380;
-	id_tag = "escape_pod1_berth_hatch";
-	locked = 1;
-	name = "Escape Pod One"
-	},
-/turf/simulated/floor/plating,
-/area/hallway/primary/fourthdeck/aft)
 "Yx" = (
 /obj/structure/railing/mapped{
 	dir = 1;
@@ -17090,17 +17101,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/command/pathfinder)
-"ZA" = (
-/obj/machinery/door/airlock/external/escapepod{
-	frequency = 1380;
-	icon_state = "closed";
-	id_tag = "escape_pod3_berth_hatch";
-	locked = 1;
-	name = "Escape Pod Three"
-	},
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/plating,
-/area/hallway/primary/fourthdeck/aft)
 "ZE" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -41211,7 +41211,7 @@ wa
 Yj
 Yj
 wa
-Yw
+ap
 wa
 Yj
 Yj
@@ -41235,7 +41235,7 @@ wa
 Yj
 Yj
 wa
-ZA
+bd
 wa
 Yj
 Yj
@@ -41817,7 +41817,7 @@ wa
 Yj
 Yj
 wa
-dd
+aT
 wa
 Yj
 Yj
@@ -41841,7 +41841,7 @@ wa
 Yj
 Yj
 wa
-Gv
+bH
 wa
 Yj
 Yj
