@@ -2867,7 +2867,7 @@
 	pixel_y = 23;
 	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/white,
 /area/medical/morgue/autopsy)
 "aex" = (
 /obj/machinery/computer/modular/preset/security{
@@ -2945,7 +2945,7 @@
 	dir = 8;
 	pixel_x = 21
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/white,
 /area/medical/morgue/autopsy)
 "aeC" = (
 /obj/effect/floor_decal/floordetail/edgedrain{
@@ -2957,7 +2957,7 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/white,
 /area/medical/morgue/autopsy)
 "aeD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2981,7 +2981,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/white,
 /area/medical/morgue/autopsy)
 "aeG" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -3241,7 +3241,7 @@
 	color = "#F8F8F8";
 	dir = 6
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/white,
 /area/medical/morgue/autopsy)
 "afb" = (
 /obj/effect/floor_decal/corner/yellow{
@@ -3258,7 +3258,7 @@
 	color = "#F8F8F8";
 	dir = 9
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/white,
 /area/medical/morgue/autopsy)
 "afd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -21823,7 +21823,7 @@
 	pixel_x = 6;
 	pixel_y = -24
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/white,
 /area/medical/morgue/autopsy)
 "frA" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -26552,7 +26552,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/grey{
 	color = "";
-	desc = "F8F8F8"
+	desc = ""
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
@@ -27283,7 +27283,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/white,
 /area/medical/morgue/autopsy)
 "lVb" = (
 /obj/machinery/door/firedoor,
@@ -34037,6 +34037,9 @@
 /obj/machinery/door/airlock/medical{
 	name = "Counselor's Office"
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow{
+	color = "#6a97b0"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/counselor)
 "ujx" = (
@@ -34228,10 +34231,9 @@
 "uLa" = (
 /obj/machinery/optable,
 /obj/effect/floor_decal/industrial/outline/grey{
-	color = "";
-	desc = "F8F8F8"
+	color = "#404040"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/white,
 /area/medical/morgue/autopsy)
 "uMh" = (
 /obj/machinery/body_scanconsole{

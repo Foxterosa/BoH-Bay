@@ -2612,17 +2612,6 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/xo)
-"er" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/carpet/blue,
-/area/crew_quarters/heads/office/co)
 "es" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -16499,7 +16488,6 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
-/obj/item/clothing/head/beret/solgov/health,
 /obj/item/toy/figure/cmo,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
@@ -17101,6 +17089,18 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/xo)
+"NT" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/bed/chair/comfy/blue{
+	icon_state = "comfychair_preview";
+	dir = 4
+	},
+/turf/simulated/floor/carpet/blue,
+/area/crew_quarters/heads/office/co)
 "NW" = (
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
@@ -27609,7 +27609,7 @@ SJ
 ev
 eP
 UY
-Id
+NT
 Ig
 OM
 tR
