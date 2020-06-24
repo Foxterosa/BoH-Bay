@@ -53,7 +53,7 @@
 /obj/item/clothing/head/helmet/space/void/mining
 	name = "mining voidsuit helmet"
 	desc = "A scuffed voidsuit helmet with a boosted communication system and reinforced armor plating."
-	item_icons = list(slot_wear_helmet_str = 'icons/icons_manaos/mob/onmob/onmob_head.dmi')
+	item_icons = list(slot_head_str = 'icons/icons_manaos/mob/onmob/onmob_head.dmi')
 	icon_state = "rig0-mining"
 	item_state = "mining_helm"
 	item_state_slots = list(
