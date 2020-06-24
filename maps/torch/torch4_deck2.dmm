@@ -682,8 +682,6 @@
 /obj/item/weapon/storage/belt/medical,
 /obj/item/weapon/storage/belt/medical,
 /obj/item/weapon/storage/belt/medical,
-/obj/item/weapon/storage/belt/medical,
-/obj/item/clothing/accessory/stethoscope,
 /obj/item/clothing/accessory/stethoscope,
 /obj/item/clothing/accessory/stethoscope,
 /obj/item/clothing/accessory/stethoscope,
@@ -691,11 +689,21 @@
 /obj/item/device/flashlight/pen,
 /obj/item/device/flashlight/pen,
 /obj/item/device/flashlight/pen,
+/obj/item/weapon/defibrillator/compact,
+/obj/item/device/scanner/health,
+/obj/item/device/scanner/health,
+/obj/item/device/scanner/health,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "bn" = (
 /obj/structure/closet/crate/med_crate/trauma,
-/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/weapon/storage/firstaid/trauma,
+/obj/item/weapon/storage/firstaid/trauma,
+/obj/effect/floor_decal/industrial/outline/grey{
+	color = "F8F8F8"
+	},
+/obj/item/weapon/storage/pill_bottle/bicaridine,
+/obj/item/weapon/storage/pill_bottle/bicaridine,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "bo" = (
@@ -953,8 +961,6 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/structure/closet/l3closet/general/multi,
-/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "bQ" = (
@@ -969,7 +975,14 @@
 	icon_state = "0-4"
 	},
 /obj/structure/closet/crate/med_crate/oxyloss,
-/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/weapon/storage/firstaid/o2,
+/obj/item/weapon/storage/firstaid/o2,
+/obj/effect/floor_decal/industrial/outline/grey{
+	color = "F8F8F8";
+	desc = "F8F8F8"
+	},
+/obj/item/weapon/storage/pill_bottle/dexalin_plus,
+/obj/item/weapon/storage/pill_bottle/dexalin_plus,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "bR" = (
@@ -981,7 +994,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "bS" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/floor_decal/industrial/hatch/yellow{
+	color = "F8F8F8"
+	},
 /obj/structure/ladder/up,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
@@ -1227,7 +1242,9 @@
 /area/storage/medical)
 "cq" = (
 /obj/structure/closet/radiation,
-/obj/effect/floor_decal/industrial/outline/grey,
+/obj/effect/floor_decal/industrial/outline/grey{
+	color = "F8F8F8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "cr" = (
@@ -1597,27 +1614,20 @@
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/locker_room)
 "da" = (
-/obj/structure/table/rack,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/storage/box/bodybags,
-/obj/item/weapon/crowbar/prybar,
-/obj/item/weapon/crowbar/prybar,
-/obj/item/weapon/crowbar/prybar,
-/turf/simulated/floor/tiled/techfloor,
-/area/storage/medical)
-"db" = (
-/obj/structure/closet/secure_closet/medical_torch,
-/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/closet/l3closet/general/multi,
+/obj/effect/floor_decal/industrial/outline/grey{
+	color = "F8F8F8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "dc" = (
 /obj/structure/closet/crate/med_crate/burn,
-/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/weapon/storage/firstaid/fire,
+/obj/effect/floor_decal/industrial/outline/grey{
+	color = "F8F8F8"
+	},
+/obj/item/weapon/storage/pill_bottle/dermaline,
+/obj/item/weapon/storage/pill_bottle/dermaline,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "dd" = (
@@ -2656,8 +2666,8 @@
 /area/maintenance/seconddeck/aftstarboard)
 "eZ" = (
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -3622,10 +3632,6 @@
 "gY" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/reagent_dispensers/fueltank,
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/locker_room)
 "gZ" = (
@@ -4117,10 +4123,7 @@
 "hV" = (
 /obj/structure/table/steel,
 /obj/machinery/light,
-/obj/machinery/cell_charger,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/random/powercell,
+/obj/machinery/recharger,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/locker_room)
 "hW" = (
@@ -4142,6 +4145,10 @@
 "hZ" = (
 /obj/structure/table/steel,
 /obj/item/weapon/storage/toolbox/syndicate,
+/obj/machinery/light/small{
+	icon_state = "bulb1";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/locker_room)
 "ia" = (
@@ -4150,14 +4157,13 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/table/rack/shelf,
-/obj/item/clothing/mask/muzzle,
-/obj/item/clothing/mask/muzzle,
-/obj/item/clothing/mask/muzzle,
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/suit/straight_jacket,
 /obj/item/clothing/glasses/blindfold,
 /obj/item/clothing/glasses/blindfold,
-/obj/item/clothing/glasses/blindfold,
+/obj/item/clothing/mask/muzzle,
+/obj/item/clothing/mask/muzzle,
+/obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "ib" = (
@@ -4902,6 +4908,11 @@
 /turf/simulated/wall/prepainted,
 /area/engineering/storage)
 "jz" = (
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1";
+	tag = "icon-railing0 (EAST)"
+	},
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -4967,8 +4978,8 @@
 /area/janitor)
 "jF" = (
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/engine_room)
@@ -5064,8 +5075,8 @@
 /area/maintenance/seconddeck/forestarboard)
 "jR" = (
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
@@ -5545,8 +5556,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 10;
-	icon_state = "intact"
+	icon_state = "intact";
+	dir = 10
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
@@ -5847,8 +5858,8 @@
 "lq" = (
 /obj/structure/railing/mapped,
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/structure/railing/mapped{
 	dir = 1;
@@ -6654,7 +6665,6 @@
 /obj/item/weapon/gun/launcher/syringe,
 /obj/item/weapon/storage/box/syringegun,
 /obj/item/weapon/storage/box/syringegun,
-/obj/item/weapon/defibrillator/compact,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "nc" = (
@@ -6690,8 +6700,8 @@
 /area/maintenance/seconddeck/central)
 "nf" = (
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled/dark,
@@ -7221,8 +7231,8 @@
 	dir = 10
 	},
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
@@ -7551,8 +7561,8 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 10;
-	icon_state = "intact"
+	icon_state = "intact";
+	dir = 10
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -7848,9 +7858,18 @@
 /area/engineering/foyer)
 "pz" = (
 /obj/structure/closet/crate/medical,
-/obj/item/bodybag,
-/obj/item/bodybag,
-/obj/effect/floor_decal/industrial/outline/grey,
+/obj/effect/floor_decal/industrial/outline/grey{
+	color = "";
+	desc = "F8F8F8"
+	},
+/obj/item/weapon/storage/firstaid/trauma,
+/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/o2,
+/obj/item/weapon/storage/firstaid/fire,
+/obj/item/weapon/storage/firstaid/adv,
+/obj/item/stack/nanopaste,
+/obj/item/bodybag/rescue,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "pA" = (
@@ -8121,8 +8140,8 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 10;
-	icon_state = "intact"
+	icon_state = "intact";
+	dir = 10
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_monitoring)
@@ -10134,6 +10153,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -24
+	},
+/obj/structure/closet/emcloset,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/engine_monitoring)
 "tC" = (
@@ -10241,12 +10267,12 @@
 /obj/item/weapon/tank/oxygen/yellow,
 /obj/item/weapon/tank/oxygen/yellow,
 /obj/item/weapon/tank/emergency/oxygen/double,
-/obj/machinery/light/spot{
-	dir = 1
-	},
 /obj/effect/floor_decal/techfloor{
 	icon_state = "techfloor_edges";
-	dir = 5
+	dir = 1
+	},
+/obj/machinery/light/spot{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
@@ -10254,12 +10280,13 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 10
 	},
-/obj/machinery/alarm{
-	pixel_y = 24
+/obj/structure/table/steel,
+/obj/item/weapon/book/manual/atmospipes,
+/obj/item/weapon/tank/jetpack,
+/obj/effect/floor_decal/techfloor{
+	icon_state = "techfloor_edges";
+	dir = 5
 	},
-/obj/structure/closet/secure_closet/atmos_torch,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/weapon/rpd,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
 "tN" = (
@@ -10635,10 +10662,6 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
 	icon_state = "map";
 	dir = 1
-	},
-/obj/effect/floor_decal/techfloor/corner{
-	icon_state = "techfloor_corners";
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
@@ -11246,17 +11269,6 @@
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/engineering/locker_room)
-"vP" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
-	},
-/turf/simulated/floor/tiled,
-/area/engineering/locker_room)
 "vQ" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -11512,9 +11524,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/obj/effect/floor_decal/techfloor{
-	icon_state = "techfloor_edges";
-	dir = 1
+/obj/effect/floor_decal/techfloor/corner{
+	icon_state = "techfloor_corners";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
@@ -12186,20 +12198,6 @@
 "zd" = (
 /turf/simulated/floor/tiled/freezer,
 /area/maintenance/seconddeck/foreport)
-"zj" = (
-/obj/machinery/door/airlock/glass/atmos{
-	name = "Atmospherics"
-	},
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 4;
-	icon_state = "pdoor0";
-	id_tag = "Atmoslockdown";
-	name = "Atmospherics Blast Doors";
-	opacity = 0
-	},
-/turf/simulated/floor/tiled/steel_ridged,
-/area/engineering/atmos)
 "zk" = (
 /obj/structure/sign/warning/compressed_gas{
 	icon_state = "hikpa";
@@ -13986,8 +13984,8 @@
 /area/engineering/wastetank)
 "Eb" = (
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
@@ -15364,14 +15362,19 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/expedition)
 "HU" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/storage/med_pouch/radiation,
+/obj/item/weapon/storage/firstaid/toxin,
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	icon_state = "wallmed";
+	dir = 8;
+	pixel_x = 28;
+	pixel_y = 0
+	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/med_pouch/radiation,
-/obj/item/weapon/storage/med_pouch/radiation,
-/obj/item/weapon/storage/med_pouch/radiation,
-/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/engine_monitoring)
 "HW" = (
@@ -15382,6 +15385,10 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/engineering/engine_room)
 "HX" = (
+/obj/machinery/light/small{
+	icon_state = "bulb1";
+	dir = 4
+	},
 /obj/structure/closet/secure_closet/engineering_electrical,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/monotile,
@@ -15555,6 +15562,15 @@
 "Io" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/janitor)
+"Iq" = (
+/obj/structure/railing/mapped,
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1";
+	tag = "icon-railing0 (EAST)"
+	},
+/turf/simulated/open,
+/area/engineering/locker_room)
 "Ir" = (
 /turf/simulated/wall/r_wall/hull,
 /area/maintenance/auxsolarport)
@@ -15804,8 +15820,8 @@
 	},
 /obj/structure/ladder/up,
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/foyer)
@@ -15839,8 +15855,6 @@
 	dir = 8;
 	pixel_x = -24
 	},
-/obj/item/weapon/tank/jetpack,
-/obj/item/weapon/book/manual/atmospipes,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "Jt" = (
@@ -15951,6 +15965,9 @@
 /obj/item/roller,
 /obj/item/roller,
 /obj/structure/table/rack,
+/obj/item/weapon/storage/firstaid/empty,
+/obj/item/weapon/storage/firstaid/empty,
+/obj/item/weapon/storage/firstaid/empty,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "JX" = (
@@ -16343,10 +16360,6 @@
 "LL" = (
 /obj/structure/closet/secure_closet/engineering_welding,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/locker_room)
 "LM" = (
@@ -16633,9 +16646,10 @@
 /area/maintenance/seconddeck/foreport)
 "MA" = (
 /obj/structure/table/steel,
-/obj/machinery/photocopier/faxmachine{
-	department = "Engineering"
-	},
+/obj/machinery/cell_charger,
+/obj/random/powercell,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/locker_room)
 "MB" = (
@@ -17354,8 +17368,8 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
@@ -17600,7 +17614,16 @@
 /area/maintenance/disposal)
 "PD" = (
 /obj/structure/table/rack,
-/obj/structure/bedsheetbin,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/crowbar/prybar,
+/obj/item/weapon/crowbar/prybar,
+/obj/item/weapon/crowbar/prybar,
+/obj/item/weapon/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "PE" = (
@@ -18714,12 +18737,14 @@
 /area/engineering/foyer)
 "Ts" = (
 /obj/structure/table/steel_reinforced,
+/obj/machinery/photocopier/faxmachine{
+	department = "Engineering"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/effect/floor_decal/corner/yellow/half{
 	icon_state = "bordercolorhalf";
 	dir = 1
 	},
-/obj/machinery/recharger,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engineering_monitoring)
 "Tt" = (
@@ -18830,6 +18855,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/forestarboard)
 "TN" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/machinery/vending/snix,
 /obj/item/modular_computer/telescreen/preset/engineering{
 	pixel_y = 32
@@ -18851,8 +18879,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/effect/floor_decal/corner/yellow,
 /turf/simulated/floor/tiled,
@@ -20247,10 +20275,6 @@
 /obj/item/device/lightreplacer,
 /obj/item/device/lightreplacer,
 /obj/item/device/lightreplacer,
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/locker_room)
 "YG" = (
@@ -20324,6 +20348,12 @@
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/engine_monitoring)
 "YU" = (
+/obj/structure/closet/secure_closet/atmos_torch,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/weapon/rpd,
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
 "YV" = (
@@ -40918,7 +40948,7 @@ aa
 aB
 bn
 bq
-db
+bq
 PD
 ee
 He
@@ -42141,7 +42171,7 @@ eL
 iL
 vc
 jz
-lK
+Iq
 XE
 vN
 IW
@@ -42545,7 +42575,7 @@ vc
 mw
 XE
 uI
-vP
+Pa
 lI
 ti
 hV
@@ -44372,7 +44402,7 @@ ou
 pR
 qX
 tB
-zj
+sZ
 YU
 Rb
 Tb

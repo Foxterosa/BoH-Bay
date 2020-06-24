@@ -431,7 +431,8 @@
 	return list(/obj/item/toy/plushie/nymph,
 				/obj/item/toy/plushie/mouse,
 				/obj/item/toy/plushie/kitten,
-				/obj/item/toy/plushie/lizard)
+				/obj/item/toy/plushie/lizard,
+				/obj/item/toy/plushie/kobold)
 
 /obj/random/plushie/large
 	name = "random large plushie"
@@ -485,7 +486,8 @@ obj/random/closet //A couple of random closets to spice up maint
 	var/list/locker_vermin = list(
 		/mob/living/simple_animal/mouse,
 		/mob/living/simple_animal/opossum,
-		/mob/living/carbon/alien/diona
+		/mob/living/carbon/alien/diona,
+		/mob/living/simple_animal/hostile/voxslug
 	)
 
 /obj/random/closet/spawn_choices()
@@ -1152,7 +1154,7 @@ obj/random/hostile/spawn_choices()
 		/mob/living/simple_animal/hostile/retaliate/goose = 1,
 		/mob/living/simple_animal/hostile/retaliate/parrot = 1,
 		/mob/living/simple_animal/hostile/rogue_drone = 8,
-		/mob/living/simple_animal/hostile/scarybat = 4
+		/mob/living/simple_animal/hostile/scarybat = 4,
 	)
 
 /obj/random/hostile/maint_severe
@@ -1164,6 +1166,7 @@ obj/random/hostile/spawn_choices()
 
 /obj/random/hostile/maint_severe/spawn_choices()
 	return list(
+		/mob/living/simple_animal/hostile/voxslug = 6,
 		/mob/living/simple_animal/hostile/leech = 3,
 		/mob/living/simple_animal/hostile/viscerator = 1
 	)
