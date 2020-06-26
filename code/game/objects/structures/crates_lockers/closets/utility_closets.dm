@@ -112,8 +112,12 @@
 /obj/structure/closet/radiation/WillContain()
 	return list(
 		/obj/item/weapon/storage/med_pouch/radiation = 3,
-		/obj/item/clothing/suit/radiation = 3,
-		/obj/item/clothing/head/radiation = 3,
+		/obj/item/clothing/suit/radiation,
+		/obj/item/clothing/suit/radiation,
+		/obj/item/clothing/suit/radiation,
+		/obj/item/clothing/head/radiation,
+		/obj/item/clothing/head/radiation,
+		/obj/item/clothing/head/radiation,
 		/obj/item/device/geiger = 3,
 		/obj/item/weapon/storage/med_pouch/toxin = 3,
 		/obj/item/weapon/tank/emergency/oxygen/engi = 3,
