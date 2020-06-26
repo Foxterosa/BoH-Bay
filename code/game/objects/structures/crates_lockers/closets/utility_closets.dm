@@ -15,8 +15,8 @@
  * Emergency Closet
  */
 /obj/structure/closet/emcloset
-	name = "emergency closet"
-	desc = "It's a storage unit for emergency breathmasks and o2 tanks."
+	name = "Armario de emergencias"
+	desc = "Es un armario de emergencia con mascaras y tanques de oxigeno"
 	closet_appearance = /decl/closet_appearance/oxygen
 
 /obj/structure/closet/emcloset/WillContain()
@@ -34,8 +34,8 @@
  * Fire Closet
  */
 /obj/structure/closet/firecloset
-	name = "fire-safety closet"
-	desc = "It's a storage unit for fire-fighting supplies."
+	name = "Armario anti-incendios"
+	desc = "Es un armario con equipo anti-incendios."
 	closet_appearance = /decl/closet_appearance/oxygen/fire
 
 
@@ -63,8 +63,8 @@
  * Tool Closet
  */
 /obj/structure/closet/toolcloset
-	name = "tool closet"
-	desc = "It's a storage unit for tools."
+	name = "Armario de herramientas"
+	desc = "Es un armario para herramientas."
 	closet_appearance = /decl/closet_appearance/secure_closet/engineering/tools
 
 /obj/structure/closet/toolcloset/New()
@@ -105,25 +105,26 @@
  * Radiation Closet
  */
 /obj/structure/closet/radiation
-	name = "radiation suit closet"
-	desc = "It's a storage unit for rad-protective suits."
+	name = "Armario anti-radiacion"
+	desc = "Es un armario para trajes protectores anti-radiacion"
 	closet_appearance = /decl/closet_appearance/secure_closet/engineering/tools/radiation
 
 /obj/structure/closet/radiation/WillContain()
 	return list(
-		/obj/item/weapon/storage/med_pouch/toxin = 2,
-		/obj/item/clothing/suit/radiation,
-		/obj/item/clothing/head/radiation,
-		/obj/item/clothing/suit/radiation,
-		/obj/item/clothing/head/radiation,
-		/obj/item/device/geiger = 2)
+		/obj/item/weapon/storage/med_pouch/radiation = 3,
+		/obj/item/clothing/suit/radiation = 3,
+		/obj/item/clothing/head/radiation = 3,
+		/obj/item/device/geiger = 3,
+		/obj/item/weapon/storage/med_pouch/toxin = 3,
+		/obj/item/weapon/tank/emergency/oxygen/engi = 3,
+		/obj/item/clothing/mask/gas/half = 3)
 
 /*
  * Bombsuit closet
  */
 /obj/structure/closet/bombcloset
-	name = "\improper EOD closet"
-	desc = "It's a storage unit for explosion-protective suits."
+	name = "Armario para desactivacion de explosivos"
+	desc = "Es un armario para atrajes contra explosiones."
 	closet_appearance = /decl/closet_appearance/bomb
 
 /obj/structure/closet/bombcloset/WillContain()
@@ -135,8 +136,8 @@
 
 
 /obj/structure/closet/bombclosetsecurity
-	name = "\improper EOD closet"
-	desc = "It's a storage unit for explosion-protective suits."
+	name = "Armario para desactivacion de explosivos"
+	desc = "Es un armario para atrajes contra explosiones."
 	closet_appearance = /decl/closet_appearance/bomb/security
 
 /obj/structure/closet/bombclosetsecurity/WillContain()
@@ -150,8 +151,8 @@
  * Hydrant
  */
 /obj/structure/closet/hydrant //wall mounted fire closet
-	name = "fire-safety closet"
-	desc = "It's a storage unit for fire-fighting supplies."
+	name = "Armario anti-incendios"
+	desc = "Es un armario con equipo anti-incendios."
 	closet_appearance = /decl/closet_appearance/wall/hydrant
 	anchored = 1
 	density = 0
@@ -171,8 +172,8 @@
  * First Aid
  */
 /obj/structure/closet/medical_wall //wall mounted medical closet
-	name = "first-aid closet"
-	desc = "It's a wall-mounted storage unit for first aid supplies."
+	name = "Armario de primeros auxilios"
+	desc = "Es un armario montado en la pared para suministros de primeros auxilios."
 	closet_appearance = /decl/closet_appearance/wall/medical
 	anchored = 1
 	density = 0
@@ -186,8 +187,8 @@
 		/obj/random/medical/lite = 12)
 
 /obj/structure/closet/shipping_wall
-	name = "shipping supplies closet"
-	desc = "It's a wall-mounted storage unit containing supplies for preparing shipments."
+	name = "Armario de suministros de envios"
+	desc = "Es un armario montado en la pared que contiene suiministros para preparar envios."
 	closet_appearance = /decl/closet_appearance/wall/shipping
 	anchored = 1
 	density = 0

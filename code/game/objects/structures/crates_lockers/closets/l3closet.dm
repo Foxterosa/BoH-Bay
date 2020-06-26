@@ -1,6 +1,6 @@
 /obj/structure/closet/l3closet
-	name = "level-3 biohazard suit closet"
-	desc = "It's a storage unit for level-3 biohazard gear."
+	name = "Armario para equipo de peligro biológico Nivel-3"
+	desc = "Es un armario para equipo de peligro biológico Nivel-3."
 	closet_appearance = /decl/closet_appearance/bio
 
 /obj/structure/closet/l3closet/general/WillContain()
@@ -13,10 +13,10 @@
 
 /obj/structure/closet/l3closet/general/multi/WillContain()
 	return MERGE_ASSOCS_WITH_NUM_VALUES(..(), list(
-		/obj/item/clothing/head/bio_hood/general = 5,
-		/obj/item/clothing/mask/gas/half = 5,
-		/obj/item/clothing/suit/bio_suit/general = 5,
-		/obj/item/weapon/tank/emergency/oxygen/engi = 5
+		/obj/item/clothing/head/bio_hood/general = 3,
+		/obj/item/clothing/suit/bio_suit/general = 3,
+		/obj/item/weapon/tank/emergency/oxygen/engi = 3,
+		/obj/item/clothing/mask/gas/half = 3,
 	))
 
 

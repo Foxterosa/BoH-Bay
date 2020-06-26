@@ -697,13 +697,9 @@
 /area/storage/medical)
 "bn" = (
 /obj/structure/closet/crate/med_crate/trauma,
-/obj/item/weapon/storage/firstaid/trauma,
-/obj/item/weapon/storage/firstaid/trauma,
 /obj/effect/floor_decal/industrial/outline/grey{
 	color = "F8F8F8"
 	},
-/obj/item/weapon/storage/pill_bottle/bicaridine,
-/obj/item/weapon/storage/pill_bottle/bicaridine,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "bo" = (
@@ -975,14 +971,10 @@
 	icon_state = "0-4"
 	},
 /obj/structure/closet/crate/med_crate/oxyloss,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/weapon/storage/firstaid/o2,
 /obj/effect/floor_decal/industrial/outline/grey{
 	color = "F8F8F8";
 	desc = "F8F8F8"
 	},
-/obj/item/weapon/storage/pill_bottle/dexalin_plus,
-/obj/item/weapon/storage/pill_bottle/dexalin_plus,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "bR" = (
@@ -1622,12 +1614,9 @@
 /area/storage/medical)
 "dc" = (
 /obj/structure/closet/crate/med_crate/burn,
-/obj/item/weapon/storage/firstaid/fire,
 /obj/effect/floor_decal/industrial/outline/grey{
 	color = "F8F8F8"
 	},
-/obj/item/weapon/storage/pill_bottle/dermaline,
-/obj/item/weapon/storage/pill_bottle/dermaline,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "dd" = (
@@ -4158,10 +4147,7 @@
 	icon_state = "2-8"
 	},
 /obj/item/clothing/suit/straight_jacket,
-/obj/item/clothing/suit/straight_jacket,
 /obj/item/clothing/glasses/blindfold,
-/obj/item/clothing/glasses/blindfold,
-/obj/item/clothing/mask/muzzle,
 /obj/item/clothing/mask/muzzle,
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled/techfloor,
@@ -15960,14 +15946,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/fore)
 "JN" = (
-/obj/item/roller,
-/obj/item/roller,
-/obj/item/roller,
-/obj/item/roller,
 /obj/structure/table/rack,
 /obj/item/weapon/storage/firstaid/empty,
 /obj/item/weapon/storage/firstaid/empty,
 /obj/item/weapon/storage/firstaid/empty,
+/obj/item/weapon/reagent_containers/ivbag,
+/obj/item/weapon/reagent_containers/ivbag,
+/obj/item/weapon/reagent_containers/ivbag,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "JX" = (

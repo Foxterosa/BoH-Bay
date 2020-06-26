@@ -6616,6 +6616,7 @@
 /obj/item/weapon/storage/pill_bottle/antitox,
 /obj/item/weapon/storage/pill_bottle/citalopram,
 /obj/item/weapon/storage/pill_bottle/inaprovaline,
+/obj/item/weapon/storage/pill_bottle/paracetamol,
 /turf/simulated/floor/tiled/white,
 /area/medical/equipstorage)
 "ake" = (
