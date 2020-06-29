@@ -1,5 +1,5 @@
 /obj/item/weapon/stock_parts/computer/scanner/medical
-	name = "modulo de escaner medico1"
+	name = "modulo de escaner medico"
 	desc = "Un modulo de escaner medico. Se puede usar para escanear pacientes y dar informacion medica."
 
 /obj/item/weapon/stock_parts/computer/scanner/medical/do_on_afterattack(mob/user, atom/target, proximity)

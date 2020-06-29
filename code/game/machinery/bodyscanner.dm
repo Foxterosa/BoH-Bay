@@ -2,7 +2,7 @@
 /obj/machinery/bodyscanner
 	var/mob/living/carbon/human/occupant
 	var/locked
-	name = "Escaner corporal1"
+	name = "Escaner corporal"
 	icon = 'icons/obj/Cryogenic2.dmi'
 	icon_state = "body_scanner_0"
 	density = 1
