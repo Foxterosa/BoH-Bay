@@ -1,5 +1,5 @@
 /obj/machinery/body_scan_display
-	name = "Pantalla de escaneo corporal"
+	name = "Pantalla de escaneo corporal1"
 	desc = "Una pantalla montada en la pared conectada a un escaner corporal."
 	icon = 'icons/obj/modular_telescreen.dmi'
 	icon_state = "operating"

@@ -1,7 +1,7 @@
 /obj/machinery/body_scanconsole
 	var/obj/machinery/bodyscanner/connected
 	var/stored_scan_subject
-	name = "Consola del escaner corporal"
+	name = "Consola del escaner corporal1"
 	icon = 'icons/obj/Cryogenic2.dmi'
 	icon_state = "body_scannerconsole"
 	density = 0

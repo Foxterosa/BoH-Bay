@@ -1,5 +1,5 @@
 /datum/computer_file/program/suit_sensors
-	filename = "sensormonitor"
+	filename = "sensormonitor1"
 	filedesc = "Monitoreo de sensores de traje"
 	nanomodule_path = /datum/nano_module/crew_monitor
 	ui_header = "crew_green.gif"

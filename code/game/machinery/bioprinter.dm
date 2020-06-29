@@ -2,7 +2,7 @@
 // Flesh and robot printers are defined below this object.
 
 /obj/machinery/organ_printer
-	name = "impresora de organos"
+	name = "impresora de organos1"
 	desc = "Esta es una maquina que imprime organos."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "bioprinter"
