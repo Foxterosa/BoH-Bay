@@ -448,6 +448,7 @@
 	desc = "A helmet of Exoplanet Exploration Unit, standard issue for Surveyor Corps away missions. It has an armored glass dome for superiour visibility and extra anti-radiation lining."
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
+	icon = 'icons_manaos/obj/clothing/obj_head.dmi'
 	icon_state = "helm_explorer"
 	sprite_sheets = list(
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi'
@@ -469,6 +470,7 @@
 	name = "exploration voidsuit"
 	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
+		icon = 'icons_manaos/obj/clothing/obj_suit.dmi'
 	desc = "The bulky Exoplanet Exploration Unit is a standard voidsuit for Surveyor Corps field operations. It features extra padding and respectable radiation-resistant lining."
 	icon_state = "void_explorer"
 	sprite_sheets = list(

@@ -94,10 +94,12 @@
 	glove_type = /obj/item/clothing/gloves/rig/military
 
 /obj/item/clothing/head/helmet/space/rig/military
+	icon = 'icons_manaos/obj/clothing/obj_head.dmi'
 	light_overlay = "helmet_light_dual_green"
 	species_restricted = list(SPECIES_HUMAN)
 
 /obj/item/clothing/suit/space/rig/military
+	icon = 'icons_manaos/obj/clothing/obj_suit.dmi'
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_OLDUNATHI)
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi',
