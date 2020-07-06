@@ -115,8 +115,6 @@
 	emote_message_3p = "USER laughs."
 	if (gender == MALE)
 		playsound(loc,pick('sound/misc/fsnap.ogg','sound/misc/fsnap1.ogg'), 50, 1)
-	else if (gender == FEMALE)
-		playsound(loc,pick('sound/misc/fsnap2.ogg','sound/misc/fsnap3.ogg'), 50, 1)
 
 /decl/emote/audible/mumble
 	key = "mumble"
