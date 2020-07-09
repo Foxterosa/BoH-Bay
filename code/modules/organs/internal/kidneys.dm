@@ -1,5 +1,5 @@
 /obj/item/organ/internal/kidneys
-	name = "kidneys"
+	name = "rinones"
 	icon_state = "kidneys"
 	gender = PLURAL
 	organ_tag = BP_KIDNEYS
@@ -7,11 +7,11 @@
 	min_bruised_damage = 25
 	min_broken_damage = 45
 	max_damage = 70
-	relative_size = 10
+	relative_size = 30
 
 /obj/item/organ/internal/kidneys/robotize()
 	. = ..()
-	icon_state = "kidneys-prosthetic"
+	icon_state = "rinones-protesis"
 
 /obj/item/organ/internal/kidneys/Process()
 	..()
