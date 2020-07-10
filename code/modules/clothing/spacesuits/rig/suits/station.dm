@@ -86,6 +86,7 @@
 		/obj/item/rig_module/device/rcd,
 		/obj/item/rig_module/vision/meson,
 		/obj/item/rig_module/cooling_unit
+		/obj/item/rig_module/maneuvering_jets
 		)
 
 /obj/item/weapon/rig/eva
