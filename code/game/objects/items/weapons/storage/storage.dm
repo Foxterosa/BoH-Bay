@@ -427,3 +427,6 @@
 /obj/item/proc/get_storage_cost()
 	//If you want to prevent stuff above a certain w_class from being stored, use max_w_class
 	return BASE_STORAGE_COST(w_class)
+
+/obj/item/weapon/storage/AllowDrop()
+	return TRUE

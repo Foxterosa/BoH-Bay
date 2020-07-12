@@ -357,3 +357,7 @@ var/const/enterloopsanity = 100
 
 /turf/proc/is_floor()
 	return FALSE
+
+/turf/AllowDrop()
+	return TRUE
+

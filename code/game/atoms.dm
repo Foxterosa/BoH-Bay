@@ -582,3 +582,12 @@ its easier to just keep the beam vertical.
 
 /atom/proc/get_cell()
 	return
+
+/atom/proc/drop_location()
+    var/atom/L = loc
+    if(!L)
+        return null
+    return L.AllowDrop() ? L : L.drop_location()
+
+/atom/proc/AllowDrop()
+	return FALSE

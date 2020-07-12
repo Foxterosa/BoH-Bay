@@ -562,3 +562,6 @@
 
 /obj/structure/closet/CanUseTopicPhysical(mob/user)
 	return CanUseTopic(user, GLOB.physical_no_access_state)
+
+/obj/structure/closet/AllowDrop()
+	return TRUE
