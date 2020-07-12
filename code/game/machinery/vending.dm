@@ -1636,9 +1636,7 @@
 			)
 
 /obj/machinery/gear_painter/update_icon()
-	if(panel_open)
-		icon_state = "colormate_open"
-	else if(inoperable())
+	if(inoperable())
 		icon_state = "colormate_off"
 	else if(processing.len)
 		icon_state = "colormate_active"
@@ -1655,7 +1653,7 @@
 	if(processing.len)
 		to_chat(user, "<span class='warning'>La maquina ya tiene algo adentro.</span>")
 		return FALSE
-		...()
+		..()
 
 	if(is_type_in_list(I, allowed_types) && !inoperable())
 		user.visible_message("<span class='notice'>[user] inserta \the [I] en el Color Mate.</span>")
@@ -1703,7 +1701,7 @@
 		return
 
 	if(href_list["select"])
-		var/newcolor = input(usr, "Selecciona un color.", "", activecolor) as color|null
+		var/newcolor = input(usr, "Selecciona un color.","", activecolor) as color|null
 		if(newcolor)
 			activecolor = newcolor
 
