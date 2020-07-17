@@ -143,7 +143,7 @@
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_power = 10
 	minimal_player_age = 6
-	minimum_character_age = list(SPECIES_HUMAN = 35,SPECIES_UNATHI = 35,SPECIES_SERGAL = 35, SPECIES_SKRELL = 35, SPECIES_PROMETHEAN = 35, SPECIES_YEOSA = 35, SPECIES_VASS = 35, SPECIES_TAJ = 35, SPECIES_CUSTOM = 35, SPECIES_AKULA = 35)
+	minimum_character_age = list(SPECIES_HUMAN = 0,SPECIES_UNATHI = 0,SPECIES_SERGAL = 0, SPECIES_SKRELL = 0, SPECIES_PROMETHEAN = 0, SPECIES_YEOSA = 0, SPECIES_VASS = 0, SPECIES_TAJ = 0, SPECIES_CUSTOM = 0, SPECIES_AKULA = 0)
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/cmo
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
