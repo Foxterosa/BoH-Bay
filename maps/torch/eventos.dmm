@@ -387,7 +387,6 @@
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto1)
 "abb" = (
-/obj/structure/bed/double,
 /obj/item/weapon/bedsheet/browndouble,
 /obj/item/weapon/storage/secure/safe{
 	pixel_x = 32;
@@ -399,6 +398,7 @@
 	dir = 4;
 	icon_state = "spline_fancy"
 	},
+/obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto1)
 "abc" = (
@@ -418,7 +418,6 @@
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto2)
 "abf" = (
-/obj/structure/bed/double,
 /obj/item/weapon/bedsheet/browndouble,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4;
@@ -430,6 +429,7 @@
 	step_x = 0;
 	step_y = 0
 	},
+/obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto2)
 "abg" = (
@@ -449,7 +449,6 @@
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto3)
 "abj" = (
-/obj/structure/bed/double,
 /obj/item/weapon/bedsheet/browndouble,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4;
@@ -461,6 +460,7 @@
 	step_x = 0;
 	step_y = 0
 	},
+/obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto3)
 "abk" = (
@@ -480,7 +480,6 @@
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto4)
 "abn" = (
-/obj/structure/bed/double,
 /obj/item/weapon/bedsheet/browndouble,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4;
@@ -492,6 +491,7 @@
 	step_x = 0;
 	step_y = 0
 	},
+/obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto4)
 "abo" = (
@@ -1559,11 +1559,11 @@
 /turf/simulated/floor/wood/walnut,
 /area/beach/cuarto2)
 "aeo" = (
-/obj/structure/bed/double,
 /obj/item/weapon/bedsheet/browndouble,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/orange,
 /area/beach/cuarto2)
 "aep" = (
@@ -1584,11 +1584,11 @@
 /turf/simulated/floor/wood/walnut,
 /area/beach/cuarto3)
 "aes" = (
-/obj/structure/bed/double,
 /obj/item/weapon/bedsheet/browndouble,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/orange,
 /area/beach/cuarto3)
 "aet" = (
@@ -2217,11 +2217,11 @@
 /turf/simulated/floor/wood/walnut,
 /area/beach/cuarto1)
 "agk" = (
-/obj/structure/bed/double,
 /obj/item/weapon/bedsheet/browndouble,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/orange,
 /area/beach/cuarto1)
 "agl" = (
@@ -2464,7 +2464,7 @@
 /area/beach/med)
 "agW" = (
 /obj/item/weapon/bedsheet/medical,
-/obj/structure/bed,
+/obj/structure/bed/padded,
 /turf/simulated/floor/carpet/green,
 /area/beach/med)
 "agX" = (
@@ -2501,10 +2501,10 @@
 /area/beach)
 "ahb" = (
 /obj/item/weapon/bedsheet/medical,
-/obj/structure/bed,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/bed/padded,
 /turf/simulated/floor/carpet/green,
 /area/beach/med)
 "ahc" = (
@@ -3083,8 +3083,8 @@
 /turf/simulated/floor/carpet/red,
 /area/beach/sec)
 "aiw" = (
-/obj/structure/bed,
 /obj/item/weapon/bedsheet/hos,
+/obj/structure/bed/padded,
 /turf/simulated/floor/carpet/red,
 /area/beach/sec)
 "aix" = (
@@ -3102,11 +3102,11 @@
 /turf/simulated/floor/carpet/orange,
 /area/beach/principal)
 "aiA" = (
-/obj/structure/bed,
 /obj/item/weapon/bedsheet/hos,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/bed/padded,
 /turf/simulated/floor/carpet/red,
 /area/beach/sec)
 "aiB" = (
@@ -3235,8 +3235,8 @@
 /turf/simulated/floor/carpet/red,
 /area/beach/sec)
 "aiX" = (
-/obj/structure/bed,
 /obj/item/weapon/bedsheet/orange,
+/obj/structure/bed/padded,
 /turf/simulated/floor/carpet/red,
 /area/beach/sec)
 "aiY" = (
@@ -4349,7 +4349,6 @@
 /turf/unsimulated/water,
 /area/beach)
 "kNP" = (
-/obj/structure/bed,
 /obj/item/weapon/bedsheet/hos,
 /obj/effect/floor_decal/corner/red{
 	dir = 9
@@ -4357,6 +4356,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
+/obj/structure/bed/padded,
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/casinojack/sec)
 "kTH" = (
@@ -4917,8 +4917,8 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 8
 	},
-/obj/structure/bed,
 /obj/item/weapon/bedsheet/orange,
+/obj/structure/bed/padded,
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/casinojack/sec)
 "pAy" = (
@@ -4929,7 +4929,6 @@
 /turf/simulated/floor/carpet,
 /area/casinojack/principal)
 "pEb" = (
-/obj/structure/bed,
 /obj/item/weapon/bedsheet/hos,
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -4937,6 +4936,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/structure/bed/padded,
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/casinojack/sec)
 "pFS" = (
@@ -5413,6 +5413,13 @@
 	},
 /turf/simulated/floor/carpet,
 /area/casinojack/principal)
+"trq" = (
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_y = 16
+	},
+/turf/simulated/floor/carpet/blue2,
+/area/beach/med)
 "ttD" = (
 /obj/machinery/vending/suitvendor,
 /turf/simulated/floor/carpet,
@@ -5664,7 +5671,7 @@
 /area/casinojack/sec)
 "vIU" = (
 /obj/item/weapon/bedsheet/medical,
-/obj/structure/bed,
+/obj/structure/bed/padded,
 /turf/simulated/floor/tiled/white,
 /area/casinojack/Med)
 "vKT" = (
@@ -5901,6 +5908,16 @@
 /obj/item/weapon/material/coin/gold,
 /turf/simulated/floor/carpet,
 /area/casinojack/command)
+"xMc" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_y = 16
+	},
+/turf/simulated/floor/tiled/white,
+/area/casinojack/Med)
 "xMs" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet,
@@ -15831,7 +15848,7 @@ aab
 "}
 (50,1,1) = {"
 aat
-adR
+trq
 adR
 adR
 aeO
@@ -37058,7 +37075,7 @@ aaf
 aaj
 rfj
 oYe
-sYp
+xMc
 sAS
 fmm
 aan
@@ -37870,7 +37887,7 @@ fYx
 fYx
 fYx
 fYx
-sYp
+xMc
 sAS
 sAS
 fmm
