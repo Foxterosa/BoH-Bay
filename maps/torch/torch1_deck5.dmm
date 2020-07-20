@@ -116,6 +116,11 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/airlock)
 "an" = (
@@ -273,6 +278,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
 	icon_state = "intact"
+	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/airlock)
@@ -1784,6 +1794,11 @@
 	icon_state = "warning";
 	dir = 8
 	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/airlock)
 "dd" = (
@@ -1805,16 +1820,31 @@
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 4
 	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/airlock)
 "df" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
 	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/airlock)
 "dg" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/airlock)
 "dh" = (
@@ -1832,6 +1862,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/airlock)
 "dj" = (
@@ -1848,6 +1883,11 @@
 	},
 /obj/machinery/hologram/holopad/longrange,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/airlock)
 "dk" = (
@@ -4284,6 +4324,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/infantry/com)
+"hC" = (
+/obj/effect/catwalk_plated,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "hE" = (
 /obj/machinery/door/blast/shutters{
 	dir = 8;
@@ -5513,6 +5565,11 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "ju" = (
@@ -5588,6 +5645,11 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	icon_state = "warningcorner";
 	dir = 1
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -14659,6 +14721,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/infantry)
+"Cd" = (
+/obj/effect/catwalk_plated,
+/obj/machinery/camera/network/hangar{
+	icon_state = "camera";
+	dir = 4
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "Cf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
@@ -15222,6 +15297,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/monotile,
+/area/quartermaster/hangar)
+"DT" = (
+/obj/effect/catwalk_plated,
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "DW" = (
 /obj/structure/mopbucket,
@@ -16433,6 +16517,18 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/petrov/cell3)
+"Jj" = (
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 4
+	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/quartermaster/hangar)
 "Jk" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -16443,6 +16539,11 @@
 /obj/effect/catwalk_plated,
 /obj/structure/closet/hydrant{
 	pixel_x = -32
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -18650,6 +18751,18 @@
 /obj/machinery/artifact_scanpad,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/analysis)
+"RR" = (
+/obj/effect/catwalk_plated,
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "RU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
@@ -18992,6 +19105,11 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -36167,14 +36285,14 @@ lA
 lY
 mc
 jt
-jt
+hC
 jB
-aX
-kU
-aX
+DT
+RR
+DT
 Jn
-aX
-oM
+DT
+Cd
 zf
 aX
 aX
@@ -36368,7 +36486,7 @@ CR
 zv
 lY
 eM
-aX
+ih
 cy
 Ho
 eU
@@ -36376,7 +36494,7 @@ eU
 eU
 Ho
 Ho
-Ho
+Jj
 Ho
 Ho
 Ho
@@ -36570,7 +36688,7 @@ Rz
 aQ
 lZ
 EC
-aX
+ih
 ee
 aX
 aX
@@ -36578,7 +36696,7 @@ aX
 aX
 aX
 aX
-aX
+ih
 aX
 aX
 aX
