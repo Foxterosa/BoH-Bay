@@ -390,9 +390,7 @@
 /obj/item/weapon/bedsheet/browndouble,
 /obj/item/weapon/storage/secure/safe{
 	pixel_x = 32;
-	pixel_y = 0;
-	step_x = 0;
-	step_y = 0
+	pixel_y = 0
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4;
@@ -425,9 +423,7 @@
 	},
 /obj/item/weapon/storage/secure/safe{
 	pixel_x = 32;
-	pixel_y = 0;
-	step_x = 0;
-	step_y = 0
+	pixel_y = 0
 	},
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/orange,
@@ -456,9 +452,7 @@
 	},
 /obj/item/weapon/storage/secure/safe{
 	pixel_x = 32;
-	pixel_y = 0;
-	step_x = 0;
-	step_y = 0
+	pixel_y = 0
 	},
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/orange,
@@ -487,9 +481,7 @@
 	},
 /obj/item/weapon/storage/secure/safe{
 	pixel_x = 32;
-	pixel_y = 0;
-	step_x = 0;
-	step_y = 0
+	pixel_y = 0
 	},
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/orange,
@@ -2366,13 +2358,13 @@
 /turf/simulated/floor/carpet/orange,
 /area/beach/cuarto1)
 "agH" = (
-/obj/machinery/floor_light,
+/obj/machinery/floor_light/prebuilt,
 /turf/simulated/floor/holofloor/beach/sand{
 	icon_state = "desert1"
 	},
 /area/beach)
 "agI" = (
-/obj/machinery/floor_light,
+/obj/machinery/floor_light/prebuilt,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/beach)
 "agJ" = (
@@ -2494,7 +2486,7 @@
 /turf/simulated/floor/carpet/orange,
 /area/beach/principal)
 "aha" = (
-/obj/machinery/floor_light,
+/obj/machinery/floor_light/prebuilt,
 /turf/simulated/floor/holofloor/beach/sand{
 	icon_state = "desert4"
 	},
@@ -3794,6 +3786,16 @@
 /obj/machinery/door/window/southleft,
 /turf/simulated/floor/wood/walnut,
 /area/casinojack/command)
+"eRV" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_y = 16
+	},
+/turf/simulated/floor/tiled/white,
+/area/casinojack/Med)
 "eSV" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/table/marble,
@@ -5198,6 +5200,13 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/walnut,
 /area/casinojack/principal)
+"rNH" = (
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_y = 16
+	},
+/turf/simulated/floor/carpet/blue2,
+/area/beach/med)
 "rSg" = (
 /obj/structure/closet/crate/med_crate/toxin,
 /obj/effect/floor_decal/corner/paleblue{
@@ -5413,13 +5422,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/casinojack/principal)
-"trq" = (
-/obj/structure/hygiene/sink{
-	dir = 1;
-	pixel_y = 16
-	},
-/turf/simulated/floor/carpet/blue2,
-/area/beach/med)
 "ttD" = (
 /obj/machinery/vending/suitvendor,
 /turf/simulated/floor/carpet,
@@ -5908,16 +5910,6 @@
 /obj/item/weapon/material/coin/gold,
 /turf/simulated/floor/carpet,
 /area/casinojack/command)
-"xMc" = (
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 5
-	},
-/obj/structure/hygiene/sink{
-	dir = 1;
-	pixel_y = 16
-	},
-/turf/simulated/floor/tiled/white,
-/area/casinojack/Med)
 "xMs" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet,
@@ -15848,7 +15840,7 @@ aab
 "}
 (50,1,1) = {"
 aat
-trq
+rNH
 adR
 adR
 aeO
@@ -37075,7 +37067,7 @@ aaf
 aaj
 rfj
 oYe
-xMc
+eRV
 sAS
 fmm
 aan
@@ -37887,7 +37879,7 @@ fYx
 fYx
 fYx
 fYx
-xMc
+eRV
 sAS
 sAS
 fmm
