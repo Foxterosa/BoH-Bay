@@ -163,6 +163,7 @@
 	#include "loadout/loadout_augments.dm"
 	#include "loadout/~defines.dm"
 
+	#include "eventos.dmm"
 	#include "torch1_deck5.dmm"
 	#include "torch2_deck4.dmm"
 	#include "torch3_deck3.dmm"
