@@ -333,6 +333,18 @@
 	icon_state = "leather_jacket"
 	body_parts_covered = UPPER_TORSO|ARMS
 
+/obj/item/clothing/suit/storage/hank
+	name = "atuendo de Hank"
+	desc = "morir usando esto es comun"
+	icon_state = "hank_s"
+	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/storage/deimos
+	name = "atuendo de Deimos"
+	desc = "fumar hace mal gente"
+	icon_state = "deimos_s"
+	body_parts_covered = UPPER_TORSO|ARMS
+
 /obj/item/clothing/suit/storage/leather_jacket/nanotrasen
 	name = "\improper NanoTrasen black leather jacket"
 	desc = "A black leather coat. The NanoTrasen logo is proudly displayed on the back."

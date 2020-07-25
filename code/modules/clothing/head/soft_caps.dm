@@ -105,3 +105,18 @@
 	name = "corporate security cap"
 	desc = "It's field cap in corporate colors."
 	icon_state = "corpsec_soft"
+
+/obj/item/clothing/head/soft/deimos
+	name = "tactical cap"
+	desc = "perfecta para ultimas misiones"
+	icon_state = "deimos_m"
+
+/obj/item/clothing/head/soft/hank
+	name = "bandana con mascara"
+	desc = "ahora a encontrar unas gafas rojas..."
+	icon_state = "hank_m"
+
+/obj/item/clothing/head/soft/sanford
+	name = "bandana negra"
+	desc = "esta bandana te da culpa de sobreviviente"
+	icon_state = "sandford_m"

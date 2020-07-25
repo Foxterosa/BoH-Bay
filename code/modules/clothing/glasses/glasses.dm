@@ -15,7 +15,7 @@
 	var/obj/screen/overlay = null
 	var/obj/item/clothing/glasses/hud/hud = null	// Hud glasses, if any
 	var/electric = FALSE //if the glasses should be disrupted by EMP
-	
+
 	var/toggle_on_message //set these in initialize if you want messages other than about the optical matrix
 	var/toggle_off_message
 
@@ -181,6 +181,13 @@
 	desc = "A long time ago, people used these glasses to makes images from screens threedimensional."
 	icon_state = "3d"
 	item_state = "3d"
+	body_parts_covered = 0
+
+/obj/item/clothing/glasses/hank
+	name = "gafas de Hank"
+	desc = "El visor rojo ayuda a no identificar sangre, no mucho mas"
+	icon_state = "hank_g"
+	item_state = "hank_g"
 	body_parts_covered = 0
 
 /obj/item/clothing/glasses/welding
