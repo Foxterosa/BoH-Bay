@@ -1310,10 +1310,9 @@
 					/obj/item/clothing/shoes/kasumi,
 					/obj/item/clothing/suit/storage/hank,
 					/obj/item/clothing/suit/storage/deimos,
-					/obj/item/clothing/suit/storage/sanford,
 					/obj/item/clothing/glasses/hank,
 					/obj/item/clothing/head/soft/hank,
-					/obj/item/clothing/under/sanford,
+					/obj/item/clothing/head/soft/sanford,
 					/obj/item/clothing/head/soft/deimos
 					)
 	contraband = list(/obj/item/clothing/under/stripper/mankini = 2, /obj/item/clothing/mask/muzzle = 4)
