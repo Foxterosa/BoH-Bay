@@ -1759,6 +1759,10 @@
 	name = "\improper Cabin Two"
 	icon_state = "Sleep"
 
+/area/crew_quarters_boh/cabin_main/c3
+	name = "\improper Cabin Two"
+	icon_state = "Sleep"
+
 /area/crew_quarters_boh/cabin_main/cambiador
 	name = "\improper Cambiador"
 	icon_state = "Sleep"
