@@ -280,31 +280,27 @@
 	req_access = list(access_medical_equip)
 
 /obj/item/clothing/head/helmet/space/rig/medical
+	item_icons = list(slot_head_str = 'icons_manaos/mob/onmob/onmob_head.dmi')
+	icon = 'icons_manaos/obj/clothing/obj_head.dmi'
 	camera = /obj/machinery/camera/network/medbay
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_OLDUNATHI)
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
-		SPECIES_OLDUNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
-		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
-		)
 
 /obj/item/clothing/suit/space/rig/medical
+	item_icons = list(slot_wear_suit_str = 'icons_manaos/mob/onmob/onmob_suit.dmi')
+	icon = 'icons_manaos/obj/clothing/obj_suit.dmi'
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_OLDUNATHI)
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi'
-		)
+
 
 /obj/item/clothing/shoes/magboots/rig/medical
+	item_icons = list(slot_shoes_str = 'icons_manaos/mob/onmob/onmob_feet.dmi')
+	icon = 'icons_manaos/obj/clothing/obj_feet.dmi'
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_OLDUNATHI)
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_feet_unathi.dmi'
-		)
+
 
 /obj/item/clothing/gloves/rig/medical
+	item_icons = list(slot_gloves_str = 'icons_manaos/mob/onmob/onmob_hands.dmi')
+	icon = 'icons_manaos/obj/clothing/obj_hands.dmi'
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_OLDUNATHI)
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_hands_unathi.dmi'
-		)
 
 /obj/item/weapon/rig/medical/equipped
 
