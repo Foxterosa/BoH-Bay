@@ -430,8 +430,6 @@
 	icon_state = "techfloor_edges";
 	dir = 1
 	},
-/obj/machinery/recharge_station,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 9
 	},
@@ -1703,6 +1701,12 @@
 	},
 /obj/item/device/geiger,
 /obj/item/device/geiger,
+/obj/item/inflatable/door,
+/obj/item/inflatable/door,
+/obj/item/inflatable/door,
+/obj/item/inflatable/wall,
+/obj/item/inflatable/wall,
+/obj/item/inflatable/wall,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/guppy_hangar/start)
 "cW" = (
@@ -2131,17 +2135,15 @@
 /area/exploration_shuttle/airlock)
 "dE" = (
 /obj/structure/table/steel_reinforced,
-/obj/machinery/button/blast_door{
-	id_tag = "guppy_hatch";
-	name = "Rear Hatch Control";
-	pixel_x = 0;
-	pixel_y = 0;
-	req_access = list("ACCESS_TORCH_GUP")
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/guppy_hangar/start)
 "dF" = (
 /obj/structure/bed/chair/shuttle/blue,
+/obj/machinery/button/blast_door{
+	id_tag = "garuda";
+	name = "Protective Shutters Control";
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/guppy_hangar/start)
 "dG" = (
@@ -2469,6 +2471,14 @@
 "ef" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/effect/paint/hull,
+/obj/machinery/door/blast/regular/open{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id_tag = "garuda";
+	name = "Protective Shutters";
+	opacity = 0
+	},
 /turf/simulated/floor/plating,
 /area/guppy_hangar/start)
 "eg" = (
@@ -14072,6 +14082,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/isolation)
+"zI" = (
+/obj/effect/floor_decal/techfloor{
+	icon_state = "techfloor_edges";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/guppy_hangar/start)
 "zK" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -20352,6 +20374,14 @@
 "YC" = (
 /obj/effect/paint/hull,
 /obj/effect/wallframe_spawn/reinforced/titanium,
+/obj/machinery/door/blast/regular/open{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id_tag = "garuda";
+	name = "Protective Shutters";
+	opacity = 0
+	},
 /turf/simulated/floor/plating,
 /area/guppy_hangar/start)
 "YE" = (
@@ -40439,7 +40469,7 @@ aX
 ee
 aZ
 br
-bI
+zI
 cg
 xz
 xz
