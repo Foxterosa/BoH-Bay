@@ -6704,6 +6704,7 @@
 	pixel_y = 0;
 	rcon_setting = 2
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/command/pilot)
 "lk" = (
@@ -11322,6 +11323,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/security/infantry)
 "st" = (
@@ -14107,6 +14109,10 @@
 	icon_state = "walnut_broken0"
 	},
 /area/vacant/bar)
+"zM" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark,
+/area/quartermaster/exploration)
 "zO" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/r_n_d/destructive_analyzer,
@@ -18111,6 +18117,7 @@
 /area/exploration_shuttle/cargo)
 "Pd" = (
 /obj/random_multi/single_item/runtime,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/exploration)
 "Pe" = (
@@ -18577,6 +18584,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftstarboard)
+"Rh" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark,
+/area/quartermaster/expedition)
 "Ri" = (
 /obj/machinery/door/airlock/research{
 	id_tag = null;
@@ -20342,6 +20358,18 @@
 /obj/random_multi/single_item/poppy,
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftport)
+"Yp" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark,
+/area/quartermaster/storage)
 "Yr" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -35439,7 +35467,7 @@ kL
 hl
 iP
 kg
-fH
+zM
 ki
 jD
 eu
@@ -42292,7 +42320,7 @@ qt
 WU
 Ez
 qg
-qg
+Rh
 qu
 pU
 qy
@@ -42510,7 +42538,7 @@ os
 OG
 ox
 iF
-Ax
+Yp
 Ym
 Ym
 Ym
