@@ -996,6 +996,9 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 1
 	},
+/obj/item/modular_computer/telescreen/preset/medical{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/locker)
 "abs" = (
@@ -3447,6 +3450,9 @@
 	dir = 8
 	},
 /obj/machinery/chemical_dispenser/tac_coffee/full,
+/obj/item/modular_computer/telescreen/preset/medical{
+	pixel_x = -32
+	},
 /turf/simulated/floor/wood/walnut,
 /area/medical/equipstorage)
 "afI" = (
@@ -21418,6 +21424,9 @@
 	dir = 5
 	},
 /obj/item/modular_computer/laptop/preset/records,
+/obj/structure/sign/warning/nosmoking_1{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/lounge)
 "fQb" = (
@@ -21434,9 +21443,6 @@
 	},
 /obj/machinery/light{
 	dir = 1
-	},
-/obj/structure/sign/warning/nosmoking_1{
-	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/lounge)
@@ -21824,15 +21830,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/subacute)
-"grb" = (
-/obj/item/modular_computer/telescreen/preset/medical{
-	pixel_x = -32
-	},
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/lounge)
 "grI" = (
 /obj/structure/table/steel,
 /obj/item/device/taperecorder,
@@ -22401,15 +22398,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/aft)
-"hdo" = (
-/obj/structure/sign/warning/nosmoking_1{
-	pixel_y = 32
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/infirmary)
 "heb" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -26990,6 +26978,9 @@
 	},
 /obj/structure/table/standard,
 /obj/machinery/cell_charger,
+/obj/item/modular_computer/telescreen/preset/medical{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/garaje)
 "mtB" = (
@@ -29511,16 +29502,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
-"pxK" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1;
-	icon_state = "warning"
-	},
-/obj/structure/bed/chair/office/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/medical/reslab)
 "pyb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -30775,6 +30756,16 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
+"qRU" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1;
+	icon_state = "warning"
+	},
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/medical/reslab)
 "qSb" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -54909,7 +54900,7 @@ fnb
 fvw
 fPb
 gdb
-grb
+gdb
 afY
 gUb
 ycz
@@ -58936,7 +58927,7 @@ uvu
 adt
 izW
 aak
-pxK
+qRU
 dkt
 izW
 cIb
@@ -60762,7 +60753,7 @@ ahw
 ckx
 ahw
 ahw
-hdo
+fJM
 eVP
 pGv
 ovZ
