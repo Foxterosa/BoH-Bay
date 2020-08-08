@@ -424,7 +424,7 @@
 	var/datum/robot_component/toggle = show_radial_menu(usr, src, installed_components)
 	if(!istype(toggle))
 		return
-	
+
 	to_chat(src, SPAN_WARNING("You [toggle.toggled ? "dis" : "en"]able [toggle]."))
 	toggle.toggled = !toggle.toggled
 
@@ -1113,3 +1113,10 @@
 	var/obj/item/robot_parts/robot_suit/C = new dismantle_type(loc)
 	C.dismantled_from(src)
 	qdel(src)
+
+/mob/living/silicon/robot/blob_act(obj/structure/blob/B)
+	if(stat != DEAD)
+		adjustBruteLoss(30)
+	else
+		gib()
+	return TRUE

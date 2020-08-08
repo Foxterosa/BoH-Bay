@@ -2,6 +2,7 @@ GLOBAL_LIST_EMPTY(med_hud_users)          // List of all entities using a medica
 GLOBAL_LIST_EMPTY(sec_hud_users)          // List of all entities using a security HUD.
 GLOBAL_LIST_EMPTY(jani_hud_users)
 GLOBAL_LIST_EMPTY(hud_icon_reference)
+GLOBAL_LIST_INIT(all_vent_pumps, list())
 
 GLOBAL_LIST_EMPTY(listening_objects) // List of objects that need to be able to hear, used to avoid recursive searching through contents.
 

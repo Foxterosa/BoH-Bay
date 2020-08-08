@@ -84,3 +84,15 @@
 		return
 	sleep(lag)
 	move(lag)
+
+/obj/effect/accelerated_particle/proc/try_irradiate(src, atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		L.apply_effect((energy * 6), IRRADIATE, 0)
+	else if(istype(A, /obj/machinery/the_singularitygen))
+		var/obj/machinery/the_singularitygen/S = A
+		S.energy += energy
+	else if(istype(A, /obj/structure/blob))
+		var/obj/structure/blob/B = A
+		B.take_damage(energy * 0.6)
+		movement_range = 0

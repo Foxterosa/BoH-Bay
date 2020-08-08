@@ -817,7 +817,7 @@ var/list/gamemode_cache = list()
 					fail2topic_rule_name = value
 				if ("fail2topic_enabled")
 					fail2topic_enabled = text2num(value)
-				
+
 				if ("show_gamemode_vote")
 					show_gamemode_vote = text2num(value)
 

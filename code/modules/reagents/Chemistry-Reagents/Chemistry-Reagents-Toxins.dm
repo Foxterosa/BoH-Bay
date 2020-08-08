@@ -1050,3 +1050,10 @@
 	H.weedlevel += removed*strength*0.05
 	seed.set_trait(TRAIT_POTENCY, seed.get_trait(TRAIT_POTENCY) + removed*0.1, 200, 0)
 	return
+
+/datum/reagent/spore
+	name = "Spore Toxin"
+	id = "spore"
+	description = "A natural toxin produced by blob spores that inhibits vision when ingested."
+	color = "#9ACD32"
+	taste_description = "bitterness"

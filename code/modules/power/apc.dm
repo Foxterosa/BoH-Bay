@@ -1191,6 +1191,7 @@ obj/machinery/power/apc/proc/autoset(var/cur_state, var/on)
 	to_chat(user, "\The [src] has been upgraded. It is now protected against EM pulses.")
 	return 1
 
-
+/obj/machinery/power/apc/blob_act(obj/structure/blob/B)
+	set_broken()
 
 #undef APC_UPDATE_ICON_COOLDOWN

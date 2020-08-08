@@ -42,6 +42,9 @@
 	if(old_loc)
 		update_neighbors(old_loc)
 
+/obj/structure/lattice/blob_act(obj/structure/blob/B)
+	return
+
 /obj/structure/lattice/proc/update_neighbors(var/location = loc)
 	for (var/dir in GLOB.cardinal)
 		var/obj/structure/lattice/L = locate(/obj/structure/lattice, get_step(location, dir))

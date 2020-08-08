@@ -32,6 +32,11 @@
 #define ANTAG_SET_APPEARANCE    0x400 // Causes antagonists to use an appearance modifier on spawn.
 #define ANTAG_RANDOM_EXCEPTED   0x800 // If a game mode randomly selects antag types, antag types with this flag should be excluded.
 
+//Para el blob sentiente -Foxterosa
+#define GAMEMODE_IS_BLOB (SSticker && istype(SSticker.mode, /datum/game_mode/blob))
+#define SPECIAL_ROLE_BLOB "Blob"
+#define SPECIAL_ROLE_BLOB_OVERMIND "Blob Overmind"
+
 // Mode/antag template macros.
 #define MODE_BORER         "borer"
 #define MODE_LOYALIST      "loyalist"

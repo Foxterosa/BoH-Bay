@@ -207,6 +207,20 @@ var/list/global/organ_rel_size = list(
 	. += (intag ? block : stars_no_html(JOINTEXT(block), pr, re_encode))
 	. = JOINTEXT(.)
 
+//foxterosa estuvo aqui, esto es para el blob
+/proc/isNonCrewAntag(A)
+	if(!isAntag(A))
+		return 0
+
+	var/mob/living/carbon/C = A
+	var/special_role = C.mind.special_role
+	var/list/crew_roles = list(
+		SPECIAL_ROLE_BLOB
+	)
+	if(special_role in crew_roles)
+		return 0
+
+	return 1
 //Ingnores the possibility of breaking tags.
 /proc/stars_no_html(text, pr, re_encode)
 	text = html_decode(text) //We don't want to screw up escaped characters
@@ -723,3 +737,34 @@ proc/is_blind(A)
 	result[2] = ainvis
 
 	return result
+
+/proc/notify_ghosts(message, ghost_sound = null, enter_link = null, title = null, atom/source = null, image/alert_overlay = null, flashwindow = TRUE, var/action = NOTIFY_JUMP) //Easy notification of ghosts.
+	for(var/mob/dead/observer/O in GLOB.player_list)
+		if(O.client)
+			to_chat(O, "<span class='ghostalert'>[message][(enter_link) ? " [enter_link]" : ""]</span>")
+			if(ghost_sound)
+				O << sound(ghost_sound)
+			if(flashwindow)
+				window_flash(O.client)
+			if(source)
+				var/obj/screen/alert/notify_action/A = O.throw_alert("\ref[source]_notify_action", /obj/screen/alert/notify_action)
+				if(A)
+					if(O.client.prefs && O.client.prefs.UI_style)
+						A.icon = ui_style2icon(O.client.prefs.UI_style)
+					if(title)
+						A.name = title
+					A.desc = message
+					A.action = action
+					A.target = source
+					if(!alert_overlay)
+						var/old_layer = source.layer
+						var/old_plane = source.plane
+						source.layer = FLOAT_LAYER
+						source.plane = FLOAT_PLANE
+						A.overlays += source
+						source.layer = old_layer
+						source.plane = old_plane
+					else
+						alert_overlay.layer = FLOAT_LAYER
+						alert_overlay.plane = FLOAT_PLANE
+						A.overlays += alert_overlay

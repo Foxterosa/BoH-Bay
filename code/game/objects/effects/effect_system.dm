@@ -155,6 +155,18 @@ steam.start() -- spawns the effect
 		sleep(5)
 		step(sparks,direction)
 
+//para el blob
+
+/obj/structure/foamedmetal/blob_act()
+	qdel(src)
+
+/obj/effect/blob_act(obj/structure/blob/B)
+	return
+
+/obj/effect/decal/blob_act(obj/structure/blob/B)
+	if(B && B.loc == loc)
+		qdel(src)
+
 /////////////////////////////////////////////
 //// SMOKE SYSTEMS
 // direct can be optinally added when set_up, to make the smoke always travel in one direction

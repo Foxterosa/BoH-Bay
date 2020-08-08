@@ -42,6 +42,7 @@
 #define SPECIALROLE_HUD 8 // AntagHUD image.
 #define  STATUS_HUD_OOC 9 // STATUS_HUD without virus DB check for someone being ill.
 #define 	  LIFE_HUD 10 // STATUS_HUD that only reports dead or alive
+#define ANTAG_HUD_BLOB 11 //Antag hud del blob troesma
 
 // Shuttle moving status.
 #define SHUTTLE_IDLE      0
@@ -305,3 +306,7 @@
 
 // NULL_OR_EQUAL define, ported from Aurora
 #define NULL_OR_EQUAL(self,other) (!(self) || (self) == (other))
+
+//different types of atom colorations (blob?)
+
+#define FIXED_COLOUR_PRIORITY

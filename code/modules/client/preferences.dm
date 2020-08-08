@@ -1,4 +1,7 @@
 #define SAVE_RESET -1
+GLOBAL_LIST_INIT(special_role_times, list( //minimum age (in days) for accounts to play these roles
+	ROLE_BLOB = 14
+))
 
 datum/preferences
 	//doohickeys for savefiles

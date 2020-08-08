@@ -735,3 +735,7 @@
 	if(lightbulb)
 		remove_bulb()
 	return TRUE
+
+/obj/machinery/light_construct/blob_act(obj/structure/blob/B)
+	if(B && B.loc == loc)
+		qdel(src)

@@ -486,3 +486,6 @@
 		spawn(0)
 			qdel(src)
 		return gain
+
+/obj/singularity/blob_act(obj/structure/blob/B)
+	return

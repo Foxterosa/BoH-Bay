@@ -43,7 +43,7 @@
 	if(bio_level < 1 || bio_level > 9)
 		CRASH("Expected a number between 1 and 9, was: [log_info_line(bio_level)]")
 
-	command_announcement.Announce("Confirmed outbreak of level [bio_level] biohazard aboard the [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert", new_sound = level_x_biohazard_sound(bio_level))
+	command_announcement.Announce("Confirmada alerta de riesgo biologico de nivel [bio_level] abordo de la [station_name()]. Todo el personal debe contener la amaenaza.", "Biohazard Alert", new_sound = level_x_biohazard_sound(bio_level))
 
 /datum/map/proc/level_x_biohazard_sound(var/bio_level)
 	return

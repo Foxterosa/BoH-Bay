@@ -374,3 +374,7 @@
 #define MODIFIER_STACK_ALLOWED	3	// Multiple instances are allowed.
 
 #define MODIFIER_GENETIC	1	// Modifiers with this flag will be copied to mobs who get cloned.
+
+// For the tcomms monitor otra cosa para el blob - Fox
+
+#define isovermind(A)	(istype((A), /mob/camera/blob))

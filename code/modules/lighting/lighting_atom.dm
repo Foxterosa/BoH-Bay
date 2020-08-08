@@ -74,3 +74,6 @@
 		var/turf/T = loc
 		if(istype(T))
 			T.handle_opacity_change(src)
+
+/atom/movable/lighting_object/blob_act(obj/structure/blob/B)
+	return

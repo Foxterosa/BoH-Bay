@@ -25,6 +25,8 @@
 	var/hotkey_ui_hidden = 0	//This is to hide the buttons that can be used via hotkeys. (hotkeybuttons list of buttons)
 
 	var/obj/screen/lingchemdisplay
+	var/obj/screen/blobpwrdisplay
+	var/obj/screen/blobhealthdisplay
 	var/obj/screen/r_hand_hud_object
 	var/obj/screen/l_hand_hud_object
 	var/obj/screen/action_intent
@@ -37,6 +39,8 @@
 
 	var/obj/screen/movable/action_button/hide_toggle/hide_actions_toggle
 	var/action_buttons_hidden = 0
+
+
 
 /datum/hud/New(mob/owner)
 	mymob = owner
@@ -51,6 +55,7 @@
 	l_hand_hud_object = null
 	action_intent = null
 	move_intent = null
+	blobpwrdisplay = null
 	adding = null
 	other = null
 	hotkeybuttons = null
@@ -274,3 +279,12 @@
 	icon_state = "prog_bar_100"
 	invisibility = INVISIBILITY_MAXIMUM
 	screen_loc = ui_stamina
+
+//BLOBS
+
+/obj/screen/alert/nofactory
+	name = "No Factory"
+	desc = "You have no factory, and are slowly dying!"
+	icon_state = "blobbernaut_nofactory"
+	alerttooltipstyle = "blob"
+

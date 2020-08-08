@@ -12,3 +12,6 @@
 	density = 0
 	anchored = 1
 	layer = PROJECTILE_LAYER
+
+/obj/effect/decal/chempuff/blob_act(obj/structure/blob/B)
+	return

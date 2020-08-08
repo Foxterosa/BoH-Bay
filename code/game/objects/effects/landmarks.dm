@@ -38,6 +38,9 @@
 			GLOB.latejoin_cyborg += loc
 			delete_me = 1
 			return
+		if("blobstart")
+			GLOB.blobstart += loc
+			qdel(src)
 		if("prisonwarp")
 			GLOB.prisonwarp += loc
 			delete_me = 1

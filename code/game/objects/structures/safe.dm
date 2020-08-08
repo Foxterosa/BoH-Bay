@@ -46,6 +46,8 @@ FLOOR SAFES
 		return 1
 	return 0
 
+/obj/structure/safe/blob_act(obj/structure/blob/B)
+	return
 
 /obj/structure/safe/proc/decrement(num)
 	num -= 1

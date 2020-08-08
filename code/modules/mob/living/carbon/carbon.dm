@@ -21,6 +21,13 @@
 			qdel(M)
 	return ..()
 
+/mob/living/carbon/blob_act(obj/structure/blob/B)
+	if(stat == DEAD)
+		return
+	else
+		show_message("<span class='userdanger'>The blob attacks!</span>")
+		adjustBruteLoss(10)
+
 /mob/living/carbon/rejuvenate()
 	bloodstr.clear_reagents()
 	touching.clear_reagents()

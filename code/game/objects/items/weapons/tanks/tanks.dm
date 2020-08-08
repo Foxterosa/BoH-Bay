@@ -196,6 +196,17 @@ var/list/global/tank_gauge_cache = list()
 		return
 	ui_interact(user)
 
+/obj/item/tank/blob_act(obj/structure/blob/B)
+	if(B && B.loc == loc)
+		var/turf/location = get_turf(src)
+		if(!location)
+			qdel(src)
+
+		if(air_contents)
+			location.assume_air(air_contents)
+
+		qdel(src)
+
 // There's GOT to be a better way to do this
 	if (proxyassembly.assembly)
 		proxyassembly.assembly.attack_self(user)

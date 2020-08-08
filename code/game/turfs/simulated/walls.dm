@@ -1,3 +1,7 @@
+#define WALL_DENT_HIT 1
+#define WALL_DENT_SHOT 2
+#define MAX_DENT_DECALS 15
+
 /turf/simulated/wall
 	name = "wall"
 	desc = "A huge chunk of metal used to seperate rooms."
@@ -155,6 +159,17 @@
 		damage = max(0, damage + dam)
 		update_damage()
 	return
+
+/turf/simulated/wall/blob_act(obj/structure/blob/B)
+	if(prob(50))
+		dismantle_wall()
+	else
+		add_dent(WALL_DENT_HIT)
+		/turf/simulated/wall/blob_act(obj/structure/blob/B)
+	if(prob(50))
+		dismantle_wall()
+	else
+		add_dent(WALL_DENT_HIT)
 
 /turf/simulated/wall/proc/update_damage()
 	var/cap = material.integrity

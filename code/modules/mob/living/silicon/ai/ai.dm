@@ -448,6 +448,13 @@ var/list/ai_verbs_default = list(
 		if(camera_light_on)	A.set_light(0.5, 0.1, AI_CAMERA_LUMINOSITY)
 		else				A.set_light(0)
 
+//mas blob cosas
+/mob/living/silicon/ai/blob_act(obj/structure/blob/B)
+	if(stat != DEAD)
+		adjustBruteLoss(60)
+		updatehealth()
+		return 1
+	return 0
 
 /mob/living/silicon/ai/proc/switchCamera(var/obj/machinery/camera/C)
 	if (!C || stat == DEAD) //C.can_use())

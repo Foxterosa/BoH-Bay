@@ -234,6 +234,13 @@
 
 	close_up()
 
+//LA CUCARAAACHA LA CUCARAAACHA, YA NO QUIERE CAMINAAAR . By Duck
+/mob/living/silicon/pai/blob_act()
+	if(stat != DEAD)
+		adjustBruteLoss(60)
+		return 1
+	return 0
+
 /mob/living/silicon/pai/proc/choose_chassis()
 	set category = "pAI Commands"
 	set name = "Choose Chassis"

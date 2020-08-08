@@ -19,6 +19,13 @@
 		var/damage = round(30/(get_dist(B,T)+1))
 		B.take_damage(damage)
 
+	for(var/obj/structure/blob/B in hear(8, flashbang_turf))     		//Blob damage here
+		var/damage = round(30 / (get_dist(B, get_turf(src)) + 1))
+		B.take_damage(damage, BURN, "melee", 0)
+
+	spawn(light_time)
+		qdel(src)
+
 	new/obj/effect/sparks(src.loc)
 	new/obj/effect/effect/smoke/illumination(src.loc, 5, range=30, power=1, color="#ffffff")
 	qdel(src)

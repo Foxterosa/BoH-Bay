@@ -589,6 +589,10 @@ var/list/global/slot_flags_enumeration = list(
 	M.eye_blurry += rand(3,4)
 	return
 
+/obj/item/blob_act(obj/structure/blob/B)
+	if(B && B.loc == loc)
+		qdel(src)
+
 /obj/item/clean_blood()
 	. = ..()
 	if(blood_overlay)

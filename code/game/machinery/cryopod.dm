@@ -56,6 +56,10 @@
 	user << browse(dat, "window=cryopod_console")
 	onclose(user, "cryopod_console")
 
+//Attacks/effects.
+/obj/machinery/cryopod/blob_act()
+	return //Sorta gamey, but we don't really want these to be destroyed.
+
 /obj/machinery/computer/cryopod/OnTopic(user, href_list, state)
 	if(href_list["log"])
 		var/dat = "<b>Recently stored [storage_type]</b><br/><hr/><br/>"
