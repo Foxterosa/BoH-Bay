@@ -57,6 +57,9 @@ var/global/list/additional_antag_types = list()
 	else if(!round_autoantag && latejoin_antag_tags.len)
 		round_autoantag = TRUE
 
+/proc/get_roletext(var/role)
+	return role
+
 /datum/game_mode/Topic(href, href_list[])
 	if(..())
 		return

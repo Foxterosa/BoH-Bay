@@ -13,7 +13,6 @@
 	maxbodytemp = 360
 	universal_speak = 1 //So mobs can understand them when a blob uses Blob Broadcast
 	sentience_type = SENTIENCE_OTHER
-	gold_core_spawnable = NO_SPAWN
 	var/mob/camera/blob/overmind = null
 
 /mob/living/simple_animal/hostile/blob/proc/adjustcolors(var/a_color)

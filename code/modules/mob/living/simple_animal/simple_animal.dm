@@ -17,6 +17,8 @@
 	skin_amount = 5
 
 	var/show_stat_health = 1	//does the percentage health show in the stat panel for the mob
+	var/list/atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0) //Leaving something at 0 means it's off - has no maximum
+
 
 	var/icon_living = ""
 	var/icon_dead = ""
