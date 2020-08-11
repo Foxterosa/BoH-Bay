@@ -211,53 +211,45 @@ area/space/atmosalert()
 	icon_state = "conference"
 	luminosity = 1
 	requires_power = 0
+	dynamic_lighting = 1
 	var/sound/mysound = null
 
 /area/beach/cuarto1
 	name = "Keelin's private beach cuarto 1"
 	icon_state = "surgery"
-	dynamic_lighting = 1
 
 /area/beach/cuarto2
 	name = "Keelin's private beach cuarto 2"
 	icon_state = "surgery"
-	dynamic_lighting = 1
 
 /area/beach/cuarto3
 	name = "Keelin's private beach cuarto 3"
 	icon_state = "surgery"
-	dynamic_lighting = 1
 
 /area/beach/principal
 	name = "Keelin's private beach principal"
 	icon_state = "bridge"
-	dynamic_lighting = 1
 
 /area/beach/bano
 	name = "Keelin's private beach bano"
 	icon_state = "checkpoint1"
-	dynamic_lighting = 1
 
 /area/beach/cambiador
 	name = "Keelin's private beach cambiador"
 	icon_state = "checkpoint1"
-	dynamic_lighting = 1
 
 /area/beach/cocina
 	name = "Keelin's private beach cocina"
 	icon_state = "kitchen"
-	dynamic_lighting = 1
 
 /area/beach/med
 	name = "Keelin's private beach med"
 	icon_state = "medbay"
-	dynamic_lighting = 1
 	req_access = list(access_medical)
 
 /area/beach/sec
 	name = "Keelin's private beach sec"
 	icon_state = "checkpoint1"
-	dynamic_lighting = 1
 	req_access = list(access_brig)
 
 /area/beach/playa
@@ -318,35 +310,31 @@ area/space/atmosalert()
 	name = "Hotel-Casino Flamingo"
 	icon_state = "null"
 	luminosity = 1
+	dynamic_lighting = 0
 	requires_power = 0
 
 /area/casinojack/sec
 	name = "Hotel-Casino Flamingo Sec"
 	icon_state = "checkpoint1"
-	dynamic_lighting = 0
 	req_access = list(access_brig)
 
 /area/casinojack/bar
 	name = "Hotel-Casino Flamingo Bar"
 	icon_state = "kitchen"
-	dynamic_lighting = 0
 	req_access = list(access_bar)
 
 /area/casinojack/command
 	name = "Hotel-Casino Flamingo Command"
 	icon_state = "bridge"
-	dynamic_lighting = 0
 	req_access = list(access_bridge)
 
 /area/casinojack/principal
 	name = "Hotel-Casino Flamingo Principal"
 	icon_state = "conference"
-	dynamic_lighting = 0
 
 /area/casinojack/Med
 	name = "Hotel-Casino Flamingo Med"
 	icon_state = "medbay"
-	dynamic_lighting = 0
 	req_access = list(access_medical)
 
 /area/casinojack/cuarto1
