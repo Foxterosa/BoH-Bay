@@ -211,9 +211,7 @@
 	selection_color = "#026865"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/psi_world
 	alt_titles = list(
-		"Mentalista",
 		"Terapeuta",
-		"Psiquiatra",
 		"Consejero/a"
 		)
 	info = "Eres el Psiquiatra. Tu responsabilidad principal es la salud mental y bienestar de la tripulacion. Sigues las ordenes del Oficial Medico en Jefe. A parte del Asesor Psiconico, eres el unico miembro abordo con habilidades Psiconicas."
@@ -355,7 +353,7 @@
 
 
 /datum/job/submap/service/cocinero/coc_world
-	title = "Cocinero"
+	title = "Cocinero/a"
 	supervisors = "el Alcalde"
 	total_positions = 2
 	economic_power = 1
@@ -363,7 +361,6 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/coc_world
 	info = "Cocinas deliciosos platillos y mantienes a los ciudadanos alimentados. Puedes cobrar por tus servicios."
 	alt_titles = list(
-		"Chef",
 		"Artista Culinario",
 		"Carnicero/a",
 		"Aprendiz de Cocinero")
@@ -376,7 +373,7 @@
 
 
 /datum/job/submap/service/bartender/bar_world
-	title = "Bartender"
+	title = "Barterista"
 	supervisors = "el Alcalde"
 	total_positions = 2
 	economic_power = 1
@@ -385,7 +382,7 @@
 	info = "Sirves bebidas a aquellos que las soliciten. Puedes cobrar por tus servicios."
 	alt_titles = list(
 		"Cantinero/a",
-		"Aprendiz de Bartender")
+		"Aprendiz de Barterista")
 	access = list(access_hydroponics, access_bar, access_solgov_crew, access_kitchen, access_commissary, access_maint_tunnels)
 	minimal_access = list()
 	min_skill = list(   SKILL_COOKING   = SKILL_BASIC,
@@ -413,11 +410,9 @@
 	economic_power = 1
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/civ_world
 	alt_titles = list(
-		"Residente",
+		"Residente/a",
 		"Vagabundo/a",
 		"Turista",
-		"Periodista",
-		"Artista",
 		"Inmigrante",
 		"Asistente/a")
 	skill_points = 40
@@ -441,7 +436,7 @@
 
 
 /datum/job/submap/service/comerciante/com_world
-	title = "Comerciante"
+	title = "Mercader"
 	supervisors = "el Alcalde"
 	total_positions = 3
 	economic_power = 1
@@ -525,7 +520,6 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/research/cie_world
 	alt_titles = list(
 		"Xenobiologo/a",
-		"Investigador/a",
 		"Xenobotanic/a",
 		"Investigador/a Quimico")
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
@@ -548,7 +542,7 @@
 
 
 /datum/job/submap/ciencias/robotista/rob_world
-	title = "Robotista"
+	title = "Robotist"
 	supervisors = "el Cientifico en Jefe"
 	total_positions = 2
 	economic_power = 1
@@ -756,7 +750,7 @@
 	total_positions = 1
 	economic_power = 1
 	selection_color = "#1d1d4f"
-	outfit_type = /decl/hierarchy/outfit/job/crew/command/alc_world
+	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/alc_world
 	alt_titles = list(
 		"Presidente",
 		"Gobernador"
@@ -782,7 +776,7 @@
 	total_positions = 1
 	economic_power = 1
 	selection_color = "#2f2f7f"
-	outfit_type = /decl/hierarchy/outfit/job/crew/command/bs_world
+	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/bs_world
 	alt_titles = list(
 		"Guardaespaldas"
 		)
@@ -807,7 +801,7 @@
 	total_positions = 1
 	economic_power = 1
 	selection_color = "#2f2f7f"
-	outfit_type = /decl/hierarchy/outfit/job/crew/command/mag_world
+	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/mag_world
 	alt_titles = list(
 		"Juez")
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_EXPERT,

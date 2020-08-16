@@ -139,7 +139,7 @@
 
 
 //Ciudad Manaos
-/decl/hierarchy/outfit/job/crew/command/alc_world
+/decl/hierarchy/outfit/job/torch/crew/command/alc_world
 	name = OUTFIT_JOB_NAME("Alcalde - World")
 	glasses = /obj/item/clothing/glasses/sunglasses
 	uniform = /obj/item/clothing/under/rank/centcom
@@ -148,7 +148,7 @@
 	id_type = /obj/item/weapon/card/id/torch/gold
 	pda_type = /obj/item/modular_computer/pda/captain
 
-/decl/hierarchy/outfit/job/crew/command/mag_world
+/decl/hierarchy/outfit/job/torch/crew/command/mag_world
 	name = OUTFIT_JOB_NAME("Magistrado - World")
 	l_ear = /obj/item/device/radio/headset/world_mag
 	uniform = /obj/item/clothing/under/suit_jacket/really_black
@@ -156,7 +156,7 @@
 	id_type = /obj/item/weapon/card/id/torch/crew/magistrado
 	pda_type = /obj/item/modular_computer/pda/heads/paperpusher
 
-/decl/hierarchy/outfit/job/crew/command/bs_world
+/decl/hierarchy/outfit/job/torch/crew/command/bs_world
 	name = OUTFIT_JOB_NAME("Blueshield - World")
 	l_ear = /obj/item/device/radio/headset/world_bs
 	uniform = /obj/item/clothing/under/bs_uniform

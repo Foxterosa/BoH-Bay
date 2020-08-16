@@ -59,7 +59,6 @@
 	alt_titles = list(
 		"Tecnico de motor",
 		"Tecnico en Control de Averias",
-		"Electricista",
 		"Tecnico en Atmosfera",
 		"Tecnico en AEV",
 		"Tecnico en Telecomunicaciones",

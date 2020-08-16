@@ -389,82 +389,82 @@
 	name = "radio del Médico en Jefe."
 	icon_state = "med_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_omj
+	ks1type = /obj/item/device/encryptionkey/world/world_omj
 
 /obj/item/device/radio/headset/world_med
 	name = "radio del Hospital"
 	icon_state = "med_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_med
+	ks1type = /obj/item/device/encryptionkey/world/world_med
 
 /obj/item/device/radio/headset/world_qm
 	name = "radio del Intendente de Cargo."
 	icon_state = "cargo_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_qm
+	ks1type = /obj/item/device/encryptionkey/world/world_qm
 
 /obj/item/device/radio/headset/world_cargo
 	name = "radio de Cargo."
 	icon_state = "cargo_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_cargo
+	ks1type = /obj/item/device/encryptionkey/world/world_cargo
 
 /obj/item/device/radio/headset/world_sec
 	name = "radio de la Policía."
 	icon_state = "sec_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_sec
+	ks1type = /obj/item/device/encryptionkey/world/world_sec
 
 /obj/item/device/radio/headset/world_pj
 	name = "radio del Policía en Jefe."
 	icon_state = "sec_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_pj
+	ks1type = /obj/item/device/encryptionkey/world/world_pj
 
 /obj/item/device/radio/headset/world_cie
 	name = "radio de Ciencias."
 	icon_state = "com_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_cie
+	ks1type = /obj/item/device/encryptionkey/world/world_cie
 
 /obj/item/device/radio/headset/world_ocj
 	name = "radio del Cientifico en Jefe."
 	icon_state = "com_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_ocj
+	ks1type = /obj/item/device/encryptionkey/world/world_ocj
 
 /obj/item/device/radio/headset/world_civ
 	name = "radio del Ciudad Manaos"
 	icon_state = "com_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_civ
+	ks1type = /obj/item/device/encryptionkey/world/world_civ
 
 /obj/item/device/radio/headset/world_ing
 	name = "radio de Ingenieria."
 	icon_state = "eng_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_ing
+	ks1type = /obj/item/device/encryptionkey/world/world_ing
 
 /obj/item/device/radio/headset/world_oij
 	name = "radio de Ingeniero en Jefe."
 	icon_state = "eng_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_oij
+	ks1type = /obj/item/device/encryptionkey/world/world_oij
 
 /obj/item/device/radio/headset/world_alc
 	name = "radio del Alcalde."
 	icon_state = "com_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_alc
+	ks1type = /obj/item/device/encryptionkey/world/world_alc
 
 /obj/item/device/radio/headset/world_bs
 	name = "radio del Guardaespaldas"
 	icon_state = "com_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_alc
+	ks1type = /obj/item/device/encryptionkey/world/world_alc
 
 /obj/item/device/radio/headset/world_mag
 	name = "radio del Magistrado."
 	icon_state = "com_headset"
 	item_state = "headset"
-	ks1type = /obj/item/device/encryptionkey/world_pj
+	ks1type = /obj/item/device/encryptionkey/world/world_pj

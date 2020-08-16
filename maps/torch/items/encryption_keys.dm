@@ -83,62 +83,62 @@
 
 
 //Ciudad Manaos
-/obj/item/device/encryptionkey/world_cargo
+/obj/item/device/encryptionkey/world/world_cargo
 	name = "radio encriptada de Cargo."
 	icon_state = "qm_cypherkey"
 	channels = list("Supply" = 1, "911" = 1, "106" = 1)
 
-/obj/item/device/encryptionkey/world_qm
+/obj/item/device/encryptionkey/world/world_qm
 	name = "radio encriptada del Intendente de Cargo."
 	icon_state = "qm_cypherkey"
 	channels = list("Supply" = 1, "911" = 1, "106" = 1, "Command" = 1)
 
-/obj/item/device/encryptionkey/world_med
+/obj/item/device/encryptionkey/world/world_med
 	name = "radio encriptada del hospital."
 	icon_state = "medsci_cypherkey"
 	channels = list("Medical" = 1, "911" = 1, "106" = 1)
 
-/obj/item/device/encryptionkey/world_omj
+/obj/item/device/encryptionkey/world/world_omj
 	name = "radio encriptada del Médico en jefe."
 	icon_state = "medsci_cypherkey"
 	channels = list("Medical" = 1, "911" = 1, "106" = 1, "Command" = 1)
 
-/obj/item/device/encryptionkey/world_sec
+/obj/item/device/encryptionkey/world/world_sec
 	name = "radio encriptada de la Polcía."
 	icon_state = "sec_cypherkey"
 	channels = list("Security" = 1, "911" = 1, "106" = 1)
 
-/obj/item/device/encryptionkey/world_pj
+/obj/item/device/encryptionkey/world/world_pj
 	name = "radio encriptada del Policía en Jefe."
 	icon_state = "sec_cypherkey"
 	channels = list("Security" = 1, "911" = 1, "106" = 1, "Command" = 1)
 
-/obj/item/device/encryptionkey/world_cie
+/obj/item/device/encryptionkey/world/world_cie
 	name = "radio encriptada de Ciencias."
 	icon_state = "sci_cypherkey"
 	channels = list("Science" = 1, "911" = 1, "106" = 1)
 
-/obj/item/device/encryptionkey/world_ocj
+/obj/item/device/encryptionkey/world/world_ocj
 	name = "radio encriptada del Cientifico en Jefe."
 	icon_state = "sci_cypherkey"
 	channels = list("Science" = 1, "911" = 1, "106" = 1, "Command" = 1)
 
-/obj/item/device/encryptionkey/world_civ
+/obj/item/device/encryptionkey/world/world_civ
 	name = "radio encriptada comun de los ciudadanos de Ciudad Manaos."
 	icon_state = "srv_cypherkey"
 	channels = list("911" = 1, "106" = 1)
 
-/obj/item/device/encryptionkey/world_ing
+/obj/item/device/encryptionkey/world/world_ing
 	name = "radio encriptada de Ingenieria."
 	icon_state = "eng_cypherkey"
 	channels = list("Engineering" = 1, "911" = 1, "106" = 1)
 
-/obj/item/device/encryptionkey/world_oij
+/obj/item/device/encryptionkey/world/world_oij
 	name = "radio encriptada del Ingeniero en Jefe."
 	icon_state = "eng_cypherkey"
 	channels = list("Engineering" = 1, "911" = 1, "106" = 1, "Command" = 1)
 
-/obj/item/device/encryptionkey/world_alc
+/obj/item/device/encryptionkey/world/world_alc
 	name = "radio encriptada del Alcalde."
 	icon_state = "eng_cypherkey"
 	channels = list("Engineering" = 1, "911" = 1, "106" = 1, "Command" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Security" = 1)
