@@ -45,3 +45,24 @@
 	shoes = /obj/item/clothing/shoes/black
 	id_type = /obj/item/weapon/card/id/torch/contractor/engineering/roboticist
 	pda_type = /obj/item/modular_computer/pda/roboticist
+
+
+
+
+//Ciudad Manaos
+/decl/hierarchy/outfit/job/torch/crew/engineering/oij_world
+	name = OUTFIT_JOB_NAME("Ingeniero en Jefe - World")
+	uniform = /obj/item/clothing/under/rank/chief_engineer
+	shoes = /obj/item/clothing/shoes/brown
+	l_ear = /obj/item/device/radio/headset/world_oij
+	id_type = /obj/item/weapon/card/id/torch/silver/engineering
+	pda_type = /obj/item/modular_computer/pda/heads/ce
+	pda_slot = slot_l_store
+	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+
+/decl/hierarchy/outfit/job/torch/crew/engineering/engineer
+	name = OUTFIT_JOB_NAME("Ingeniero - World")
+	uniform = /obj/item/clothing/under/rank/engineer
+	shoes = /obj/item/clothing/shoes/black
+	id_type = /obj/item/weapon/card/id/torch/crew/engineering
+	pda_type = /obj/item/modular_computer/pda/engineering

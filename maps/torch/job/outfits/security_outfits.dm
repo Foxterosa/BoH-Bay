@@ -56,3 +56,33 @@
 	name = OUTFIT_JOB_NAME("Master at Arms - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
+
+
+
+//Ciudad Manaos
+
+/decl/hierarchy/outfit/job/torch/crew/security/pj_world
+	name = OUTFIT_JOB_NAME("Policia en Jefe - World")
+	l_ear = /obj/item/device/radio/headset/world_pj
+	uniform = /obj/item/clothing/under/policejefe
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/torch/silver/security
+	pda_type = /obj/item/modular_computer/pda/heads/hos
+
+/decl/hierarchy/outfit/job/torch/crew/security/pol_world
+	name = OUTFIT_JOB_NAME("Policía - World")
+	l_ear = /obj/item/device/radio/headset/world_sec
+	uniform = /obj/item/clothing/under/police
+	head = /obj/item/clothing/head/police
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/torch/crew/security
+	pda_type = /obj/item/modular_computer/pda/security
+
+/decl/hierarchy/outfit/job/torch/crew/security/det_world
+	name = OUTFIT_JOB_NAME("Detective - World")
+	l_ear = /obj/item/device/radio/headset/world_sec
+	head = /obj/item/clothing/head/det
+	uniform = /obj/item/clothing/under/det
+	suit = /obj/item/clothing/suit/storage/det_trench/ft
+	shoes = /obj/item/clothing/shoes/laceup
+	backpack_contents = list(/obj/item/clothing/accessory/badge/PI = 1)

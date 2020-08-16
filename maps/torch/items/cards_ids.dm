@@ -238,3 +238,12 @@
 /obj/item/weapon/card/id/torch/contractor/service/lawyer
 	job_access_type = /datum/job/lawyer
 	detail_color = COLOR_NAVY_BLUE
+
+/obj/item/weapon/card/id/torch/contractor/service/bot_world
+	color = COLOR_BOTTLE_GREEN
+	detail_color = COLOR_OFF_WHITE
+	job_access_type = /datum/job/submap/service/botanico/bot_world
+
+/obj/item/weapon/card/id/torch/contractor/service/com_world
+	detail_color = COLOR_NAVY_BLUE
+	job_access_type = /datum/job/submap/service/comerciante/com_world

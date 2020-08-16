@@ -77,3 +77,79 @@
 	name = OUTFIT_JOB_NAME("Chaplain - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/service
 	shoes = /obj/item/clothing/shoes/dutyboots
+
+
+
+//Ciudad Manaos
+/decl/hierarchy/outfit/job/torch/crew/service/jan_world
+	name = OUTFIT_JOB_NAME("Conserje - World")
+	l_ear = /obj/item/device/radio/headset/world_civ
+	uniform = /obj/item/clothing/under/rank/janitor
+	shoes = /obj/item/clothing/shoes/black
+	id_type = /obj/item/weapon/card/id/torch/crew/service/janitor
+	pda_type = /obj/item/modular_computer/pda
+
+
+/decl/hierarchy/outfit/job/torch/crew/service/coc_world
+	name = OUTFIT_JOB_NAME("Cocinero - World")
+	l_ear = /obj/item/device/radio/headset/world_civ
+	uniform = /obj/item/clothing/under/rank/chef
+	shoes = /obj/item/clothing/shoes/black
+	id_type = /obj/item/weapon/card/id/torch/crew/service/chef
+	pda_type = /obj/item/modular_computer/pda
+
+
+/decl/hierarchy/outfit/job/torch/crew/service/bar_world
+	name = OUTFIT_JOB_NAME("Bartender - World")
+	l_ear = /obj/item/device/radio/headset/world_civ
+	uniform = /obj/item/clothing/under/rank/bartender
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/torch/contractor/service/bartender
+	pda_type = /obj/item/modular_computer/pda
+
+
+/decl/hierarchy/outfit/job/torch/crew/service/cap_world
+	name = OUTFIT_JOB_NAME("Capellán - World")
+	l_ear = /obj/item/device/radio/headset/world_civ
+	uniform = /obj/item/clothing/under/rank/chaplain
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/torch/crew/service/chaplain
+	pda_type = /obj/item/modular_computer/pda
+
+
+/decl/hierarchy/outfit/job/torch/crew/service/civ_world
+	name = OUTFIT_JOB_NAME("Civil - World")
+	l_ear = /obj/item/device/radio/headset/world_civ
+	uniform = /obj/item/clothing/under/librarian
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/torch/passenger
+	pda_type = /obj/item/modular_computer/pda
+
+
+/decl/hierarchy/outfit/job/torch/crew/service/abo_world
+	name = OUTFIT_JOB_NAME("Abogado - World")
+	l_ear = /obj/item/device/radio/headset/world_civ
+	uniform = /obj/item/clothing/under/lawyer/black
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/torch/contractor/service/lawyer
+	pda_type = /obj/item/modular_computer/pda
+
+
+/decl/hierarchy/outfit/job/torch/crew/service/bot_world
+	name = OUTFIT_JOB_NAME("Botánico - World")
+	l_ear = /obj/item/device/radio/headset/world_civ
+	uniform = /obj/item/clothing/under/rank/hydroponics
+	suit = /obj/item/clothing/suit/apron
+	shoes = /obj/item/clothing/shoes/black
+	gloves = /obj/item/clothing/gloves/thick/botany
+	id_type = /obj/item/weapon/card/id/torch/contractor/service/bot_world
+	pda_type = /obj/item/modular_computer/pda
+
+
+/decl/hierarchy/outfit/job/torch/crew/service/com_world
+	name = OUTFIT_JOB_NAME("Comerciante - World")
+	l_ear = /obj/item/device/radio/headset/world_civ
+	uniform = /obj/item/clothing/under/lawyer/infil
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/torch/contractor/service/com_world
+	pda_type = /obj/item/modular_computer/pda

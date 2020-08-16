@@ -91,3 +91,38 @@
 	name = OUTFIT_JOB_NAME("Counselor - Mentalist")
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/laceup
+
+
+//Ciudad Manaos
+/decl/hierarchy/outfit/job/torch/crew/medical/omj_world
+	name = OUTFIT_JOB_NAME("Médico en Jefe - World")
+	l_ear  = /obj/item/device/radio/headset/world_omj
+	uniform = /obj/item/clothing/under/rank/chief_medical_officer
+	shoes = /obj/item/clothing/shoes/white
+	id_type = /obj/item/weapon/card/id/torch/silver/medical
+	pda_type = /obj/item/modular_computer/pda/heads/cmo
+	pda_slot = slot_l_store
+
+/decl/hierarchy/outfit/job/torch/crew/medical/med_world
+	name = OUTFIT_JOB_NAME("Médico - World")
+	l_ear  = /obj/item/device/radio/headset/world_med
+	uniform = /obj/item/clothing/under/rank/medical
+	shoes = /obj/item/clothing/shoes/white
+	id_type = /obj/item/weapon/card/id/torch/crew/medical
+	pda_type = /obj/item/modular_computer/pda/medical
+
+/decl/hierarchy/outfit/job/torch/crew/medical/quim_world
+	name = OUTFIT_JOB_NAME("Quimico - World")
+	l_ear  = /obj/item/device/radio/headset/world_med
+	uniform = /obj/item/clothing/under/rank/chemist
+	shoes = /obj/item/clothing/shoes/white
+	id_type = /obj/item/weapon/card/id/torch/contractor/chemist
+	pda_type = /obj/item/modular_computer/pda/medical
+
+/decl/hierarchy/outfit/job/torch/crew/medical/psi_world
+	name = OUTFIT_JOB_NAME("Psiquiatra - World")
+	l_ear  = /obj/item/device/radio/headset/world_med
+	uniform = /obj/item/clothing/under/rank/medical
+	shoes = /obj/item/clothing/shoes/white
+	id_type = /obj/item/weapon/card/id/torch/contractor/medical/counselor
+	pda_type = /obj/item/modular_computer/pda/medical

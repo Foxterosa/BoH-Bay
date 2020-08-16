@@ -219,3 +219,15 @@
 	id = access_bs
 	desc = "Blueshield"
 	region = ACCESS_REGION_COMMAND
+
+/var/const/access_bot_world = "ACCESS_BOT_WORLD" //209
+/datum/access/bot_world
+	id = access_bot_world
+	desc = "Botánico"
+	region = ACCESS_REGION_GENERAL
+
+/var/const/access_com_world = "ACCESS_COM_WORLD" //209
+/datum/access/com_world
+	id = access_com_world
+	desc = "Comerciante"
+	region = ACCESS_REGION_GENERAL

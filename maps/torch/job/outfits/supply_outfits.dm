@@ -50,3 +50,31 @@
 /decl/hierarchy/outfit/job/torch/passenger/research/prospector/New()
 	..()
 	BACKPACK_OVERRIDE_ENGINEERING
+
+
+
+//Ciudad Manaos
+/decl/hierarchy/outfit/job/torch/passenger/research/min_world
+	name = OUTFIT_JOB_NAME("Minero - World")
+	uniform = /obj/item/clothing/under/rank/miner
+	shoes = /obj/item/clothing/shoes/workboots
+	id_type = /obj/item/weapon/card/id/torch/passenger/research/mining
+	pda_type = /obj/item/modular_computer/pda/mining
+	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	l_ear = /obj/item/device/radio/headset/world_cargo
+
+/decl/hierarchy/outfit/job/torch/crew/supply/car_world
+	name = OUTFIT_JOB_NAME("Tecnico de Cargo - World")
+	l_ear = /obj/item/device/radio/headset/world_cargo
+	uniform = /obj/item/clothing/under/rank/cargotech
+	shoes = /obj/item/clothing/shoes/brown
+	id_type = /obj/item/weapon/card/id/torch/crew/supply
+	pda_type = /obj/item/modular_computer/pda/cargo
+
+/decl/hierarchy/outfit/job/torch/crew/supply/qm_world
+	name = OUTFIT_JOB_NAME("Intendente de Cargo - World")
+	l_ear = /obj/item/device/radio/headset/world_qm
+	uniform = /obj/item/clothing/under/rank/cargo
+	shoes = /obj/item/clothing/shoes/brown
+	id_type = /obj/item/weapon/card/id/torch/crew/supply/deckofficer
+	pda_type = /obj/item/modular_computer/pda/cargo

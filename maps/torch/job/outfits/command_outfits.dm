@@ -133,3 +133,33 @@
 	name = OUTFIT_JOB_NAME("Bridge Officer - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/command
 	shoes = /obj/item/clothing/shoes/dutyboots
+
+
+
+
+
+//Ciudad Manaos
+/decl/hierarchy/outfit/job/crew/command/alc_world
+	name = OUTFIT_JOB_NAME("Alcalde - World")
+	glasses = /obj/item/clothing/glasses/sunglasses
+	uniform = /obj/item/clothing/under/rank/centcom
+	l_ear = /obj/item/device/radio/headset/world_alc
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/torch/gold
+	pda_type = /obj/item/modular_computer/pda/captain
+
+/decl/hierarchy/outfit/job/crew/command/mag_world
+	name = OUTFIT_JOB_NAME("Magistrado - World")
+	l_ear = /obj/item/device/radio/headset/world_mag
+	uniform = /obj/item/clothing/under/suit_jacket/really_black
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/torch/crew/magistrado
+	pda_type = /obj/item/modular_computer/pda/heads/paperpusher
+
+/decl/hierarchy/outfit/job/crew/command/bs_world
+	name = OUTFIT_JOB_NAME("Blueshield - World")
+	l_ear = /obj/item/device/radio/headset/world_bs
+	uniform = /obj/item/clothing/under/bs_uniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/torch/crew/blueshield
+	pda_type = /obj/item/modular_computer/pda/heads/paperpusher

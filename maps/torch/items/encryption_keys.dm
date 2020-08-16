@@ -80,3 +80,65 @@
 	name = "senior enlisted advisor's encryption key"
 	icon_state = "com_cypherkey"
 	channels = list("Command" = 1, "Infantry" = 1, "Security" = 1, "Engineering" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "Exploration" = 1)
+
+
+//Ciudad Manaos
+/obj/item/device/encryptionkey/world_cargo
+	name = "radio encriptada de Cargo."
+	icon_state = "qm_cypherkey"
+	channels = list("Supply" = 1, "911" = 1, "106" = 1)
+
+/obj/item/device/encryptionkey/world_qm
+	name = "radio encriptada del Intendente de Cargo."
+	icon_state = "qm_cypherkey"
+	channels = list("Supply" = 1, "911" = 1, "106" = 1, "Command" = 1)
+
+/obj/item/device/encryptionkey/world_med
+	name = "radio encriptada del hospital."
+	icon_state = "medsci_cypherkey"
+	channels = list("Medical" = 1, "911" = 1, "106" = 1)
+
+/obj/item/device/encryptionkey/world_omj
+	name = "radio encriptada del Médico en jefe."
+	icon_state = "medsci_cypherkey"
+	channels = list("Medical" = 1, "911" = 1, "106" = 1, "Command" = 1)
+
+/obj/item/device/encryptionkey/world_sec
+	name = "radio encriptada de la Polcía."
+	icon_state = "sec_cypherkey"
+	channels = list("Security" = 1, "911" = 1, "106" = 1)
+
+/obj/item/device/encryptionkey/world_pj
+	name = "radio encriptada del Policía en Jefe."
+	icon_state = "sec_cypherkey"
+	channels = list("Security" = 1, "911" = 1, "106" = 1, "Command" = 1)
+
+/obj/item/device/encryptionkey/world_cie
+	name = "radio encriptada de Ciencias."
+	icon_state = "sci_cypherkey"
+	channels = list("Science" = 1, "911" = 1, "106" = 1)
+
+/obj/item/device/encryptionkey/world_ocj
+	name = "radio encriptada del Cientifico en Jefe."
+	icon_state = "sci_cypherkey"
+	channels = list("Science" = 1, "911" = 1, "106" = 1, "Command" = 1)
+
+/obj/item/device/encryptionkey/world_civ
+	name = "radio encriptada comun de los ciudadanos de Ciudad Manaos."
+	icon_state = "srv_cypherkey"
+	channels = list("911" = 1, "106" = 1)
+
+/obj/item/device/encryptionkey/world_ing
+	name = "radio encriptada de Ingenieria."
+	icon_state = "eng_cypherkey"
+	channels = list("Engineering" = 1, "911" = 1, "106" = 1)
+
+/obj/item/device/encryptionkey/world_oij
+	name = "radio encriptada del Ingeniero en Jefe."
+	icon_state = "eng_cypherkey"
+	channels = list("Engineering" = 1, "911" = 1, "106" = 1, "Command" = 1)
+
+/obj/item/device/encryptionkey/world_alc
+	name = "radio encriptada del Alcalde."
+	icon_state = "eng_cypherkey"
+	channels = list("Engineering" = 1, "911" = 1, "106" = 1, "Command" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Security" = 1)

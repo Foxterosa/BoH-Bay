@@ -193,6 +193,7 @@
 	#include "../away/unishi/unishi.dm"
 	//#include "../away/voxship/voxship.dm"
 	#include "../away/skrellscoutship/skrellscoutship.dm"
+	#include "../away/world/world.dm"
 
 
 	#define using_map_DATUM /datum/map/torch
