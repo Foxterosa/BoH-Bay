@@ -148,17 +148,17 @@
 
 
 /datum/job/submap/hospital/med_world
-	title = "Medico"
+	title = "Medico/a"
 	supervisors = "el Medico en Jefe"
 	total_positions = 4
 	economic_power = 1
 	selection_color = "#026865"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/med_world
 	alt_titles = list(
-		"Cirujano",
-		"Enfermero",
+		"Cirujano/a",
+		"Enfermero/a",
 		"Estudiante de medicina",
-		"Paramedico"
+		"Paramedico/a"
 		)
 	info = "Te encargas tratar a las personas que necesiten asistencia médica."
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
@@ -180,15 +180,15 @@
 
 
 /datum/job/submap/hospital/quimica/quim_world
-	title = "Quimico"
+	title = "Quimico/a"
 	supervisors = "el Medico en Jefe"
 	total_positions = 2
 	economic_power = 1
 	selection_color = "#026865"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/quim_world
 	alt_titles = list(
-		"Farmaceutico",
-		"Tecnico de laboratorio"
+		"Farmaceutico/a",
+		"Tecnico/a de laboratorio"
 		)
 	info = "Eres un Quimico. Haces medicina y trabajas en el laboratorio de medicina. No eres un doctor o un medico, pero tienes conocimientos basicos en esos campos. No deberias de tratar pacientes si no, proporcionar la medicina necesaria para hacerlo. sigues las ordenes de los Medicos y Tecnicos Medicos."
 	min_skill = list(   SKILL_MEDICAL   = SKILL_ADEPT,
@@ -204,7 +204,7 @@
 
 
 /datum/job/submap/hospital/psicologo/psi_world
-	title = "Psicologo"
+	title = "Psicologo/a"
 	supervisors = "el Medico en Jefe"
 	total_positions = 1
 	economic_power = 1
@@ -214,7 +214,7 @@
 		"Mentalista",
 		"Terapeuta",
 		"Psiquiatra",
-		"Consejero"
+		"Consejero/a"
 		)
 	info = "Eres el Psiquiatra. Tu responsabilidad principal es la salud mental y bienestar de la tripulacion. Sigues las ordenes del Oficial Medico en Jefe. A parte del Asesor Psiconico, eres el unico miembro abordo con habilidades Psiconicas."
 	min_skill = list(
@@ -310,8 +310,8 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/security/pol_world
 	info = "Simplemente espere por cualquier crimen que necesite alguna evidencia física, investigue la evidencia y la escena y compílela para los tribunales, incluso si se necesitan varios turnos para lograrlo."
 	alt_titles = list(
-		"Tecnico forense",
-		"Investigador")
+		"Tecnico/a forense",
+		"Investigador/a")
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
 	                    SKILL_EVA         = SKILL_BASIC,
@@ -345,7 +345,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/security/pol_world
 	info = "Te encargas de mantener limpia la ciudad y los locales que lo requerian."
 	alt_titles = list(
-		"Tecnico de Higiene",
+		"Tecnico/a de Higiene",
 		"Maid"
 		)
 	min_skill = list(   SKILL_HAULING = SKILL_BASIC)
@@ -365,7 +365,7 @@
 	alt_titles = list(
 		"Chef",
 		"Artista Culinario",
-		"Carnicero",
+		"Carnicero/a",
 		"Aprendiz de Cocinero")
 	min_skill = list(   SKILL_COOKING   = SKILL_ADEPT,
 	                    SKILL_BOTANY    = SKILL_BASIC,
@@ -384,7 +384,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/bar_world
 	info = "Sirves bebidas a aquellos que las soliciten. Puedes cobrar por tus servicios."
 	alt_titles = list(
-		"Cantinero",
+		"Cantinero/a",
 		"Aprendiz de Bartender")
 	access = list(access_hydroponics, access_bar, access_solgov_crew, access_kitchen, access_commissary, access_maint_tunnels)
 	minimal_access = list()
@@ -414,18 +414,18 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/civ_world
 	alt_titles = list(
 		"Residente",
-		"Vagabundo",
+		"Vagabundo/a",
 		"Turista",
 		"Periodista",
 		"Artista",
 		"Inmigrante",
-		"Asistente")
+		"Asistente/a")
 	skill_points = 40
 	access = list(access_maint_tunnels, access_emergency_storage, access_solgov_crew)
 
 
 /datum/job/submap/service/botanico/bot_world
-	title = "Botanico"
+	title = "Botanico/a"
 	supervisors = "el Alcalde"
 	total_positions = 2
 	economic_power = 1
@@ -433,9 +433,9 @@
 	info = "Encargate de botanica y has frutas o verduras para venderlas a quien las quiera."
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/bot_world
 	alt_titles = list(
-		"Granjero",
+		"Granjero/a",
 		"Naturista",
-		"Verdulero")
+		"Verdulero/a")
 	skill_points = 30
 	access = list(access_maint_tunnels, access_emergency_storage, access_solgov_crew, access_bot_world)
 
@@ -449,7 +449,7 @@
 	info = "Dirije tu local y vende los productos que quieras, puedes solicitar los productos que quieras vender a cargo"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/com_world
 	alt_titles = list(
-		"Armero",
+		"Armero/a",
 		"Dependiente de tienda")
 	skill_points = 30
 	min_skill = list(   SKILL_FINANCE = SKILL_ADEPT,
@@ -460,7 +460,7 @@
 
 
 /datum/job/submap/service/abogado/abo_world
-	title = "Abogado"
+	title = "Abogado/a"
 	supervisors = "Alcalde"
 	total_positions = 2
 	economic_power = 1
@@ -517,18 +517,17 @@
 
 
 /datum/job/submap/ciencias/cientifico/cie_world
-	title = "Cientifico"
+	title = "Cientifico/a"
 	supervisors = "el Cientifico en Jefe"
 	total_positions = 4
 	economic_power = 1
 	selection_color = "#ad6bad"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/research/cie_world
 	alt_titles = list(
-		"Xenobiologo",
-		"Anomalista",
-		"Investigador",
-		"Xenobotanico",
-		"Investigador Quimico")
+		"Xenobiologo/a",
+		"Investigador/a",
+		"Xenobotanic/a",
+		"Investigador/a Quimico")
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
 	                    SKILL_DEVICES     = SKILL_BASIC,
@@ -556,8 +555,8 @@
 	selection_color = "#ad6bad"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/research/rob_world
 	alt_titles = list(
-		"Tecnico de Mechas",
-		"Tecnico Biomecanico")
+		"Tecnico/a de Mechas",
+		"Tecnico/a Biomecanico")
 	min_skill = list(   SKILL_COMPUTER		= SKILL_ADEPT,
 	                    SKILL_DEVICES		= SKILL_ADEPT,
 	                    SKILL_ANATOMY       = SKILL_EXPERT,
@@ -615,7 +614,7 @@
 
 
 /datum/job/submap/cargo/car_world
-	title = "Tecnico de Cargo"
+	title = "Tecnico/a de Cargo"
 	supervisors = "el Intendente de Cargo"
 	total_positions = 4
 	economic_power = 1
@@ -638,14 +637,13 @@
 
 
 /datum/job/submap/cargo/mineria/min_world
-	title = "Minero"
+	title = "Minero/a"
 	supervisors = "el Intendente de Cargo"
 	total_positions = 4
 	economic_power = 1
 	selection_color = "#7f6e2c"
 	alt_titles = list(
-		"Prospector",
-		"Tecnico de salvamento")
+		"Tecnico/a de salvamento")
 	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/min_world
 	min_skill = list(   SKILL_HAULING = SKILL_ADEPT,
 	                    SKILL_EVA     = SKILL_BASIC,
@@ -711,7 +709,7 @@
 
 
 /datum/job/submap/ingenieria/ing_world
-	title = "Ingeniero"
+	title = "Ingeniero/a"
 	supervisors = "el Ingeniero en Jefe"
 	total_positions = 4
 	economic_power = 1
@@ -804,7 +802,7 @@
 
 
 /datum/job/submap/comando/magistrado/mag_world
-	title = "Magistrado"
+	title = "Magistrado/a"
 	supervisors = "el alcalde"
 	total_positions = 1
 	economic_power = 1
