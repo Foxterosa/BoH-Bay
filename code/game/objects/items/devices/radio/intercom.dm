@@ -178,23 +178,3 @@
 /obj/item/device/radio/intercom/locked/confessional
 	name = "confessional intercom"
 	locked_frequency = 1480
-
-
-
-/obj/item/device/radio/intercom/e911
-	name = "\improper 911"
-	frequency = E911_FREQ
-
-/obj/item/device/radio/intercom/e911/Initialize()
-	. = ..()
-	internal_channels[num2text(E911_FREQ)] = list(access_solgov_crew)
-
-/obj/item/device/radio/intercom/e106
-	name = "\improper 106"
-	frequency = E106_FREQ
-
-/obj/item/device/radio/intercom/e106/Initialize()
-	. = ..()
-	internal_channels[num2text(E106_FREQ)] = list(access_solgov_crew)
-
-

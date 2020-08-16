@@ -771,14 +771,15 @@
 
 
 /datum/job/submap/comando/blueshield/bs_world
-	title = "Blueshield"
+	title = "Guardaespaldas"
 	supervisors = "el Alcalde, y los Jefes departamentales"
 	total_positions = 1
 	economic_power = 1
 	selection_color = "#2f2f7f"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/bs_world
 	alt_titles = list(
-		"Guardaespaldas"
+		"Escolta gubernamental",
+		"Protector Blueshield"
 		)
 	info = "Eres un Blueshield, te encargas de proteger la vida del personal de alto riesgo de la ciudad, NO eres seguridad."
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
