@@ -391,11 +391,13 @@
 	skill_points = 30
 
 /datum/job/submap/service/capellan/cap_world
-	title = "Capellan"
-	supervisors = "Alcalde"
+	title = "Cura"
+	supervisors = "el Alcalde"
 	total_positions = 2
 	economic_power = 1
 	selection_color = "#557e38"
+	alt_titles = list(
+		"Sacerdote")
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/cap_world
 	min_skill = list(SKILL_BUREAUCRACY = SKILL_BASIC)
 	skill_points = 30
