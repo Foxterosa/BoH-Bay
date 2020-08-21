@@ -15,6 +15,7 @@
 	//var/toxloss = 0   //Toxic damage caused by being poisoned or radiated
 	//var/fireloss = 0  //Burn damage caused by being way too hot, too cold or burnt.
 	//var/halloss = 0   //Hallucination damage. 'Fake' damage obtained through hallucinating or the holodeck. Sleeping should cause it to wear off.
+	//var/obliteration = 0
 
 	var/last_special = 0 //Used by the resist verb, likely used to prevent players from bypassing next_move by logging in/out.
 

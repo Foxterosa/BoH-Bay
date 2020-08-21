@@ -12,6 +12,7 @@
 	var/fireloss
 	var/brainloss
 	var/oxyloss
+	var/obliteration
 	var/using_map_name
 	var/overmap_location_name
 	var/coords
@@ -52,6 +53,7 @@ SUBSYSTEM_DEF(statistics)
 		fireloss INTEGER, \
 		brainloss INTEGER, \
 		oxyloss INTEGER, \
+		obliteraion INTEGER, \
 		using_map_name TEXT, \
 		overmap_location_name TEXT, \
 		coords TEXT \
