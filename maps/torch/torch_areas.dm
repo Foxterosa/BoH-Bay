@@ -927,11 +927,6 @@
 	icon_state = "locker"
 	req_access = list(access_kitchen)
 
-/area/crew_quarters/commissary
-	name = "\improper Comisaria"
-	icon_state = "crew_quarters"
-	req_access = list(access_commissary)
-
 /area/crew_quarters/lounge
 	name = "\improper Salón"
 	icon_state = "crew_quarters"

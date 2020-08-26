@@ -4809,6 +4809,8 @@
 /area/hallway/primary/fifthdeck/fore)
 "it" = (
 /obj/effect/floor_decal/corner/mauve/mono,
+/obj/structure/closet/emcloset,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fifthdeck/fore)
 "iu" = (
@@ -5854,8 +5856,6 @@
 	tag_exterior_door = "petrov_shuttle_dock_outer";
 	tag_interior_door = "petrov_shuttle_dock_inner"
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/emcloset,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;

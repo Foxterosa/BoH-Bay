@@ -19604,6 +19604,13 @@
 /obj/structure/lattice,
 /turf/simulated/wall/r_wall/hull,
 /area/thruster/d1port)
+"ddY" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 10
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/center)
 "deb" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/medical{
@@ -20411,15 +20418,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
-"ewc" = (
-/obj/effect/floor_decal/corner/green/mono,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/closet/emcloset,
-/turf/simulated/floor/tiled/monotile,
-/area/hallway/primary/firstdeck/center)
 "exb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -21979,10 +21977,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/recepcion)
-"gIZ" = (
-/obj/machinery/constructable_frame/computerframe,
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/firstdeck/aftport)
 "gJb" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -23179,25 +23173,6 @@
 /obj/machinery/ai_status_display,
 /turf/simulated/wall/r_wall/prepainted,
 /area/hallway/primary/firstdeck/center)
-"hXs" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/catwalk,
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftport)
 "hYb" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -24898,13 +24873,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/assembly/robotics)
-"kdd" = (
-/obj/structure/closet/emcloset,
-/obj/effect/floor_decal/corner/green/mono,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/light,
-/turf/simulated/floor/tiled/monotile,
-/area/hallway/primary/firstdeck/center)
 "keb" = (
 /obj/structure/skele_stand,
 /turf/simulated/floor/tiled/white,
@@ -28198,6 +28166,10 @@
 /obj/effect/floor_decal/torchltdlogo,
 /turf/simulated/floor/tiled,
 /area/rnd/entry)
+"nRT" = (
+/obj/machinery/constructable_frame/computerframe,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/firstdeck/aftport)
 "nSb" = (
 /obj/effect/floor_decal/torchltdlogo{
 	icon_state = "bottomright";
@@ -33656,6 +33628,17 @@
 /obj/effect/floor_decal/corner/red,
 /turf/simulated/floor/tiled/dark,
 /area/security/brig/perma)
+"tNq" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_x = 0;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/aft)
 "tNK" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -34234,6 +34217,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
+"vfC" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/center)
 "vfH" = (
 /obj/effect/floor_decal/floordetail/edgedrain{
 	color = "";
@@ -34666,6 +34658,25 @@
 "vVe" = (
 /turf/simulated/floor/reinforced/hydrogen,
 /area/thruster/d1starboard)
+"vZu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/aftport)
 "wcE" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 8
@@ -35134,17 +35145,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury)
-"xto" = (
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 5
-	},
-/obj/machinery/vending/wallmed1{
-	name = "Emergency NanoMed";
-	pixel_x = 0;
-	pixel_y = 30
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/aft)
 "xtq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 10
@@ -51250,11 +51250,11 @@ acD
 xTc
 atH
 auN
-ewc
-rKo
+auN
+vfC
 ayg
-ure
-kdd
+ddY
+auN
 auN
 jTV
 thO
@@ -54284,7 +54284,7 @@ leb
 umI
 ayg
 ure
-awd
+auN
 auN
 aFl
 aGw
@@ -57311,7 +57311,7 @@ ael
 qIy
 jyA
 arK
-xto
+tNq
 hnN
 rvY
 amO
@@ -58544,7 +58544,7 @@ rWb
 rwb
 szb
 aSK
-hXs
+vZu
 bDK
 bDK
 bDK
@@ -62164,7 +62164,7 @@ ayJ
 ayJ
 mwJ
 snG
-gIZ
+nRT
 xxB
 xxB
 aqE
