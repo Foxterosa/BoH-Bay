@@ -757,18 +757,6 @@
 	name = "\improper Bar escondido"
 	icon_state = "bar"
 
-// Storage
-/area/storage/auxillary
-	req_access = list(access_cargo)
-
-/area/storage/auxillary/port
-	name = "Puerto de almacenamiento auxiliar "
-	icon_state = "auxstorage"
-
-/area/storage/auxillary/starboard
-	name = "Almacén auxiliar de estribor"
-	icon_state = "auxstorage"
-
 /area/storage/cargo
 	name = "Cargo - Almacén"
 	icon_state = "quartstorage"
@@ -896,20 +884,26 @@
 
 // Crew areas
 /area/crew_quarters/bar/storage
-	name = "\improper Almacen de servicio"
+	name = "\improper Deck 3 - Almacén de servicio"
 	req_access = list(access_bar, access_kitchen)
 
 /area/crew_quarters/cryolocker
-	name = "\improper Armario de almacenamiento criogénico"
+	name = "\improper Deck 3 - Almacén de sinteticos"
 	icon_state = "locker"
 
 /area/crew_quarters/head
-	name = "\improper Cubierta 3 - Cabecera"
+	name = "\improper Cubierta 3 - Baño"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
 
 /area/crew_quarters/head/aux
-	name = "\improper Cubierta 1 - Cabecera"
+	name = "\improper Cubierta 1 - Baño"
+
+/area/crew_quarters/head/aux2
+	name = "\improper Cubierta 2 - Baño"
+
+/area/crew_quarters/head/aux4
+	name = "\improper Cubierta 4 - Baño"
 
 /area/crew_quarters/head/sauna
 	name = "\improper Sauna"
@@ -1213,6 +1207,13 @@
 
 /area/crew_quarters_boh/cabin_main/officerbunk
 	name = "\improper Bridge - Cuartos de oficiales"
+	icon_state = "Sleep"
+	req_access = list(access_bridge)
+	sound_env = SMALL_SOFTFLOOR
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/crew_quarters_boh/cabin_main/almacen
+	name = "\improper Bridge - Almacen de emergencias"
 	icon_state = "Sleep"
 	req_access = list(access_bridge)
 	sound_env = SMALL_SOFTFLOOR

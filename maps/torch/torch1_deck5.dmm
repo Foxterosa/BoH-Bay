@@ -5229,7 +5229,6 @@
 "iX" = (
 /obj/random/torchcloset,
 /obj/random/maintenance/solgov,
-/obj/random/maintenance/solgov,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/hangar)
@@ -5955,8 +5954,6 @@
 /area/quartermaster/expedition)
 "jX" = (
 /obj/structure/largecrate,
-/obj/random/maintenance/solgov,
-/obj/random/maintenance/solgov,
 /obj/random/maintenance/solgov,
 /obj/random/maintenance/solgov,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -11367,10 +11364,6 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/fifthdeck/aftstarboard)
-"sx" = (
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/fifthdeck/aftstarboard)
 "sy" = (
 /turf/simulated/floor/plating,
 /area/shuttle/petrov/isolation)
@@ -12359,12 +12352,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/fifthdeck/aftport)
-"ul" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/fifthdeck/aftport)
 "um" = (
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -12637,7 +12624,6 @@
 "uL" = (
 /obj/random/tech_supply,
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/structure/largecrate,
 /obj/random/illegal,
@@ -13166,12 +13152,6 @@
 "wa" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/maintenance/fifthdeck/aftport)
-"wc" = (
-/obj/structure/table/rack,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/fifthdeck/aftport)
 "wd" = (
 /obj/structure/bed/chair/office/dark,
@@ -14852,10 +14832,6 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/phoron)
-"CB" = (
-/obj/random/trash,
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/fifthdeck/aftstarboard)
 "CC" = (
 /obj/structure/closet/secure_closet/crew/research,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -15613,10 +15589,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/petrov/cell2)
-"FR" = (
-/obj/random/junk,
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/fifthdeck/aftstarboard)
 "FS" = (
 /obj/effect/shuttle_landmark/skipjack/hanger,
 /turf/space,
@@ -40692,8 +40664,8 @@ ZG
 MC
 pG
 pI
-Ea
-CB
+aW
+aW
 aJ
 aX
 ee
@@ -40894,8 +40866,8 @@ ZG
 MC
 pH
 du
-FR
-Ea
+aW
+aW
 aJ
 aX
 ee
@@ -41297,9 +41269,9 @@ ZG
 ZG
 aH
 Um
-Ea
 sw
-sw
+Ut
+Ut
 ag
 oI
 eH
@@ -41499,9 +41471,9 @@ ZG
 ZG
 aH
 Um
-Ea
-sx
 sz
+Ut
+Ut
 ag
 aX
 aX
@@ -41701,7 +41673,7 @@ ZG
 ZG
 aH
 Um
-Ea
+Ut
 Ut
 Ut
 ag
@@ -43135,10 +43107,10 @@ Sr
 Zo
 qF
 Fk
-ul
-wj
-Xn
-wc
+gI
+gI
+gI
+gI
 HG
 gq
 gq

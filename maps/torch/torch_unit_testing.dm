@@ -42,8 +42,6 @@
 		/area/maintenance/aux_med = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/solar = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/storage = NO_SCRUBBER|NO_VENT,
-		/area/storage/auxillary/port = 0,
-		/area/storage/auxillary/starboard = 0,
 		/area/storage/primary = 0,
 		/area/storage/tech = 0,
 		/area/storage/tools = 0,
