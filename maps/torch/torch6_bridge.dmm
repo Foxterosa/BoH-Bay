@@ -5196,6 +5196,10 @@
 	pixel_x = 0;
 	pixel_y = 24
 	},
+/obj/structure/dogbed{
+	name = "Cama de Senko-san"
+	},
+/mob/living/simple_animal/fox/fluff/senkosan,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/cobed)
 "iG" = (
@@ -14450,25 +14454,6 @@
 /obj/effect/shuttle_landmark/torch/deck5/guppy,
 /turf/space,
 /area/space)
-"zc" = (
-/obj/machinery/computer/modular/preset/cardslot/command{
-	icon_state = "console";
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/red{
-	icon_state = "corner_white";
-	dir = 6
-	},
-/obj/machinery/recharger/wallcharger{
-	dir = 8;
-	pixel_x = 23;
-	pixel_y = -3
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/bridgecheck)
 "zf" = (
 /obj/structure/bed/chair/comfy/blue{
 	icon_state = "comfychair_preview";
@@ -14785,10 +14770,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/office/rd)
-"Al" = (
-/obj/machinery/status_display,
-/turf/simulated/wall/r_wall/prepainted,
-/area/security/bridgecheck)
 "Am" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -16955,6 +16936,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
+"KI" = (
+/obj/machinery/status_display,
+/turf/simulated/wall/r_wall/prepainted,
+/area/security/bridgecheck)
 "KN" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -17318,25 +17303,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/aftstarboard)
-"MG" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/vending/wallmed1{
-	name = "Emergency NanoMed";
-	pixel_x = 0;
-	pixel_y = 30
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/hallway/primary/bridge/fore)
 "MU" = (
 /obj/machinery/light{
 	dir = 4
@@ -18769,6 +18735,25 @@
 /obj/effect/floor_decal/corner/red/mono,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/bridge/fore)
+"TD" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_x = 0;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/bridge/fore)
 "TK" = (
 /obj/effect/floor_decal/corner/blue/three_quarters,
 /obj/structure/cable/green{
@@ -19255,6 +19240,25 @@
 /obj/item/sticky_pad/random,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/office/xo)
+"VJ" = (
+/obj/machinery/computer/modular/preset/cardslot/command{
+	icon_state = "console";
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	icon_state = "corner_white";
+	dir = 6
+	},
+/obj/machinery/recharger/wallcharger{
+	dir = 8;
+	pixel_x = 23;
+	pixel_y = -3
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/bridgecheck)
 "VL" = (
 /obj/effect/floor_decal/corner/red/half,
 /turf/simulated/floor/tiled/monotile,
@@ -32559,7 +32563,7 @@ mE
 mE
 mE
 mE
-MG
+TD
 ga
 sL
 sL
@@ -33365,7 +33369,7 @@ mN
 AA
 nZ
 Wa
-zc
+VJ
 mN
 rg
 yb
@@ -33563,7 +33567,7 @@ La
 iX
 Lk
 gl
-Al
+KI
 mO
 oK
 zM
