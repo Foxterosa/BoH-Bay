@@ -151,6 +151,7 @@
 	trenchcoats += /obj/item/clothing/suit/leathercoat
 	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(trenchcoats)
 
+
 /datum/gear/suit/wintercoat_fleet
 	display_name = "Abrigo de invierno, flota"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet
