@@ -8,7 +8,7 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "fax"
 	insert_anim = "faxsend"
-	var/send_access = list(list(access_lawyer, access_solgov_crew))
+	var/send_access = list(list(access_lawyer))
 
 	idle_power_usage = 30
 	active_power_usage = 200
@@ -214,6 +214,8 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 		message_admins(sender, "[uppertext(destination)] FAX[intercepted ? "(Intercepted by [intercepted])" : null]", rcvdcopy, destination, "#006100")
 	else if (destination == "Sol Federal Police")
 		message_admins(sender, "[uppertext(destination)] FAX[intercepted ? "(Intercepted by [intercepted])" : null]", rcvdcopy, destination, "#1f66a0")
+	else if (destination == "The Foundation")
+		message_admins(sender, "[uppertext(destination)] FAX[intercepted ? "(Intercepted by [intercepted])" : null]", rcvdcopy, destination, "#fffb00")
 	else if (destination == "[GLOB.using_map.boss_short] Supply")
 		message_admins(sender, "[uppertext(destination)] FAX[intercepted ? "(Intercepted by [intercepted])" : null]", rcvdcopy, destination, "#5f4519")
 	else if (destination in GLOB.using_map.map_admin_faxes)

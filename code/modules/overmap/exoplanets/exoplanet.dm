@@ -1,7 +1,7 @@
 /obj/effect/overmap/visitable/sector/exoplanet
 	name = "exoplanet"
 	icon_state = "globe"
-	in_space = 0
+	sector_flags = OVERMAP_SECTOR_KNOWN
 	var/area/planetary_area
 	var/list/seeds = list()
 	var/list/animals = list()
@@ -41,7 +41,7 @@
 	//Flags deciding what features to pick
 	var/ruin_tags_whitelist
 	var/ruin_tags_blacklist
-	var/features_budget = 4
+	var/features_budget = 5
 	var/list/possible_features = list()
 	var/list/spawned_features
 
@@ -345,7 +345,7 @@
 		var/i = 1
 		var/sanity = prob(99.9)
 		while(i <= gasnum && total_moles && newgases.len)
-			if(badflag && sanity)
+			if(badflag) // if sanity is 0 badflag never gets set anyway
 				for(var/g in newgases)
 					if(gas_data.flags[g] & badflag)
 						newgases -= g
@@ -355,7 +355,6 @@
 					badflag |= XGM_GAS_FUEL
 				if(gas_data.flags[ng] & XGM_GAS_FUEL)
 					badflag |= XGM_GAS_OXIDIZER
-				sanity = 0
 
 			var/part = total_moles * rand(3,80)/100 //allocate percentage to it
 			if(i == gasnum || !newgases.len) //if it's last gas, let it have all remaining moles
@@ -411,14 +410,14 @@
 
 	for(var/datum/exoplanet_theme/theme in themes)
 		skybox_image.overlays += theme.get_planet_image_extra()
-	
+
 	if(water_color) //TODO: move water levels out of randommap into exoplanet
 		var/image/water = image('icons/skybox/planet.dmi', "water")
 		water.color = water_color
 		water.appearance_flags = PIXEL_SCALE
 		water.transform = water.transform.Turn(rand(0,360))
 		skybox_image.overlays += water
-	
+
 	if(atmosphere && atmosphere.return_pressure() > SOUND_MINIMUM_PRESSURE)
 
 		var/atmo_color = get_atmosphere_color()
@@ -435,7 +434,7 @@
 
 		var/image/atmo = image('icons/skybox/planet.dmi', "atmoring")
 		skybox_image.underlays += atmo
-		
+
 	var/image/shadow = image('icons/skybox/planet.dmi', "shadow")
 	shadow.blend_mode = BLEND_MULTIPLY
 	skybox_image.overlays += shadow

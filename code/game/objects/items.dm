@@ -499,8 +499,6 @@ var/list/global/slot_flags_enumeration = list(
 //Otherwise should return 0 to indicate that the attack is not affected in any way.
 /obj/item/proc/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	var/parry_chance = get_parry_chance(user)
-	if(attacker)
-		parry_chance = max(0, parry_chance - 10 * attacker.get_skill_difference(SKILL_COMBAT, user))
 	if(parry_chance)
 		if(default_parry_check(user, attacker, damage_source) && prob(parry_chance))
 			user.visible_message("<span class='danger'>\The [user] parries [attack_text] with \the [src]!</span>")
@@ -514,9 +512,6 @@ var/list/global/slot_flags_enumeration = list(
 
 /obj/item/proc/get_parry_chance(mob/user)
 	. = base_parry_chance
-	if(user)
-		if(base_parry_chance || user.skill_check(SKILL_COMBAT, SKILL_ADEPT))
-			. += 10 * (user.get_skill_value(SKILL_COMBAT) - SKILL_BASIC)
 
 /obj/item/proc/on_disarm_attempt(mob/target, mob/living/attacker)
 	if(force < 1)
@@ -804,9 +799,9 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 /obj/item/proc/get_examine_line()
 	if(blood_color)
-		. = SPAN_WARNING("\icon[src] [gender==PLURAL?"some":"a"] <font color='[blood_color]'>stained</font> [src]")
+		. = SPAN_WARNING("[icon2html(src, viewers(get_turf(src)))] [gender==PLURAL?"some":"a"] <font color='[blood_color]'>stained</font> [src]")
 	else
-		. = "\icon[src] \a [src]"
+		. = "[icon2html(src, viewers(get_turf(src)))] \a [src]"
 	var/ID = GetIdCard()
 	if(ID)
 		. += "  <a href='?src=\ref[ID];look_at_id=1'>\[Look at ID\]</a>"
@@ -822,7 +817,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 /obj/item/proc/has_embedded()
 	return
 
-/obj/item/proc/get_pressure_weakness(pressure)
+/obj/item/proc/get_pressure_weakness(pressure,zone)
 	. = 1
 	if(pressure > ONE_ATMOSPHERE)
 		if(max_pressure_protection != null)

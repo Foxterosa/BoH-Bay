@@ -1,5 +1,5 @@
 /obj/item/organ/internal/heart
-	name = "heart"
+	name = "corazon"
 	icon_state = "heart-on"
 	organ_tag = "heart"
 	parent_organ = BP_CHEST
@@ -9,7 +9,7 @@
 	var/beat_sound = 'sound/effects/singlebeat.ogg'
 	var/tmp/next_blood_squirt = 0
 	damage_reduction = 0.7
-	relative_size = 5
+	relative_size = 25
 	max_damage = 45
 	var/open
 	var/list/external_pump
@@ -46,13 +46,13 @@
 	// pulse mod starts out as just the chemical effect amount
 	var/pulse_mod = owner.chem_effects[CE_PULSE]
 	var/is_stable = owner.chem_effects[CE_STABLE]
-		
+
 	// If you have enough heart chemicals to be over 2, you're likely to take extra damage.
 	if(pulse_mod > 2 && !is_stable)
 		var/damage_chance = (pulse_mod - 2) ** 2
 		if(prob(damage_chance))
 			take_internal_damage(0.5)
-	
+
 	// Now pulse mod is impacted by shock stage and other things too
 	if(owner.shock_stage > 30)
 		pulse_mod++
@@ -60,9 +60,11 @@
 		pulse_mod++
 
 	var/oxy = owner.get_blood_oxygenation()
-	if(oxy < BLOOD_VOLUME_OKAY) //brain wants us to get MOAR OXY
+	if(oxy < BLOOD_VOLUME_OKAY && !owner.chem_effects[CE_NOPULSE]) //brain wants us to get MOAR OXY
 		pulse_mod++
-	if(oxy < BLOOD_VOLUME_BAD) //MOAR
+	if(oxy < BLOOD_VOLUME_BAD && !owner.chem_effects[CE_NOPULSE]) //MOAR
+		pulse_mod++
+	if(oxy < BLOOD_VOLUME_SURVIVE && !owner.chem_effects[CE_NOPULSE]) //PUSH IT TO THE LIMIT
 		pulse_mod++
 
 	if(owner.status_flags & FAKEDEATH || owner.chem_effects[CE_NOPULSE])
@@ -77,7 +79,7 @@
 		should_stop = should_stop || prob(max(0, owner.getBrainLoss() - owner.maxHealth * 0.75)) //brain failing to work heart properly
 		should_stop = should_stop || (prob(5) && pulse == PULSE_THREADY) //erratic heart patterns, usually caused by oxyloss
 		if(should_stop) // The heart has stopped due to going into traumatic or cardiovascular shock.
-			to_chat(owner, "<span class='danger'>Your heart has stopped!</span>")
+			to_chat(owner, "<span class='danger'>Tu corazon se ha detenido!</span>")
 			pulse = PULSE_NONE
 			return
 
@@ -172,8 +174,8 @@
 		if(world.time >= next_blood_squirt && istype(owner.loc, /turf) && do_spray.len)
 			var/spray_organ = pick(do_spray)
 			owner.visible_message(
-				SPAN_DANGER("Blood sprays out from \the [owner]'s [spray_organ]!"),
-				FONT_HUGE(SPAN_DANGER("Blood sprays out from your [spray_organ]!"))
+				SPAN_DANGER("La sangre chorrea fuera de \the [owner]'s [spray_organ]!"),
+				FONT_HUGE(SPAN_DANGER("La sangre chorrea fuera de tu [spray_organ]!"))
 			)
 			owner.Stun(1)
 			owner.eye_blurry = 2

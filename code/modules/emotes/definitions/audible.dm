@@ -15,11 +15,24 @@
 /decl/emote/audible/whimper
 	key ="whimper"
 	emote_message_3p = "USER whimpers."
+/decl/emote/audible/whimper/do_extra(var/atom/user)
+	if(iscarbon(user)) //Citadel Edit because this is hilarious
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc,pick( 'sound/emotes_skyrat/whimper_f1.ogg','sound/emotes_skyrat/whimper_f2.ogg', 50, 1))
 
 /decl/emote/audible/gasp
 	key ="gasp"
 	emote_message_3p = "USER gasps."
 	conscious = 0
+/decl/emote/audible/gasp/do_extra(var/atom/user)
+	if(iscarbon(user)) //Citadel Edit because this is hilarious
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc, pick ( 'sound/emotes_skyrat/gasp_f1.ogg','sound/emotes_skyrat/gasp_f2.ogg','sound/emotes_skyrat/gasp_f3.ogg','sound/emotes_skyrat/gasp_f4.ogg','sound/emotes_skyrat/gasp_f5.ogg','sound/emotes_skyrat/gasp_f6.ogg', 50, 1))
+		else
+			playsound(C.loc, pick ( 'sound/emotes_skyrat/gasp_m1.ogg','sound/emotes_skyrat/gasp_m2.ogg','sound/emotes_skyrat/gasp_m3.ogg','sound/emotes_skyrat/gasp_m4.ogg','sound/emotes_skyrat/gasp_m5.ogg','sound/emotes_skyrat/gasp_m6.ogg', 50, 1))
+
 
 /decl/emote/audible/scretch
 	key ="scretch"
@@ -71,6 +84,14 @@
 	key = "sniff"
 	emote_message_3p = "USER sniffs."
 
+/decl/emote/audible/sniff/do_extra(var/atom/user)
+	if(iscarbon(user)) //Citadel Edit because this is hilarious
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc, 'sound/emotes_skyrat/female_sniff.ogg', 50, 1)
+		if(C.gender == MALE)
+			playsound(C.loc, 'sound/emotes_skyrat/male_sniff.ogg', 50, 1)
+
 /decl/emote/audible/snore
 	key = "snore"
 	emote_message_3p = "USER snores."
@@ -97,6 +118,14 @@
 	emote_message_3p = "USER coughs!"
 	conscious = 0
 
+/decl/emote/audible/cough/do_extra(var/atom/user)
+	if(iscarbon(user)) //Citadel Edit because this is hilarious
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc,pick ('sound/emotes_skyrat/female_cough_1.ogg','sound/emotes_skyrat/female_cough_2.ogg','sound/emotes_skyrat/female_cough_3.ogg', 50, 1))
+		else
+			playsound(C.loc,pick ('sound/emotes_skyrat/male_cough_1.ogg','sound/emotes_skyrat/male_cough_2.ogg','sound/emotes_skyrat/male_cough_3.ogg', 50, 1))
+
 /decl/emote/audible/cry
 	key = "cry"
 	emote_message_3p = "USER cries."
@@ -113,6 +142,14 @@
 	key = "laugh"
 	emote_message_3p_target = "USER laughs at TARGET."
 	emote_message_3p = "USER laughs."
+
+/decl/emote/audible/laugh/do_extra(var/atom/user)
+	if(iscarbon(user)) //Citadel Edit because this is hilarious
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc, 'sound/voice/human/womanlaugh.ogg', 50, 1)
+		else
+			playsound(C.loc,pick ('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg', 50, 1))
 
 /decl/emote/audible/mumble
 	key = "mumble"
@@ -135,6 +172,11 @@
 /decl/emote/audible/giggle
 	key = "giggle"
 	emote_message_3p = "USER giggles."
+/decl/emote/audible/giggle/do_extra(var/atom/user)
+	if(iscarbon(user)) //Citadel Edit because this is hilarious
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc,pick ('sound/emotes_skyrat/female_giggle_1.ogg','sound/emotes_skyrat/female_giggle_2.ogg', 50, 1))
 
 /decl/emote/audible/scream
 	key = "scream"
@@ -154,26 +196,26 @@
 
 /decl/emote/audible/fsnap
 	key = "fsnap"
-	emote_message_1p_target = "<span class='notice'>You snap at TARGET, trying to get TARGET_THEIR attention.</span>"
-	emote_message_1p = "You snap with fingers."
-	emote_message_3p_target = "<span class='notice'>USER snap at TARGET, trying to get TARGET_THEIR attention.</span>"
-	emote_message_3p = "USER snaps with fingers."
+	emote_message_1p_target = "<span class='notice'>You snap your fingers at TARGET, trying to get TARGET_THEIR attention.</span>"
+	emote_message_1p = "You snap your fingers."
+	emote_message_3p_target = "<span class='notice'>USER snaps USER_THEIR fingers at TARGET, trying to get TARGET_THEIR attention.</span>"
+	emote_message_3p = "USER snaps USER_THEIR fingers."
 	emote_sound = 'sound/misc/fsnap1.ogg'
 
 /decl/emote/audible/fsnap2
 	key = "fsnap2"
-	emote_message_1p_target = "<span class='notice'>You snap at TARGET twice, trying to get TARGET_THEIR attention.</span>"
-	emote_message_1p = "You snap with fingers twice."
-	emote_message_3p_target = "<span class='notice'>USER snap at TARGET twice, trying to get TARGET_THEIR attention.</span>"
-	emote_message_3p = "USER snaps with fingers twice."
+	emote_message_1p_target = "<span class='notice'>You snap your fingers at TARGET twice, trying to get TARGET_THEIR attention.</span>"
+	emote_message_1p = "You snap your fingers twice."
+	emote_message_3p_target = "<span class='notice'>USER snaps USER_THEIR fingers at TARGET twice, trying to get TARGET_THEIR attention.</span>"
+	emote_message_3p = "USER snaps USER_THEIR fingers twice."
 	emote_sound = 'sound/misc/fsnap2.ogg'
 
 /decl/emote/audible/fsnap3
 	key = "fsnap3"
-	emote_message_1p_target = "<span class='notice'>You snap at TARGET thrice, trying to get TARGET_THEIR attention.</span>"
-	emote_message_1p = "You snap with fingers thrice."
-	emote_message_3p_target = "<span class='notice'>USER snap at TARGET thrice, trying to get TARGET_THEIR attention.</span>"
-	emote_message_3p = "USER snaps with fingers thrice."
+	emote_message_1p_target = "<span class='notice'>You snap your fingers at TARGET three times in a row, trying to get TARGET_THEIR attention.</span>"
+	emote_message_1p = "You snap your fingers three times in a row."
+	emote_message_3p_target = "<span class='notice'>USER snaps USER_THEIR fingers at TARGET three times in a row, trying to get TARGET_THEIR attention.</span>"
+	emote_message_3p = "USER snaps USER_THEIR fingers three times in a row."
 	emote_sound = 'sound/misc/fsnap3.ogg'
 
 /decl/emote/audible/bug_hiss
@@ -222,3 +264,30 @@
 	key = "oorah"
 	emote_message_3p= "USER oorahs!"
 	emote_message_3p_target= "USER oorahs at TARGET!"
+
+/decl/emote/audible/aslap
+	key = "aslap"
+	emote_message_1p = "Te nalgeas a ti mismo!"
+	emote_message_3p= "USER nalgea a TARGET!"
+	emote_sound = 'sound/effects/snap.ogg'
+
+/decl/emote/audible/nya
+	key = "nya"
+	emote_message_1p = "Dejas salir el Nya~"
+	emote_message_3p= "USER deja salir el Nya~"
+/decl/emote/audible/nya/do_extra(var/atom/user)
+	if(iscarbon(user)) //Citadel Edit because this is hilarious
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc, 'sound/effects/nya.ogg', 10, 1)
+
+/decl/emote/audible/awoo
+	key = "awoo"
+	emote_message_1p = "Dejas salir el Awoo~"
+	emote_message_3p= "USER deja salir el Awoo~"
+
+/decl/emote/audible/awoo/do_extra(var/atom/user)
+	if(iscarbon(user)) //Citadel Edit because this is hilarious
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc, 'sound/voice/awoo.ogg', 10, 1)

@@ -1,7 +1,7 @@
 /obj/item/weapon/storage/box/syndie_kit
 	name = "box"
 	desc = "A sleek, sturdy box."
-	icon_state = "box_of_doom"
+	icon_state = "box"
 
 //For uplink kits that provide bulkier items
 /obj/item/weapon/storage/backpack/satchel/syndie_kit
@@ -45,6 +45,57 @@
 		/obj/item/clothing/head/helmet/space/void/merc,
 		/obj/item/clothing/mask/gas/syndicate,
 		/obj/item/weapon/tank/emergency/oxygen/double,
+		/obj/item/clothing/shoes/magboots
+		)
+
+//Soft Suit uplink kit
+/obj/item/weapon/storage/backpack/satchel/syndie_kit/softsuit
+
+	startswith = list(
+		/obj/item/clothing/head/helmet/space/emergency,
+		/obj/item/clothing/suit/space/emergency
+		)
+
+//Plate kits
+
+/obj/item/weapon/storage/backpack/satchel/syndie_kit/riotkit
+
+	startswith = list(
+	/obj/item/clothing/accessory/armguards/riot,
+	/obj/item/clothing/accessory/legguards/riot,
+	/obj/item/clothing/head/helmet/riot
+	)
+
+/obj/item/weapon/storage/backpack/satchel/syndie_kit/ballistickit
+
+	startswith = list(
+	/obj/item/clothing/accessory/armguards/ballistic,
+	/obj/item/clothing/accessory/legguards/ballistic,
+	/obj/item/clothing/head/helmet/ballistic,
+	)
+
+/obj/item/weapon/storage/backpack/satchel/syndie_kit/ablativekit
+
+	startswith = list(
+	/obj/item/clothing/accessory/armguards/ablative,
+	/obj/item/clothing/accessory/legguards/ablative,
+	/obj/item/clothing/head/helmet/ablative
+	)
+
+/obj/item/weapon/storage/backpack/satchel/syndie_kit/mediumkit
+
+	startswith = list(
+	/obj/item/clothing/accessory/armorplate/medium,
+	/obj/item/clothing/accessory/armguards,
+	/obj/item/clothing/accessory/legguards,
+	/obj/item/clothing/head/helmet
+	)
+
+//Chameleon Armor uplink kit
+/obj/item/weapon/storage/backpack/chameleonarmor/sydie_kit
+	startswith = list(
+		/obj/item/clothing/suit/chameleonarmor,
+		/obj/item/clothing/head/chameleonarmor
 		)
 
 // Chameleon uplink kit
@@ -97,6 +148,13 @@
 		/obj/item/weapon/gun/projectile/revolver,
 		/obj/item/ammo_magazine/speedloader/magnum
 	)
+
+/obj/item/weapon/storage/backpack/satchel/syndie_kit/magnum
+	startswith = list(
+		/obj/item/weapon/gun/projectile/pistol/magnum_pistol,
+		/obj/item/ammo_magazine/magnum
+	)
+
 
 /obj/item/weapon/storage/box/syndie_kit/toxin
 	startswith = list(
@@ -174,3 +232,13 @@
 		/obj/item/clothing/suit/armor/pcarrier/merc,
 		/obj/item/clothing/head/helmet/merc
 	)
+
+/obj/item/weapon/storage/backpack/dufflebag/syndie/juggernaut
+	startswith = list(
+		/obj/item/clothing/suit/bomb_suit/juggernaut,
+		/obj/item/clothing/head/bomb_hood/juggernaut
+	)
+
+/obj/item/weapon/storage/backpack/dufflebag/syndie/juggernaut/Initialize()
+	. = ..()
+	make_exact_fit()

@@ -40,6 +40,7 @@
 	name = OUTFIT_JOB_NAME("Bridge Officer - Marine Corps")
 	uniform = /obj/item/clothing/under/solgov/utility/army/command
 	shoes = /obj/item/clothing/shoes/dutyboots
+
 /***/
 
 // Engineering
@@ -166,3 +167,42 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	backpack_contents = list(/obj/item/clothing/accessory/armor/tag/saare = 1, /obj/item/clothing/accessory/armor/helmcover/saare = 1)
 /***/
+
+//Medical Psyker
+/decl/hierarchy/outfit/job/torch/crew/command/psiadvisor/equip_id(var/mob/living/carbon/human/H, var/rank, var/assignment, var/equip_adjustments)
+	. = ..()
+	var/obj/item/weapon/card/id/foundation_civilian/regis_card = new
+	if(rank)
+		regis_card.rank = rank
+	if(assignment)
+		regis_card.assignment = assignment
+	H.set_id_info(regis_card)
+	H.equip_to_slot_or_store_or_drop(regis_card)
+
+//Magistrado
+/decl/hierarchy/outfit/job/torch/crew/magistrado
+	name = OUTFIT_JOB_NAME("Magistrado")
+	l_ear = /obj/item/device/radio/headset/headset_com
+	uniform = /obj/item/clothing/under/rank/internalaffairs/plain/solgov
+	suit = /obj/item/clothing/suit/storage/toggle/suit/black
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/torch/crew/magistrado
+	pda_type = /obj/item/modular_computer/pda/heads/paperpusher
+
+//Blueshield
+/decl/hierarchy/outfit/job/torch/crew/command/blueshield
+	name = OUTFIT_JOB_NAME("Blueshield")
+	l_ear = /obj/item/device/radio/headset/heads/torchexec
+	uniform = /obj/item/clothing/under/bs_uniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/torch/crew/blueshield
+	pda_type = /obj/item/modular_computer/pda/heads/paperpusher
+
+
+//Lawyer
+/decl/hierarchy/outfit/job/torch/crew/service/lawyer
+	name = OUTFIT_JOB_NAME("Lawyer")
+	uniform = /obj/item/clothing/under/lawyer/black
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/torch/contractor/service/lawyer
+	pda_type = /obj/item/modular_computer/pda

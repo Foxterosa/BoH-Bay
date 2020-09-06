@@ -11,7 +11,7 @@
 	icon_vend = "sec-vend"
 	vend_delay = 14
 	base_type = /obj/machinery/vending/security
-	req_access = list(access_armory)
+	req_access = list(access_security)
 	products = list(
 		/obj/item/clothing/accessory/armguards = 12,
 		/obj/item/clothing/accessory/armguards/navy = 8,
@@ -29,6 +29,11 @@
 		/obj/item/clothing/accessory/legguards/riot = 4,
 		/obj/item/clothing/accessory/legguards/ballistic = 2,
 		/obj/item/clothing/accessory/legguards/ablative = 2,
+		/obj/item/clothing/accessory/storage/holster = 8,
+		/obj/item/clothing/accessory/storage/holster/armpit = 8,
+		/obj/item/clothing/accessory/storage/holster/hip = 8,
+		/obj/item/clothing/accessory/storage/holster/thigh = 8,
+		/obj/item/clothing/accessory/storage/holster/waist = 8,
 		/obj/item/clothing/accessory/storage/pouches = 12,
 		/obj/item/clothing/accessory/storage/pouches/large = 4,
 		/obj/item/clothing/accessory/ubac = 24,

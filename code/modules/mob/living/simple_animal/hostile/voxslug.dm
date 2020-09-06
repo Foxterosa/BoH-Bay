@@ -15,8 +15,8 @@ Small, little HP, poisonous.
 	destroy_surroundings = 0
 	health = 15
 	maxHealth = 15
-	speed = 0
-	move_to_delay = 0
+	speed = 1
+	move_to_delay = 3
 	density = 1
 	min_gas = null
 	mob_size = MOB_MINISCULE
@@ -76,7 +76,7 @@ Small, little HP, poisonous.
 			if(prob(1))
 				to_chat(L, "<span class='warning'>You feel strange as \the [src] pulses...</span>")
 			var/datum/reagents/R = L.reagents
-			R.add_reagent(/datum/reagent/cryptobiolin, 0.5)
+			R.add_reagent(/datum/reagent/vecuronium_bromide, 0.5)
 
 /obj/item/weapon/holder/voxslug/attack(var/mob/target, var/mob/user)
 	var/mob/living/simple_animal/hostile/voxslug/V = contents[1]

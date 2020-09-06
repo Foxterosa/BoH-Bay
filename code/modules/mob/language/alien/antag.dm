@@ -35,6 +35,9 @@
 		var/mob/living/carbon/M = speaker
 		B = M.has_brain_worms()
 	else if(istype(speaker,/mob/living/simple_animal/borer))
+		if(B.neutered)
+			to_chat(B, SPAN_WARNING("You lack the ability to broadcast your thoughts."))
+			return FALSE
 		B = speaker
 
 	if(B)
@@ -42,7 +45,7 @@
 			if(B.host.nutrition < 50 || B.host.stat)
 				to_chat(speaker, SPAN_WARNING("Your host is too weak to relay your broadcast."))
 				return FALSE
-			B.host.nutrition -= rand(1, 3)
+			B.host.adjust_nutrition(-rand(1, 3))
 		speaker_mask = B.truename
 	..(speaker,message,speaker_mask)
 
@@ -110,7 +113,7 @@
 	name = LANGUAGE_ALIUM
 	colour = "cult"
 	speech_verb = "hisses"
-	key = "c"
+	key = "a"
 	flags = RESTRICTED
 	syllables = list("qy","bok","mok","yok","dy","gly","ryl","byl","dok","forbici", "tarem", "n'ath", "reth", "sh'yro", "eth", "d'raggathnor","niii",
 	"d'rekkathnor", "khari'd", "gual'te", "ki","ki","ki","ki","ya","ta","wej","nym","assah","qwssa","nieasl","qyno","shaffar",

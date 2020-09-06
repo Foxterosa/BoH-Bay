@@ -20,8 +20,8 @@
 	excludes = list(/datum/trait/hot_blooded)
 
 /datum/trait/hot_blooded
-	name = "Hot-blooded"
-	desc = "Your body is capable of more vigourous endothermoregulation, causing your average body temperature to be higher than normal."
+	name = "Sangre caliente"
+	desc = "Su cuerpo es capaz de una endoregulación termica mas vigorosa, lo que hace que su temperatura corporal promedio sea mas alta de lo normal."
 	cost = 0
 	var_changes = list("body_temperature" = 313, "heat_discomfort_level" = 320)
 	excludes = list(/datum/trait/cold_blooded)
@@ -45,3 +45,15 @@
 	cost = 0
 	var_changes = list("hunger_factor" = DEFAULT_HUNGER_FACTOR * 0.5, "metabolism_mod" = 0.5)
 	excludes = list(/datum/trait/fast_meta)
+
+/datum/trait/carnivore
+	name = "Carnivore"
+	desc = "For one reason or another, you're only capable of eating meat. Vegetables won't kill you, but they won't help you either."
+	cost = 0
+	var_changes = list(reagent_tag = IS_CARNIVORE)
+
+/datum/trait/herbivore
+	name = "Herbivore"
+	desc = "You're only able to eat plants. Eating meat and other animal protein will poison you."
+	cost = 0
+	var_changes = list(reagent_tag = IS_HERBIVORE)

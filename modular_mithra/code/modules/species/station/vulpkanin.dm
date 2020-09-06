@@ -14,7 +14,7 @@
 
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/claws)
 
-	description = "Fox-wolf-dog-thing genemodders. This is just a placeholder description."
+	description = "Vulpkanin es el termino usualmente utilizado para todas las modificaciones geneticas que tengan que ver con lo canino. Modificaciones geneticas de Vulpkanin, inicialmente patentadas por VeyMed, fueron hechas populares a la mitad del siglo 22, y solo han incrementado en numero desde entonces. Es un tipo de especie tan prolifico que hay comunidades enteras de poblaciones que se reproducen de forma natural y se mantienen a si mismas. Podrias ser de cualquier parte: el espacio Sol, o la Frontera, o tal vez incluso en UCG, no se muestra bien."
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -22,7 +22,7 @@
 	sexybits_location = BP_GROIN //this is possibly my favorite variable just because of how out of place it is. - cebu | what the hell does it even do -tori | Basically it just defines where you can hit them for massive (pain) damage. An entire variable dedicated to nutshots. -cebu
 
 
-	available_cultural_info = list( //I can do ANYTHING! Placeholder until the loreboys come and figure out what Vulpkanin do
+	available_cultural_info = list( //I can do ANYTHING! Placeholder until the loreboys come and figure out what Vulpkanin do | did it -bear
 		TAG_CULTURE = list(
 			CULTURE_HUMAN,
 			CULTURE_HUMAN_VATGROWN,
@@ -40,14 +40,13 @@
 			CULTURE_HUMAN_SPAFRO,
 			CULTURE_HUMAN_CONFED,
 			CULTURE_HUMAN_OTHER,
-			CULTURE_SKRELL_QERR,
-			CULTURE_SKRELL_MALISH,
-			CULTURE_SKRELL_KANIN,
-			CULTURE_SKRELL_TALUM,
-			CULTURE_SKRELL_RASKINTA,
-			CULTURE_UNATHI,
+			CULTURE_SYMBIOTIC
 		)
 	)
+
+	autohiss_basic_map = list(
+			"r" = list("rr", "rrr", "rrrr")
+		)
 
 /datum/species/vulpkanin/proc/handle_coco(var/mob/living/carbon/human/M, var/datum/reagent/nutriment/coco, var/efficiency = 1)
 	var/effective_dose = efficiency * M.chem_doses[coco.type]

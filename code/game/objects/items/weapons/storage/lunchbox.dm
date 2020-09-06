@@ -97,11 +97,19 @@
 	filled = TRUE
 
 /obj/item/weapon/storage/lunchbox/TCC
-	name = "\improper GCC lunchbox"
+	name = "\improper UCG lunchbox"
 	icon_state = "lunchbox_tcc"
 	item_state = "toolbox_syndi"
-	desc = "A little lunchbox. This one is branded with the flag of the Gilgamesh Colonial Confederation!"
+	desc = "A little lunchbox. This one is branded with the flag of the United Colonies of Gilgamesh"
 
 /obj/item/weapon/storage/lunchbox/syndicate/filled
 	filled = TRUE
 
+/obj/item/weapon/storage/lunchbox/medbay
+	name = "\improper lonchera de Medbay"
+	icon_state = "lunchbox_med"
+	item_state = "toolbox_white"
+	desc = "Una pequeña lonchera. Esta tiene el logo de med en ella."
+
+/obj/item/weapon/storage/lunchbox/medbay/filled
+	filled = TRUE

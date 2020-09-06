@@ -109,7 +109,7 @@ GLOBAL_DATUM_INIT(temp_reagents_holder, /obj, new)
 
 			if(my_atom)
 				if(replace_message)
-					my_atom.visible_message("<span class='notice'>\icon[my_atom] [replace_message]</span>")
+					my_atom.visible_message("<span class='notice'>[icon2html(my_atom, viewers(get_turf(my_atom)))] [replace_message]</span>")
 				if(replace_sound)
 					playsound(my_atom, replace_sound, 80, 1)
 
@@ -254,6 +254,13 @@ GLOBAL_DATUM_INIT(temp_reagents_holder, /obj, new)
 			return current.volume
 	return 0
 
+/datum/reagents/proc/get_reagent(var/reagent_type) // Returns reference to reagent matching passed reagent type
+	for(var/datum/reagent/current in reagent_list)
+		if (current.type == reagent_type)
+			return current
+
+	return 0
+
 /datum/reagents/proc/get_data(var/reagent_type)
 	for(var/datum/reagent/current in reagent_list)
 		if(current.type == reagent_type)
@@ -364,6 +371,24 @@ GLOBAL_DATUM_INIT(temp_reagents_holder, /obj, new)
 	remove_reagent(type, amount)
 
 	. = F.trans_to(target, amount, multiplier) // Let this proc check the atom's type
+
+	qdel(F)
+
+/datum/reagents/proc/trans_type_to_holder(var/datum/reagents/holder, var/reagent_type, var/amount = 1, var/multiplier = 1)
+	if (!holder)
+		return
+
+	amount = min(amount, get_reagent_amount(reagent_type))
+
+	if(!amount)
+		return
+
+	var/datum/reagents/F = new /datum/reagents(amount, GLOB.temp_reagents_holder)
+	var/tmpdata = get_data(reagent_type)
+	F.add_reagent(reagent_type, amount, tmpdata)
+	remove_reagent(reagent_type, amount)
+
+	. = F.trans_to_holder(holder, amount, multiplier)
 
 	qdel(F)
 

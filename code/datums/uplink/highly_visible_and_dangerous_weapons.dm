@@ -7,20 +7,14 @@
 /datum/uplink_item/item/visible_weapons/zipgun
 	name = "Zip Gun"
 	desc = "A pipe attached to crude wooden stock with firing mechanism, holds one round."
-	item_cost = 8
+	item_cost = 4
 	path = /obj/item/weapon/gun/projectile/pirate
 
 /datum/uplink_item/item/visible_weapons/smallenergy_gun
 	name = "Small Energy Gun"
 	desc = "A pocket-sized energy based sidearm with three different lethality settings, stun, shock, kill."
-	item_cost = 16
+	item_cost = 10
 	path = /obj/item/weapon/gun/energy/gun/small
-
-/datum/uplink_item/item/visible_weapons/ancient
-	name = "Replica Pistol"
-	desc = "A cheap replica of an earth handgun. To reload, buy another."
-	item_cost = 16
-	path = /obj/item/weapon/gun/projectile/pistol/throwback
 
 /datum/uplink_item/item/visible_weapons/dartgun
 	name = "Dart Gun"
@@ -58,44 +52,32 @@
 /datum/uplink_item/item/visible_weapons/energy_gun
 	name = "Energy Gun"
 	desc = "A energy based sidearm with three different lethality settings, stun, shock, kill."
-	item_cost = 32
+	item_cost = 20
 	path = /obj/item/weapon/gun/energy/gun
 
 /datum/uplink_item/item/visible_weapons/ionpistol
 	name = "Ion Pistol"
 	desc = "Ion rifle in compact form."
-	item_cost = 40
+	item_cost = 16
 	path = /obj/item/weapon/gun/energy/ionrifle/small
-
-/datum/uplink_item/item/visible_weapons/revolver
-	name = "Magnum Revolver"
-	desc = "A high-caliber revolver. Includes an extra speedloader of ammo."
-	item_cost = 56
-	path = /obj/item/weapon/storage/backpack/satchel/syndie_kit/revolver
 
 /datum/uplink_item/item/visible_weapons/grenade_launcher
 	name = "Grenade Launcher"
-	desc = "A pump action grenade launcher loaded with a random assortment of grenades"
-	item_cost = 60
-	path = /obj/item/weapon/gun/launcher/grenade/loaded
+	desc = "A pump action grenade launcher."
+	item_cost = 40
+	path = /obj/item/weapon/gun/launcher/grenade
 
 //These are for traitors (or other antags, perhaps) to have the option of purchasing some merc gear.
 /datum/uplink_item/item/visible_weapons/submachinegun
 	name = "Black Market Submachine Gun"
 	desc = "A quick-firing weapon with three togglable fire modes. Much newer than the older C-20b, and featuring more advanced features."
-	item_cost = 76
+	item_cost = 48
 	path = /obj/item/weapon/gun/projectile/automatic/merc_smg
-
-/datum/uplink_item/item/visible_weapons/submachinegun/hacked
-	name = "Hacked SMG"
-	desc = "The Infantry's C-20b, hacked to fire aboard the vessel."
-	item_cost = 42
-	path = /obj/item/weapon/gun/projectile/automatic/merc_smg/hacked
 
 /datum/uplink_item/item/visible_weapons/assaultrifle
 	name = "Assault Rifle"
 	desc = "A common rifle with three togglable fire modes."
-	item_cost = 80
+	item_cost = 72
 	path = /obj/item/weapon/gun/projectile/automatic/assault_rifle
 
 /datum/uplink_item/item/visible_weapons/advanced_energy_gun
@@ -119,7 +101,7 @@
 /datum/uplink_item/item/visible_weapons/machine_pistol
 	name = "Standard Machine Pistol"
 	desc = "A high rate of fire weapon in a smaller form factor, able to sling standard ammunition almost as quick as a submachine gun."
-	item_cost = 45
+	item_cost = 37
 	path = /obj/item/weapon/gun/projectile/automatic/machine_pistol
 
 /datum/uplink_item/item/visible_weapons/combat_shotgun
@@ -132,25 +114,25 @@
 /datum/uplink_item/item/visible_weapons/sawnoff
 	name = "Sawnoff Shotgun"
 	desc = "A shortened double-barrel shotgun, able to fire either one, or both, barrels at once."
-	item_cost = 45
+	item_cost = 34
 	path = /obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn
 
 /datum/uplink_item/item/visible_weapons/deagle
 	name = "Magnum Pistol"
-	desc = "A high-caliber pistol that uses 15mm ammunition."
+	desc = "A high-caliber pistol that uses 15mm ammunition. Contains a spare magazine."
 	item_cost = 52
-	path = /obj/item/weapon/gun/projectile/pistol/magnum_pistol
+	path = /obj/item/weapon/storage/backpack/satchel/syndie_kit/magnum
 
 /datum/uplink_item/item/visible_weapons/sigsauer
 	name = "Standard Military Pistol"
 	desc = "A regularly used and reliable weapon that is standard issue in the Navy."
-	item_cost = 40
+	item_cost = 16
 	path = /obj/item/weapon/gun/projectile/pistol/military/alt
 
 /datum/uplink_item/item/visible_weapons/detective_revolver
 	name = "Small Revolver"
 	desc = "A pocket-sized holdout revolver. Easily concealable.."
-	item_cost = 24
+	item_cost = 10
 	path = /obj/item/weapon/gun/projectile/revolver/holdout
 
 /datum/uplink_item/item/visible_weapons/pulserifle
@@ -185,6 +167,7 @@
 
 /datum/uplink_item/item/visible_weapons/harpoonbomb
 	name = "Explosive Harpoon"
+	desc = "A short throwing spear with a grenade attached to the end. For when you want to take on a tank with just a spear."
 	item_cost = 12
 	path = /obj/item/weapon/material/harpoon/bomb
 
@@ -192,7 +175,7 @@
 	name = "Incendiary Laser Blaster"
 	desc = "A laser weapon developed and subsequently banned in Sol space, it sets its targets on fire with dispersed laser technology. \
 			Most of these blasters were swiftly bought back and destroyed - but not this one."
-	item_cost = 40
+	item_cost = 32
 	path = /obj/item/weapon/gun/energy/incendiary_laser
 
 /datum/uplink_item/item/visible_weapons/boltaction
@@ -200,3 +183,15 @@
 	desc = "For arming your comrades on the cheap!"
 	item_cost = 6
 	path = /obj/item/weapon/gun/projectile/heavysniper/boltaction
+
+/datum/uplink_item/item/visible_weapons/energyshield
+	name = "Energy Shield"
+	desc = "A shield capable of stopping most projectile and melee attacks. It can be retracted, expanded, and stored anywhere."
+	item_cost = 22
+	path = /obj/item/weapon/shield/energy
+
+/datum/uplink_item/item/visible_weapons/
+	name = "Switchblade"
+	desc = "Damn it feels good to be a gangsta."
+	item_cost = 4
+	path = /obj/item/weapon/material/knife/folding/combat/switchblade

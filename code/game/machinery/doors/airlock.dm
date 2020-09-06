@@ -744,8 +744,10 @@ About the new airlock wires panel:
 	overlays += panel_overlay
 	overlays += weld_overlay
 	overlays += brace_overlay
-	overlays += lights_overlay
-	overlays += sparks_overlay
+	var/image/lights_OL = overlay_image(lights_overlay, plane = EFFECTS_ABOVE_LIGHTING_PLANE, layer = ABOVE_LIGHTING_LAYER)
+	overlays += lights_OL
+	var/image/sparks_OL = overlay_image(sparks_overlay, plane = EFFECTS_ABOVE_LIGHTING_PLANE, layer = ABOVE_LIGHTING_LAYER)
+	overlays += sparks_OL
 	overlays += damage_overlay
 
 /obj/machinery/door/airlock/do_animate(animation)
@@ -1092,7 +1094,7 @@ About the new airlock wires panel:
 	else if(istype(C, /obj/item/weapon/pai_cable))	// -- TLE
 		var/obj/item/weapon/pai_cable/cable = C
 		cable.plugin(src, user)
-	else if(!repairing && isCrowbar(C))
+	else if(!repairing && isCrowbar(C) && user.a_intent != I_HURT)
 		if(src.p_open && (operating < 0 || (!operating && welded && !src.arePowerSystemsOn() && density && !src.locked)) && !brace)
 			playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
 			user.visible_message("[user] removes the electronics from the airlock assembly.", "You start to remove electronics from the airlock assembly.")

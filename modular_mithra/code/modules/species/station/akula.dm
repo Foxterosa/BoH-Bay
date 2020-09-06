@@ -13,7 +13,7 @@
 
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/tail, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp)
 
-	description = "Sharks! This is just a placeholder description!"
+	description = "Una especie de modificaciones geneticas, divergente de los Tritonians, mediante la adicion de masa muscular adicional y dientes mas afilados. Aunque las dos razas son basadas en humanos con modificaciones geneticas que surgio de las condiciones de su colonia en el planeta acuatico, Koster-4, Tritonians generalmente siempre ha sido una seleccion mas popular en modificaciones geneticas, debido a las grandes necesidades dieteticas de un Akula."
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -21,7 +21,7 @@
 	sexybits_location = BP_GROIN //this is possibly my favorite variable just because of how out of place it is.
 
 
-	available_cultural_info = list( //I can do ANYTHING! Placeholder until the loreboys come and figure out what Akula do
+	available_cultural_info = list( //I can do ANYTHING! Placeholder until the loreboys come and figure out what Akula do | did it - bear
 		TAG_CULTURE = list(
 			CULTURE_HUMAN,
 			CULTURE_HUMAN_VATGROWN,
@@ -38,12 +38,8 @@
 			CULTURE_HUMAN_SPACER,
 			CULTURE_HUMAN_SPAFRO,
 			CULTURE_HUMAN_CONFED,
-			CULTURE_HUMAN_OTHER,
-			CULTURE_SKRELL_QERR,
-			CULTURE_SKRELL_MALISH,
-			CULTURE_SKRELL_KANIN,
-			CULTURE_SKRELL_TALUM,
-			CULTURE_SKRELL_RASKINTA,
-			CULTURE_UNATHI,
+			CULTURE_SYMBIOTIC,
+			CULTURE_HUMAN_OTHER
 		)
 	)
+	override_organ_types = list(BP_LUNGS = /obj/item/organ/internal/lungs/gills)

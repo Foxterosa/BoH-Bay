@@ -102,6 +102,16 @@
 	icon_state = "hair_ponytail6"
 	flags = HAIR_TIEABLE
 
+/datum/sprite_accessory/hair/ponytail7
+	name = "Ponytail 7"
+	icon_state = "hair_ponytail7"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/half_pati
+	name = "Half-Pati"
+	icon_state = "hair_halfpati"
+	flags = HAIR_TIEABLE
+
 /datum/sprite_accessory/hair/sideponytail
 	name = "Side Ponytail"
 	icon_state = "hair_stail"
@@ -298,6 +308,31 @@
 /datum/sprite_accessory/hair/himecut
 	name = "Hime Cut"
 	icon_state = "hair_himecut"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/himecutlong
+	name = "Long Hime Cut"
+	icon_state = "hair_himecut_long"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/shy
+	name = "Shy"
+	icon_state = "hair_shy"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/wisp
+	name = "Wisp"
+	icon_state = "hair_wisp"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/anomaly
+	name = "Anomaly"
+	icon_state = "hair_anomaly"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/beedheadlong
+	name = "Beedhead"
+	icon_state = "hair_long_bedhead"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/shorthime
@@ -672,4 +707,14 @@
 /datum/sprite_accessory/hair/ziegler
 	name = "Zieglertail"
 	icon_state = "hair_ziegler"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/cerberus
+	name = "Cerberus"
+	icon_state = "hair_cerberus"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/himecutponytail
+	name = "Himecut long ponytail"
+	icon_state = "himecut_long_ponytail"
 	flags = HAIR_TIEABLE

@@ -220,6 +220,7 @@
 				var/new_rank = sanitize(input(user,"What rank would you like to put on this card?","Agent Card Rank") as null|anything in mil_branches.spawn_ranks(military_branch.name))
 				if(!isnull(new_rank) && CanUseTopic(user, state))
 					src.military_rank = mil_branches.spawn_ranks(military_branch.name)[new_rank]
+					src.pow_cat = src.military_rank.pow_cat
 					to_chat(user, "<span class='notice'>Rank changed to '[military_rank.name]'.</span>")
 					. = 1
 
@@ -238,7 +239,11 @@
 			CS.color = initial(ID.color)
 			CS.detail_color = initial(ID.detail_color)
 			CS.extra_details = initial(ID.extra_details)
-			CS.name = initial(ID.name) + " - " + initial(ID.icon_state)
+			CS.name = initial(ID.name)
+			if (initial(ID.job_access_type))
+				var/datum/job/J = initial(ID.job_access_type)
+				CS.name += " ([initial(J.title)]) "
+			CS.name += " - [initial(ID.icon_state)]"
 			var/color_pair = ""
 			if(CS.color)
 				color_pair += CS.color

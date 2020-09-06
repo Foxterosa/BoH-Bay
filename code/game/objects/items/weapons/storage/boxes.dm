@@ -113,6 +113,20 @@
 					/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar = 1,
 					/obj/item/device/oxycandle = 1)
 
+
+/obj/item/weapon/storage/box/phoron
+	name = "Phoron Restructurant survival kit"
+	desc = "A box decorated in warning colors that contains a limited supply of survival tools for those suffering from Phoron Restructurant syndrome."
+	icon_state = "survivaleng"
+	startswith = list(
+		/obj/item/weapon/tank/emergency/phoron = 2,
+		/obj/item/weapon/extinguisher/mini = 1,
+		/obj/item/weapon/reagent_containers/hypospray/autoinjector = 1,
+		/obj/item/stack/medical/bruise_pack = 1,
+		/obj/item/device/flashlight/flare/glowstick = 1
+	)
+
+
 /obj/item/weapon/storage/box/gloves
 	name = "box of sterile gloves"
 	desc = "Contains sterile gloves."
@@ -220,8 +234,8 @@
 	name = "box of frag shells"
 	desc = "A box containing 12 military grade fragmentation shells.<br> WARNING: Live explosive munitions. Misuse may result in serious injury or death."
 	icon_state = "flashbang"
-	startswith = list(/obj/item/weapon/grenade/frag/shell = 12)
-	max_storage_space = 24
+	startswith = list(/obj/item/weapon/grenade/frag/shell = 6)
+	max_storage_space = 12
 
 /obj/item/weapon/storage/box/smokes
 	name = "box of smoke bombs"
@@ -341,6 +355,12 @@
 	desc = "A box full of handcuffs."
 	icon_state = "handcuff"
 	startswith = list(/obj/item/weapon/handcuffs = 7)
+
+/obj/item/weapon/storage/box/zipties
+	name = "box of zipties"
+	desc = "A box full of zipties."
+	icon_state = "handcuff"
+	startswith = list(/obj/item/weapon/handcuffs/ziptie = 7)
 
 /obj/item/weapon/storage/box/mousetraps
 	name = "box of Pest-B-Gon mousetraps"

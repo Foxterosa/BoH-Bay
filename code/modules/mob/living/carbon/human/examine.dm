@@ -38,7 +38,8 @@
 		T = gender_datums[PLURAL]
 	else
 		if(icon)
-			msg += "\icon[icon] " //fucking BYOND: this should stop dreamseeker crashing if we -somehow- examine somebody before their icon is generated
+			msg += "[icon2html(icon, user)] " //fucking BYOND: this should stop dreamseeker crashing if we -somehow- examine somebody before their icon is generated
+
 
 	if(!T)
 		// Just in case someone VVs the gender to something strange. It'll runtime anyway when it hits usages, better to CRASH() now with a helpful message.
@@ -128,13 +129,13 @@
 	//handcuffed?
 	if(handcuffed)
 		if(istype(handcuffed, /obj/item/weapon/handcuffs/cable))
-			msg += "<span class='warning'>[T.He] [T.is] \icon[handcuffed] restrained with cable!</span>\n"
+			msg += "<span class='warning'>[T.He] [T.is] [icon2html(handcuffed, user)] restrained with cable!</span>\n"
 		else
-			msg += "<span class='warning'>[T.He] [T.is] \icon[handcuffed] handcuffed!</span>\n"
+			msg += "<span class='warning'>[T.He] [T.is] [icon2html(handcuffed, user)] handcuffed!</span>\n"
 
 	//buckled
 	if(buckled)
-		msg += "<span class='warning'>[T.He] [T.is] \icon[buckled] buckled to [buckled]!</span>\n"
+		msg += "<span class='warning'>[T.He] [T.is] [icon2html(buckled, user)] buckled to [buckled]!</span>\n"
 
 	//Jitters
 	if(is_jittery)
@@ -308,8 +309,8 @@
 		msg += "<span class = 'deptradio'>Physical status:</span> <a href='?src=\ref[src];medical=1'>\[[medical]\]</a>\n"
 		msg += "<span class = 'deptradio'>Medical records:</span> <a href='?src=\ref[src];medrecord=`'>\[View\]</a>\n"
 
-
-	if(print_flavor_text()) msg += "[print_flavor_text()]\n"
+	var/flavor = print_flavor_text()
+	if(flavor) msg += "[flavor]<br>"
 
 	if(mind && user.mind && name == real_name)
 		var/list/relations = matchmaker.get_relationships_between(user.mind, mind, TRUE)
@@ -386,7 +387,14 @@
 	HTML += "<a href='byond://?src=\ref[src];flavor_change=feet'>Feet:</a> "
 	HTML += TextPreview(flavor_texts["feet"])
 	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=naked'>Naked (NSFW):</a> "
+	HTML += TextPreview(flavor_texts["naked"])
+	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=NSFW/OOC'>OOC:</a> "
+	HTML += TextPreview(flavor_texts["NSFW/OOC"])
+	HTML += "<br>"
 	HTML += "<hr />"
 	HTML +="<a href='?src=\ref[src];flavor_change=done'>\[Done\]</a>"
 	HTML += "<tt>"
 	src << browse(jointext(HTML,null), "window=flavor_changes;size=430x300")
+

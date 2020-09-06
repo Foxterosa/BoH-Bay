@@ -6,12 +6,12 @@
 
 	heat_protection = HEAD
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT, 
-		bullet = ARMOR_BALLISTIC_MINOR, 
+		melee = ARMOR_MELEE_RESISTANT,
+		bullet = ARMOR_BALLISTIC_MINOR,
 		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_MINOR, 
-		bomb = ARMOR_BOMB_PADDED, 
-		bio = ARMOR_BIO_SHIELDED, 
+		energy = ARMOR_ENERGY_MINOR,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_MINOR
 		)
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
@@ -20,9 +20,10 @@
 	siemens_coefficient = 0.4
 
 	//Species-specific stuff.
-	species_restricted = list(SPECIES_HUMAN, SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_IPC)
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
+		SPECIES_OLDUNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
 		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
 		)
 	sprite_sheets_obj = list(
@@ -38,12 +39,12 @@
 	w_class = ITEM_SIZE_HUGE//bulky item
 	desc = "A high-tech dark red space suit. Used for AI satellite maintenance."
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT, 
-		bullet = ARMOR_BALLISTIC_MINOR, 
+		melee = ARMOR_MELEE_RESISTANT,
+		bullet = ARMOR_BALLISTIC_MINOR,
 		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_MINOR, 
-		bomb = ARMOR_BOMB_PADDED, 
-		bio = ARMOR_BIO_SHIELDED, 
+		energy = ARMOR_ENERGY_MINOR,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_MINOR
 		)
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit)
@@ -52,7 +53,7 @@
 	max_pressure_protection = VOIDSUIT_MAX_PRESSURE
 	siemens_coefficient = 0.4
 
-	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_IPC)
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
 		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_suit_skrell.dmi',
@@ -241,22 +242,26 @@ else if(##equipment_var) {\
 			return
 
 		if(helmet || boots || tank)
-			var/choice = input("What component would you like to remove?") as null|anything in list(helmet,boots,tank)
+			var/choices = list()
+			choices[helmet] = helmet
+			choices[boots] = boots
+			choices[tank] = tank
+			var/choice = RADIAL_INPUT(user, choices)
 			if(!choice) return
 
 			playsound(loc, 'sound/items/Screwdriver.ogg', 50)
 			if(choice == tank)	//No, a switch doesn't work here. Sorry. ~Techhead
 				to_chat(user, "You pop \the [tank] out of \the [src]'s storage compartment.")
 				user.put_in_hands(tank)
-				src.tank = null
+				tank = null
 			else if(choice == helmet)
 				to_chat(user, "You detatch \the [helmet] from \the [src]'s helmet mount.")
 				user.put_in_hands(helmet)
-				src.helmet = null
+				helmet = null
 			else if(choice == boots)
 				to_chat(user, "You detatch \the [boots] from \the [src]'s boot mounts.")
 				user.put_in_hands(boots)
-				src.boots = null
+				boots = null
 		else
 			to_chat(user, "\The [src] does not have anything installed.")
 		return

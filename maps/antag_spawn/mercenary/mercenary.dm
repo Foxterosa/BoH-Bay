@@ -6,7 +6,7 @@
 /obj/effect/overmap/visitable/merc_base
 	name = "TCV Tersten Tenacity"
 	desc = "Sensor array detects a medium cargo vessel with high structural damage."
-	in_space = 1
+	sector_flags = OVERMAP_SECTOR_IN_SPACE
 	icon_state = "ship"
 	hide_from_reports = TRUE
 	initial_generic_waypoints = list(
@@ -24,6 +24,7 @@
 	fore_dir = NORTH
 	vessel_size = SHIP_SIZE_SMALL
 	vessel_mass = 14000
+	contact_class = /decl/ship_contact_class/destroyer_escort
 
 /datum/shuttle/autodock/overmap/merc_shuttle
 	name = "Desperado"

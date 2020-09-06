@@ -36,7 +36,7 @@
 	set_opacity(0)
 	set_density(0)
 	update_nearby_tiles()
-	..()
+	. = ..()
 
 /obj/machinery/shield/CanPass(atom/movable/mover, turf/target, height, air_group)
 	if(!height || air_group) return 0
@@ -138,7 +138,7 @@
 
 /obj/machinery/shieldgen/Destroy()
 	collapse_shields()
-	..()
+	. = ..()
 
 /obj/machinery/shieldgen/proc/shields_up()
 	if(active) return 0 //If it's already turned on, how did this get called?
@@ -261,14 +261,14 @@
 		return TRUE
 
 	if (src.active)
-		user.visible_message("<span class='notice'>\icon[src] [user] deactivated the shield generator.</span>", \
-			"<span class='notice'>\icon[src] You deactivate the shield generator.</span>", \
+		user.visible_message("<span class='notice'>[icon2html(src, viewers(get_turf(src)))] [user] deactivated the shield generator.</span>", \
+			"<span class='notice'>[icon2html(src,user)] You deactivate the shield generator.</span>", \
 			"You hear heavy droning fade out.")
 		src.shields_down()
 	else
 		if(anchored)
-			user.visible_message("<span class='notice'>\icon[src] [user] activated the shield generator.</span>", \
-				"<span class='notice'>\icon[src] You activate the shield generator.</span>", \
+			user.visible_message("<span class='notice'>[icon2html(src, viewers(get_turf(src)))] [user] activated the shield generator.</span>", \
+				"<span class='notice'>[icon2html(src, user)] You activate the shield generator.</span>", \
 				"You hear heavy droning.")
 			src.shields_up()
 		else

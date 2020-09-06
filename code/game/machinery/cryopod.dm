@@ -223,7 +223,7 @@
 	if(GLOB.using_map.use_overmap)
 		var/obj/effect/overmap/visitable/O = map_sectors["[z]"]
 		for(var/obj/effect/overmap/visitable/OO in range(O,2))
-			if(OO.in_space || istype(OO,/obj/effect/overmap/visitable/sector/exoplanet))
+			if((OO.sector_flags & OVERMAP_SECTOR_IN_SPACE) || istype(OO,/obj/effect/overmap/visitable/sector/exoplanet))
 				possible_locations |= text2num(level)
 
 	var/newz = GLOB.using_map.get_empty_zlevel()
@@ -432,7 +432,10 @@
 		set_occupant(target)
 
 		// Book keeping!
-		log_and_message_admins("has entered a stasis pod")
+		if (target == user)
+			log_and_message_admins("has entered a stasis pod")
+		else
+			log_and_message_admins("has placed [key_name_admin(target)] into a stasis pod")
 
 		//Despawning occurs when process() is called with an occupant without a client.
 		src.add_fingerprint(target)

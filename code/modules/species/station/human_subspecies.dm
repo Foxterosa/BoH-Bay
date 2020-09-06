@@ -80,7 +80,10 @@
 		)
 
 	additional_available_cultural_info = list(
-		TAG_CULTURE = list(CULTURE_HUMAN_VATGROWN)
+		TAG_CULTURE = list(
+			CULTURE_HUMAN_VATGROWN,
+			CULTURE_SYMBIOTIC
+		)
 	)
 	default_cultural_info = list(
 		TAG_CULTURE = CULTURE_HUMAN_VATGROWN
@@ -120,6 +123,7 @@
 		/datum/unarmed_attack/punch,
 		/datum/unarmed_attack/bite/sharp
 	)
+	override_organ_types = list(BP_LUNGS = /obj/item/organ/internal/lungs/gills)
 
 	descriptors = list(
 		/datum/mob_descriptor/height,
@@ -208,7 +212,7 @@
 	if(!H.psi)
 		H.psi = new(H)
 		var/list/faculties = list("[PSI_COERCION]", "[PSI_REDACTION]", "[PSI_ENERGISTICS]", "[PSI_PSYCHOKINESIS]")
-		for(var/i = 1 to rand(2,3))
+		for(var/i = 1 to 3)
 			H.set_psi_rank(pick_n_take(faculties), 1)
 	H.psi.max_stamina = 70
 	var/obj/item/organ/external/E = pick(H.organs)
