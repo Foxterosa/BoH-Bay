@@ -35,6 +35,28 @@
 	new /obj/item/weapon/storage/excavation(src)
 	new /obj/item/taperoll/research(src)
 
+/obj/structure/closet/excavation
+	name = "herramientas de excavacion"
+	closet_appearance = /decl/closet_appearance/secure_closet/engineering/tools
+
+/obj/structure/closet/excavation/New()
+	..()
+	new /obj/item/weapon/storage/belt/archaeology(src)
+	new /obj/item/weapon/storage/excavation(src)
+	new /obj/item/device/flashlight/lantern(src)
+	new /obj/item/device/ano_scanner(src)
+	new /obj/item/device/depth_scanner(src)
+	new /obj/item/device/core_sampler(src)
+	new /obj/item/device/gps(src)
+	new /obj/item/weapon/pinpointer/radio(src)
+	new /obj/item/clothing/glasses/meson(src)
+	new /obj/item/weapon/pickaxe(src)
+	new /obj/item/device/measuring_tape(src)
+	new /obj/item/weapon/pickaxe/xeno/hand(src)
+	new /obj/item/weapon/storage/bag/fossils(src)
+	new /obj/item/weapon/hand_labeler(src)
+	new /obj/item/taperoll/research(src)
+
 /obj/machinery/alarm/isolation
 	req_access = list(list(access_research, access_atmospherics, access_engine_equip))
 

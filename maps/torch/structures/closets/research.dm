@@ -169,11 +169,11 @@
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/, 50)
 	)
 
-/obj/structure/closet/excavation
+/obj/structure/closet/xenoexcavation
 	name = "herramientas de excavación"
 	closet_appearance = /decl/closet_appearance/secure_closet/engineering/tools
 
-/obj/structure/closet/excavation/WillContain()
+/obj/structure/closet/xenoexcavation/WillContain()
 	return list(
 		/obj/item/weapon/storage/belt/archaeology,
 		/obj/item/weapon/storage/excavation,
