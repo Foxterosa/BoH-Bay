@@ -58,22 +58,19 @@
 		/obj/item/clothing/under/rank/scientist,
 		/obj/item/clothing/suit/storage/toggle/labcoat/science/ec,
 		/obj/item/clothing/suit/storage/toggle/labcoat/science,
-		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/shoes/white,
 		/obj/item/device/radio/headset/torchnanotrasen,
-		/obj/item/clothing/mask/gas,
 		/obj/item/weapon/material/clipboard,
 		/obj/item/weapon/folder,
 		/obj/item/device/taperecorder,
 		/obj/item/device/tape/random = 3,
 		/obj/item/device/camera,
-		/obj/item/device/scanner/gas,
 		/obj/item/taperoll/research,
 		/obj/item/clothing/gloves/latex,
 		/obj/item/clothing/glasses/science,
 		/obj/item/clothing/glasses/meson,
 		/obj/item/device/radio,
-		/obj/item/device/flashlight/lantern,
+		/obj/item/device/measuring_tape,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/toxins, /obj/item/weapon/storage/backpack/satchel/tox)),
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/dufflebag, 50)
 	)
@@ -171,3 +168,27 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/, /obj/item/weapon/storage/backpack/satchel/grey)),
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/, 50)
 	)
+
+/obj/structure/closet/excavation
+	name = "herramientas de excavación"
+	closet_appearance = /decl/closet_appearance/secure_closet/engineering/tools
+
+/obj/structure/closet/excavation/WillContain()
+	return list(
+		/obj/item/weapon/storage/belt/archaeology,
+		/obj/item/weapon/storage/excavation,
+		/obj/item/device/flashlight/lantern,
+		/obj/item/device/ano_scanner,
+		/obj/item/device/depth_scanner,
+		/obj/item/device/core_sampler,
+		/obj/item/device/scanner/xenobio,
+		/obj/item/device/gps,
+		/obj/item/weapon/pinpointer/radio,
+		/obj/item/clothing/glasses/meson,
+		/obj/item/weapon/pickaxe,
+		/obj/item/device/measuring_tape,
+		/obj/item/weapon/pickaxe/xeno/hand,
+		/obj/item/weapon/storage/bag/fossils,
+		/obj/item/weapon/hand_labeler,
+		/obj/item/device/scanner/gas
+		)
