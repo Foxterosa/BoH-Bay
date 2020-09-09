@@ -11,7 +11,7 @@
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	slot_flags = SLOT_BACK
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = ITEM_SIZE_LARGE
 	force = 15
 	attack_verb = list("clubbed", "beat", "pummeled")
 	hitsound = 'sound/weapons/sonic_jackhammer.ogg'

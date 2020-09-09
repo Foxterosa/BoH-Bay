@@ -235,6 +235,42 @@
 /datum/action/item_action/organ/augment
 	button_icon = 'icons/obj/augment.dmi'
 
+//Hiero
+
+/datum/action/item_action/toggle_unfriendly_fire
+	name = "Alternar Fuego Amigo \[ON\]"
+	desc = "Toggles if the club's blasts cause friendly fire."
+	button_icon_state = "vortex_ff_on"
+
+/datum/action/item_action/toggle_unfriendly_fire/Trigger()
+	if(..())
+		UpdateButtonIcon()
+
+/datum/action/item_action/toggle_unfriendly_fire/UpdateButtonIcon()
+	if(istype(target, /obj/item/hierophant_club))
+		var/obj/item/hierophant_club/H = target
+		if(H.friendly_fire_check)
+			button_icon_state = "vortex_ff_off"
+			name = "Alternar Fuego Amigo \[OFF\]"
+			button.name = name
+		else
+			button_icon_state = "vortex_ff_on"
+			name = "Alternar Fuego Amigo \[ON\]"
+			button.name = name
+	..()
+
+/datum/action/item_action/vortex_recall
+	name = "Vortex Recall"
+	desc = "Recall yourself, and anyone nearby, to an attuned hierophant beacon at any time.<br>If the beacon is still attached, will detach it."
+	button_icon_state = "vortex_recall"
+
+/datum/action/item_action/vortex_recall/IsAvailable()
+	if(istype(target, /obj/item/hierophant_club))
+		var/obj/item/hierophant_club/H = target
+		if(H.teleporting)
+			return 0
+	return ..()
+
 #undef AB_WEST_OFFSET
 #undef AB_NORTH_OFFSET
 #undef AB_MAX_COLUMNS
