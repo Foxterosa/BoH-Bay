@@ -243,9 +243,9 @@
 
 /datum/action/item_action/toggle_unfriendly_fire/Trigger()
 	if(..())
-		UpdateIcon()
+		update_action_buttons()
 
-/datum/action/item_action/toggle_unfriendly_fire/UpdateIcon()
+/datum/action/item_action/toggle_unfriendly_fire/update_action_buttons()
 	if(istype(target, /obj/item/hierophant_club))
 		var/obj/item/hierophant_club/H = target
 		if(H.friendly_fire_check)
