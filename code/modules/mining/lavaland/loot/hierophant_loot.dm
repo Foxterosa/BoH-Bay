@@ -26,11 +26,11 @@
 	var/teleporting = FALSE //if we ARE teleporting
 	var/friendly_fire_check = FALSE //if the blasts we make will consider our faction against the faction of hit targets
 
-/obj/item/hierophant_club/examine(mob/user)
+/obj/item/weapon/hierophant_club/examine(mob/user)
 	. = ..()
 	. += "<span class='hierophant_warning'>The[beacon ? " beacon is not currently":"re is a beacon"] attached.</span>"
 
-/obj/item/hierophant_club/suicide_act(mob/living/user)
+/obj/item/weapon/hierophant_club/suicide_act(mob/living/user)
 	atom_say("Xverwpsgexmrk...")
 	user.visible_message("<span class='suicide'>[user] holds [src] into the air! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	new/obj/effect/temp_visual/hierophant/telegraph(get_turf(user))
@@ -47,7 +47,7 @@
 	return OBLITERATION
 
 
-/obj/item/hierophant_club/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+/obj/item/weapon/hierophant_club/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	..()
 	var/turf/T = get_turf(target)
 	if(!T || timer > world.time)
@@ -86,7 +86,7 @@
 			timer = world.time
 	INVOKE_ASYNC(src, .proc/prepare_icon_update)
 
-/obj/item/hierophant_club/proc/calculate_anger_mod(mob/user) //we get stronger as the user loses health
+/obj/item/weapon/hierophant_club/proc/calculate_anger_mod(mob/user) //we get stronger as the user loses health
 	chaser_cooldown = initial(chaser_cooldown)
 	cooldown_time = initial(cooldown_time)
 	chaser_speed = initial(chaser_speed)
@@ -99,7 +99,7 @@
 		chaser_speed = max(chaser_speed + health_percent, 0.5) //one tenth of a second faster for each missing 10% of health
 		blast_range -= round(health_percent * 10) //one additional range for each missing 10% of health
 
-/obj/item/hierophant_club/update_icon()
+/obj/item/weapon/hierophant_club/update_icon()
 	icon_state = "hierophant_club[timer <= world.time ? "_ready":""][(beacon && !QDELETED(beacon)) ? "":"_beacon"]"
 	item_state = icon_state
 	if(ismob(loc))
@@ -108,12 +108,12 @@
 		M.update_inv_r_hand()
 		M.update_inv_back()
 
-/obj/item/hierophant_club/proc/prepare_icon_update()
+/obj/item/weapon/hierophant_club/proc/prepare_icon_update()
 	update_icon()
 	sleep(timer - world.time)
 	update_icon()
 
-/obj/item/hierophant_club/ui_action_click(mob/user, actiontype)
+/obj/item/weapon/hierophant_club/ui_action_click(mob/user, actiontype)
 	if(actiontype == /datum/action/item_action/toggle_unfriendly_fire) //toggle friendly fire...
 		friendly_fire_check = !friendly_fire_check
 		to_chat(user, "<span class='warning'>You toggle friendly fire [friendly_fire_check ? "off":"on"]!</span>")
@@ -221,7 +221,7 @@
 	if(user)
 		user.update_action_buttons_icon()
 
-/obj/item/hierophant_club/proc/teleport_mob(turf/source, mob/M, turf/target, mob/user)
+/obj/item/weapon/hierophant_club/proc/teleport_mob(turf/source, mob/M, turf/target, mob/user)
 	var/turf/turf_to_teleport_to = get_step(target, get_dir(source, M)) //get position relative to caster
 	if(!turf_to_teleport_to || is_blocked_turf(turf_to_teleport_to, TRUE))
 		return
@@ -245,7 +245,7 @@
 	if(user != M)
 		add_attack_logs(user, M, "Teleported from ([source.x],[source.y],[source.z])")
 
-/obj/item/hierophant_club/proc/cardinal_blasts(turf/T, mob/living/user) //fire cardinal cross blasts with a delay
+/obj/item/weapon/hierophant_club/proc/cardinal_blasts(turf/T, mob/living/user) //fire cardinal cross blasts with a delay
 	if(!T)
 		return
 	new /obj/effect/temp_visual/hierophant/telegraph/cardinal(T, user)
@@ -257,7 +257,7 @@
 	for(var/d in GLOB.cardinal)
 		INVOKE_ASYNC(src, .proc/blast_wall, T, d, user)
 
-/obj/item/hierophant_club/proc/blast_wall(turf/T, dir, mob/living/user) //make a wall of blasts blast_range tiles long
+/obj/item/weapon/hierophant_club/proc/blast_wall(turf/T, dir, mob/living/user) //make a wall of blasts blast_range tiles long
 	if(!T)
 		return
 	var/range = blast_range
@@ -272,7 +272,7 @@
 		previousturf = J
 		J = get_step(previousturf, dir)
 
-/obj/item/hierophant_club/proc/aoe_burst(turf/T, mob/living/user) //make a 3x3 blast around a target
+/obj/item/weapon/hierophant_club/proc/aoe_burst(turf/T, mob/living/user) //make a 3x3 blast around a target
 	if(!T)
 		return
 	new /obj/effect/temp_visual/hierophant/telegraph(T, user)

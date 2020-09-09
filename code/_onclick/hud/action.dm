@@ -263,8 +263,8 @@
 	button_icon_state = "vortex_recall"
 
 /datum/action/item_action/vortex_recall/IsAvailable()
-	if(istype(target, /obj/item/hierophant_club))
-		var/obj/item/hierophant_club/H = target
+	if(istype(target, /obj/item/weapon/hierophant_club))
+		var/obj/item/weapon/hierophant_club/H = target
 		if(H.teleporting)
 			return 0
 	return ..()
