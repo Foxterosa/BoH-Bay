@@ -243,7 +243,7 @@
 
 /datum/action/item_action/toggle_unfriendly_fire/Trigger()
 	if(..())
-		UpdateIcon()()
+		UpdateIcon()
 
 /datum/action/item_action/toggle_unfriendly_fire/UpdateIcon()
 	if(istype(target, /obj/item/hierophant_club))
