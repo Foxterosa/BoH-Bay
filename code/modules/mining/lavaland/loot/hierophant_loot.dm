@@ -1,6 +1,6 @@
 #define HIEROPHANT_CLUB_CARDINAL_DAMAGE 30
 
-/obj/item/hierophant_club
+/obj/items/hierophant_club
 	name = "hierophant club"
 	desc = "The strange technology of this large club allows various nigh-magical feats. It used to beat you, but now you can set the beat."
 	icon_state = "hierophant_club_ready_beacon"
