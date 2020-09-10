@@ -2475,7 +2475,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/r_wall/prepainted,
-/area/maintenance/seconddeck/central)
+/area/assembly/robotics)
 "eH" = (
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
@@ -2609,7 +2609,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/r_wall/prepainted,
-/area/maintenance/seconddeck/forestarboard)
+/area/assembly/robotics)
 "eU" = (
 /obj/effect/decal/cleanable/cobweb,
 /obj/machinery/portable_atmospherics/powered/scrubber,
@@ -2822,23 +2822,15 @@
 /turf/simulated/open,
 /area/maintenance/seconddeck/central)
 "fx" = (
-/obj/structure/table/rack,
-/obj/item/stack/material/silver/ten,
-/obj/item/stack/material/silver/ten,
-/obj/item/stack/material/silver/ten,
-/obj/item/stack/material/uranium/ten,
-/obj/item/stack/material/uranium/ten,
-/obj/item/stack/material/uranium/ten,
+/obj/effect/floor_decal/corner/yellow{
+	dir = 9
+	},
 /obj/effect/floor_decal/corner/yellow{
 	icon_state = "corner_white";
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/yellow{
-	icon_state = "corner_white";
-	dir = 5
-	},
 /turf/simulated/floor/tiled,
-/area/maintenance/seconddeck/central)
+/area/assembly/robotics)
 "fy" = (
 /obj/machinery/alarm{
 	alarm_id = "petrov3";
@@ -4006,6 +3998,9 @@
 	icon_state = "warning";
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/yellow{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "hQ" = (
@@ -4807,11 +4802,10 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/yellow{
-	icon_state = "corner_white";
-	dir = 10
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/maintenance/seconddeck/central)
+/area/assembly/robotics)
 "jw" = (
 /turf/simulated/wall/prepainted,
 /area/engineering/engineering_monitoring)
@@ -7530,11 +7524,9 @@
 	},
 /obj/structure/table/steel,
 /obj/effect/floor_decal/corner/yellow{
-	dir = 6
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 9
-	},
+/obj/item/device/robotanalyzer,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "pg" = (
@@ -10262,17 +10254,17 @@
 "tW" = (
 /obj/machinery/robotics_fabricator,
 /obj/machinery/light,
+/obj/effect/floor_decal/industrial/outline/yellow{
+	color = "#404040"
+	},
 /obj/effect/floor_decal/corner/yellow{
 	icon_state = "corner_white";
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/yellow{
-	icon_state = "corner_white";
-	dir = 5
+	dir = 6
 	},
-/obj/effect/floor_decal/industrial/outline/yellow{
-	color = "#404040"
-	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "tX" = (
@@ -11367,6 +11359,9 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/aftstarboard)
+"wB" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/assembly/robotics)
 "wE" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters/head/aux2)
@@ -11615,8 +11610,12 @@
 /turf/simulated/floor/reinforced/airless,
 /area/vacant/prototype/engine)
 "xy" = (
+/obj/effect/floor_decal/corner/yellow{
+	icon_state = "corner_white";
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
-/area/maintenance/seconddeck/central)
+/area/assembly/robotics)
 "xB" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	icon_state = "intact";
@@ -11646,20 +11645,12 @@
 	c_tag = "Robotics - Lower"
 	},
 /obj/machinery/cell_charger,
-/obj/item/organ/internal/posibrain,
-/obj/item/organ/internal/posibrain,
-/obj/item/organ/internal/posibrain,
-/obj/item/device/robotanalyzer,
-/obj/item/weapon/aicard,
 /obj/effect/floor_decal/corner/yellow{
-	dir = 6
+	icon_state = "corner_white";
+	dir = 5
 	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 9
-	},
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "xG" = (
@@ -11670,9 +11661,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
-"xH" = (
-/turf/simulated/wall/r_wall/prepainted,
-/area/maintenance/seconddeck/central)
 "xJ" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -11844,10 +11832,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/maintenance/seconddeck/foreport)
-"yn" = (
-/obj/structure/sign/warning/nosmoking_2,
-/turf/simulated/wall/r_wall/prepainted,
-/area/assembly/robotics/lower)
 "yr" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -12427,6 +12411,12 @@
 "zV" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/aftport)
+"zX" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/assembly/robotics/lower)
 "Aa" = (
 /obj/machinery/door/airlock/atmos{
 	name = "Atmospherics Maintenance";
@@ -13004,8 +12994,9 @@
 	icon_state = "corner_white";
 	dir = 5
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
-/area/maintenance/seconddeck/central)
+/area/assembly/robotics)
 "Bq" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -13197,6 +13188,12 @@
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/foreport)
+"BO" = (
+/obj/item/weapon/folder/blue,
+/obj/item/weapon/folder/blue,
+/obj/item/weapon/folder/blue,
+/turf/simulated/wall/r_wall/prepainted,
+/area/assembly/robotics/lower)
 "BQ" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/door/firedoor,
@@ -15175,6 +15172,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
+"Hr" = (
+/obj/effect/floor_decal/corner/yellow{
+	icon_state = "corner_white";
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/assembly/robotics/lower)
 "Hs" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
@@ -15976,15 +15980,12 @@
 	icon_state = "corner_white";
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/yellow{
-	icon_state = "corner_white";
-	dir = 10
-	},
 /obj/effect/floor_decal/industrial/outline/yellow{
 	color = "#404040"
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
-/area/maintenance/seconddeck/central)
+/area/assembly/robotics)
 "Km" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -16131,6 +16132,11 @@
 /obj/effect/floor_decal/industrial/hatch/yellow{
 	color = "#b19664"
 	},
+/obj/effect/floor_decal/corner/yellow{
+	icon_state = "corner_white";
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "KZ" = (
@@ -16241,14 +16247,16 @@
 	name = "robotics fabrication console"
 	},
 /obj/effect/floor_decal/corner/yellow{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/yellow{
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/yellow{
 	color = "#404040"
 	},
+/obj/effect/floor_decal/corner/yellow{
+	icon_state = "corner_white";
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "Lm" = (
@@ -16452,12 +16460,10 @@
 	icon_state = "corner_white";
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/yellow{
-	icon_state = "corner_white";
-	dir = 10
-	},
+/obj/item/device/flash/synthetic,
+/obj/item/device/flash/synthetic,
 /turf/simulated/floor/tiled,
-/area/maintenance/seconddeck/central)
+/area/assembly/robotics)
 "Mf" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -16655,6 +16661,9 @@
 "MB" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
+	},
+/obj/effect/floor_decal/corner/yellow{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
@@ -17306,9 +17315,10 @@
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
 	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 9
-	},
+/obj/item/weapon/aicard,
+/obj/item/organ/internal/posibrain,
+/obj/item/organ/internal/posibrain,
+/obj/item/organ/internal/posibrain,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "OR" = (
@@ -18350,34 +18360,24 @@
 /obj/item/stack/material/plasteel/fifty,
 /obj/item/stack/material/plasteel/fifty,
 /obj/item/stack/material/glass/fifty,
-/obj/item/stack/material/glass/fifty,
-/obj/item/stack/material/aluminium/fifty,
 /obj/item/stack/material/aluminium/fifty,
 /obj/item/stack/material/plastic/fifty,
-/obj/item/stack/material/plastic/fifty,
 /obj/item/stack/material/steel/fifty,
 /obj/item/stack/material/steel/fifty,
 /obj/item/stack/material/steel/fifty,
-/obj/item/stack/material/plastic/fifty,
 /obj/item/stack/material/plasteel/fifty,
-/obj/item/stack/material/titanium/fifty,
-/obj/item/stack/material/glass/fifty,
-/obj/item/stack/material/titanium,
-/obj/item/stack/material/titanium,
-/obj/item/stack/material/aluminium/fifty,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/yellow{
-	icon_state = "corner_white";
-	dir = 5
+/obj/effect/floor_decal/corner/yellow/half{
+	icon_state = "bordercolorhalf";
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/yellow{
-	icon_state = "corner_white";
-	dir = 10
+	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/maintenance/seconddeck/central)
+/area/assembly/robotics)
 "RY" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/corner/yellow{
@@ -18593,6 +18593,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck)
+"ST" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/sign/warning/nosmoking_2,
+/turf/simulated/wall/r_wall/prepainted,
+/area/assembly/robotics)
 "SU" = (
 /obj/structure/sign/warning/pods/east{
 	dir = 1;
@@ -19242,6 +19251,11 @@
 /obj/effect/floor_decal/industrial/hatch/yellow{
 	color = "#b19664"
 	},
+/obj/effect/floor_decal/corner/yellow{
+	icon_state = "corner_white";
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "UX" = (
@@ -19257,6 +19271,10 @@
 /obj/effect/floor_decal/industrial/hatch/yellow{
 	color = "#b19664"
 	},
+/obj/effect/floor_decal/corner/yellow{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "UY" = (
@@ -19896,17 +19914,14 @@
 /area/engineering/storage)
 "WQ" = (
 /obj/machinery/robotics_fabricator,
+/obj/effect/floor_decal/industrial/outline/yellow{
+	color = "#404040"
+	},
 /obj/effect/floor_decal/corner/yellow{
 	icon_state = "corner_white";
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/yellow{
-	icon_state = "corner_white";
-	dir = 5
-	},
-/obj/effect/floor_decal/industrial/outline/yellow{
-	color = "#404040"
-	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "WW" = (
@@ -20182,17 +20197,14 @@
 	pixel_y = -32
 	},
 /obj/item/weapon/reagent_containers/glass/beaker,
+/obj/effect/floor_decal/industrial/outline/yellow{
+	color = "#404040"
+	},
 /obj/effect/floor_decal/corner/yellow{
 	icon_state = "corner_white";
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/yellow{
-	icon_state = "corner_white";
-	dir = 5
-	},
-/obj/effect/floor_decal/industrial/outline/yellow{
-	color = "#404040"
-	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "XL" = (
@@ -20415,12 +20427,8 @@
 	icon_state = "corner_white";
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/yellow{
-	icon_state = "corner_white";
-	dir = 10
-	},
 /turf/simulated/floor/tiled,
-/area/maintenance/seconddeck/central)
+/area/assembly/robotics)
 "Yy" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall/r_wall/prepainted,
@@ -37483,8 +37491,8 @@ hn
 bJ
 es
 eT
-az
-az
+wB
+wB
 XR
 XR
 XR
@@ -38090,7 +38098,7 @@ bJ
 xJ
 eG
 Kl
-gg
+Hr
 XR
 hP
 iA
@@ -38292,7 +38300,7 @@ dY
 dW
 eG
 Yr
-gg
+zX
 UX
 MB
 yI
@@ -38492,7 +38500,7 @@ bK
 bK
 dw
 dW
-eG
+ST
 Me
 RH
 gh
@@ -38897,7 +38905,7 @@ UB
 bf
 dZ
 eG
-xH
+wB
 XR
 XR
 xF
@@ -39101,7 +39109,7 @@ ea
 eJ
 ft
 ic
-yn
+XR
 Ll
 UM
 tW
@@ -39304,7 +39312,7 @@ eK
 fu
 gj
 XR
-XR
+BO
 XR
 XR
 XR
