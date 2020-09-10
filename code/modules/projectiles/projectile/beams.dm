@@ -351,3 +351,21 @@
 		L.adjust_fire_stacks(rand(2,4))
 		if(L.fire_stacks >= 3)
 			L.IgniteMob()
+
+/obj/item/projectile/beam/kinetic
+	name = "kinectic beam"
+	icon_state = "omnilaser"
+	fire_sound = 'sound/weapons/kenetic_accel.ogg'
+	damage = 20//enables it to cut off limbs without too many hits
+	sharp = 0
+	edge = 1
+	damage_type = BRUTE
+	life_span = 3
+	armor_penetration = 30//it's an industrial grade plasma cutter, designed to effortlessly cut through heavy material.
+	distance_falloff = 3//makes up for the damage and pen
+	shrapnel_chance_multiplier = 0.0//no thanks
+	arterial_bleed_chance_multiplier = 0.0//you too
+
+	muzzle_type = /obj/effect/projectile/kinetic/muzzle
+	tracer_type = /obj/effect/projectile/kinetic/tracer
+	impact_type = /obj/effect/projectile/kinetic/impact

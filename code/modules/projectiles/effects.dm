@@ -290,3 +290,18 @@
 
 /obj/effect/projectile/incen/impact
 	icon_state = "impact_incen"
+
+//----------------------------
+// kinectic beam
+//----------------------------
+/obj/effect/projectile/kinetic/
+	light_color = "#EAEAEA"
+
+/obj/effect/projectile/kinetic/tracer
+	icon_state = "beam_kinetic"
+
+/obj/effect/projectile/kinetic/muzzle
+	icon_state = "muzzle_kinetic"
+
+/obj/effect/projectile/kinetic/impact
+	icon_state = "impact_kinetic"
