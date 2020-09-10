@@ -1315,21 +1315,12 @@
 /obj/item/stack/material/plasteel/fifty,
 /obj/item/stack/material/plasteel/fifty,
 /obj/item/stack/material/glass/fifty,
-/obj/item/stack/material/glass/fifty,
-/obj/item/stack/material/aluminium/fifty,
 /obj/item/stack/material/aluminium/fifty,
 /obj/item/stack/material/plastic/fifty,
-/obj/item/stack/material/plastic/fifty,
 /obj/item/stack/material/steel/fifty,
 /obj/item/stack/material/steel/fifty,
 /obj/item/stack/material/steel/fifty,
-/obj/item/stack/material/plastic/fifty,
 /obj/item/stack/material/plasteel/fifty,
-/obj/item/stack/material/titanium/fifty,
-/obj/item/stack/material/glass/fifty,
-/obj/item/stack/material/titanium,
-/obj/item/stack/material/titanium,
-/obj/item/stack/material/aluminium/fifty,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -1688,9 +1679,7 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/seconddeck/central)
 "db" = (
-/obj/structure/table/rack,
-/obj/item/device/kit/paint,
-/obj/item/device/kit/paint,
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/maintenance/seconddeck/central)
 "dc" = (
@@ -1702,6 +1691,8 @@
 /obj/item/weapon/cell/standard,
 /obj/item/weapon/cell/standard,
 /obj/item/device/floor_painter,
+/obj/item/device/flash/synthetic,
+/obj/item/device/flash/synthetic,
 /turf/simulated/floor/tiled,
 /area/maintenance/seconddeck/central)
 "dd" = (
@@ -2570,16 +2561,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/seconddeck)
-"eG" = (
-/obj/structure/table/rack,
-/obj/item/stack/material/silver/ten,
-/obj/item/stack/material/silver/ten,
-/obj/item/stack/material/silver/ten,
-/obj/item/stack/material/uranium/ten,
-/obj/item/stack/material/uranium/ten,
-/obj/item/stack/material/uranium/ten,
-/turf/simulated/floor/tiled,
-/area/maintenance/seconddeck/central)
 "eH" = (
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
@@ -2974,6 +2955,10 @@
 	dir = 4
 	},
 /obj/structure/table/steel,
+/obj/item/organ/internal/posibrain,
+/obj/item/organ/internal/posibrain,
+/obj/item/organ/internal/posibrain,
+/obj/item/weapon/aicard,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "fy" = (
@@ -3906,6 +3891,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/table/steel,
+/obj/item/device/robotanalyzer,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "hp" = (
@@ -4116,11 +4102,7 @@
 	c_tag = "Robotics - Lower"
 	},
 /obj/machinery/cell_charger,
-/obj/item/organ/internal/posibrain,
-/obj/item/organ/internal/posibrain,
-/obj/item/organ/internal/posibrain,
-/obj/item/device/robotanalyzer,
-/obj/item/weapon/aicard,
+/obj/item/weapon/paper_bin,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/lower)
 "hJ" = (
@@ -12946,6 +12928,12 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/aftport)
+"AW" = (
+/obj/item/weapon/folder/blue,
+/obj/item/weapon/folder/blue,
+/obj/item/weapon/folder/blue,
+/turf/simulated/wall/r_wall/prepainted,
+/area/assembly/robotics/lower)
 "AX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -37411,7 +37399,7 @@ bJ
 dW
 bq
 cq
-eG
+eI
 fr
 hN
 hP
@@ -39029,7 +39017,7 @@ eK
 fu
 gj
 XR
-XR
+AW
 XR
 XR
 XR
