@@ -1491,6 +1491,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/enchiladas
 	name = "enchiladas"
 	desc = "A corn tortilla wrap stuffed with peppers and other goodies!"
+	icon = 'icons/obj/aurora/food.dmi'
 	icon_state = "enchiladas"
 	trash = /obj/item/trash/tray
 	filling_color = "#a36a1f"
@@ -3001,6 +3002,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/spacetwinkie
 	name = "\improper Space Eclair"
+	icon = 'icons/obj/aurora/food.dmi'
 	icon_state = "space_twinkie"
 	desc = "Guaranteed to survive longer then you will."
 	filling_color = "#ffe591"
@@ -3011,6 +3013,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers
 	name = "\improper Cheesie Honkers"
+	icon = 'icons/obj/aurora/food.dmi'
 	icon_state = "cheesie_honkers"
 	desc = "Bite sized cheesie snacks that will honk all over your mouth."
 	trash = /obj/item/trash/cheesie
@@ -3199,6 +3202,27 @@
 	reagent_data = list(/datum/reagent/nutriment = list("sweetness" = 3, "cookie" = 2))
 	w_class = ITEM_SIZE_TINY
 	bitesize = 1
+
+/obj/item/weapon/reagent_containers/food/snacks/macaron
+	name = "macaron"
+	desc = "MACARON!!"
+	icon = 'icons/obj/aurora/food.dmi'
+	icon_state = "macaron1"
+	filling_color = "#dbc94f"
+	var/overlay_state = "box-macaron1"
+	center_of_mass = "x=17;y=18"
+	reagents_to_add = list(/datum/reagent/nutriment = 3, /datum/reagent/sugar = 2)
+	reagent_data = list(/datum/reagent/nutriment = list("sweetness" = 3, "macaron" = 2))
+	w_class = ITEM_SIZE_TINY
+	bitesize = 3
+
+/obj/item/weapon/reagent_containers/food/snacks/macaron/normal
+	name = "macaron"
+	desc = "MACARON!!"
+	icon = 'icons/obj/aurora/food.dmi'
+	icon_state = "macaron1"
+	reagents_to_add = list(/datum/reagent/nutriment = 3)
+	bitesize = 3
 
 /obj/item/weapon/reagent_containers/food/snacks/chocolatebar
 	name = "chocolate bar"

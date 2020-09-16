@@ -45,6 +45,24 @@
 /obj/item/weapon/storage/box/donut/empty
 	startswith = null
 
+/obj/item/weapon/storage/box/macaron
+	icon = 'icons/obj/aurora/food.dmi'
+	icon_state = "macaronbox"
+	name = "caja de macarons"
+	can_hold = list(/obj/item/weapon/reagent_containers/food/snacks/macaron)
+	foldable = /obj/item/stack/material/cardboard
+	startswith = list(/obj/item/weapon/reagent_containers/food/snacks/macaron/normal = 7)
+
+/obj/item/weapon/storage/box/macaron/on_update_icon()
+	overlays.Cut()
+	var/i = 0
+	for(var/obj/item/weapon/reagent_containers/food/snacks/macaron/D in contents)
+		overlays += image('icons/obj/aurora/food.dmi', "[i][D.overlay_state]")
+		i++
+
+/obj/item/weapon/storage/box/macaron/empty
+	startswith = null
+
 //misc tobacco nonsense
 /obj/item/weapon/storage/cigpaper
 	name = "\improper Gen. Eric cigarette paper"
@@ -135,7 +153,8 @@
 /obj/item/weapon/storage/chewables/candy/cookies
 	name = "pack of Getmore Cookies"
 	desc = "A pack of delicious cookies, and possibly the only product in Getmores Chocolate Corp lineup that has any trace of chocolate in it."
-	icon_state = "cookiebag"
+	icon = 'icons/obj/aurora/food.dmi'
+	icon_state = "cookiesnack"
 	max_storage_space = 6
 	startswith = list(/obj/item/weapon/reagent_containers/food/snacks/cookie = 6)
 	make_exact_fit()
