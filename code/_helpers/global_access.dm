@@ -45,6 +45,8 @@
 			return global.SSatoms;
 		if("SScharacter_setup")
 			return global.SScharacter_setup;
+		if("SSchat")
+			return global.SSchat;
 		if("SSchemistry")
 			return global.SSchemistry;
 		if("SScircuit")
@@ -143,6 +145,8 @@
 			return global.SSvines;
 		if("SSvote")
 			return global.SSvote;
+		if("SSvueui")
+			return global.SSvueui;
 		if("SSwebhooks")
 			return global.SSwebhooks;
 		if("SSxenoarch")
@@ -465,6 +469,10 @@
 			return global.gear_datums;
 		if("gear_tweak_free_color_choice_")
 			return global.gear_tweak_free_color_choice_;
+		if("gear_tweak_free_desc")
+			return global.gear_tweak_free_desc;
+		if("gear_tweak_free_name")
+			return global.gear_tweak_free_name;
 		if("gender_datums")
 			return global.gender_datums;
 		if("ghost_darkness_images")
@@ -980,6 +988,8 @@
 			global.SSatoms=newval;
 		if("SScharacter_setup")
 			global.SScharacter_setup=newval;
+		if("SSchat")
+			global.SSchat=newval;
 		if("SSchemistry")
 			global.SSchemistry=newval;
 		if("SScircuit")
@@ -1078,6 +1088,8 @@
 			global.SSvines=newval;
 		if("SSvote")
 			global.SSvote=newval;
+		if("SSvueui")
+			global.SSvueui=newval;
 		if("SSwebhooks")
 			global.SSwebhooks=newval;
 		if("SSxenoarch")
@@ -1400,6 +1412,10 @@
 			global.gear_datums=newval;
 		if("gear_tweak_free_color_choice_")
 			global.gear_tweak_free_color_choice_=newval;
+		if("gear_tweak_free_desc")
+			global.gear_tweak_free_desc=newval;
+		if("gear_tweak_free_name")
+			global.gear_tweak_free_name=newval;
 		if("gender_datums")
 			global.gender_datums=newval;
 		if("ghost_darkness_images")
@@ -1892,6 +1908,7 @@
 	"SSao",
 	"SSatoms",
 	"SScharacter_setup",
+	"SSchat",
 	"SSchemistry",
 	"SScircuit",
 	"SScircuit_components",
@@ -1941,6 +1958,7 @@
 	"SSturf",
 	"SSvines",
 	"SSvote",
+	"SSvueui",
 	"SSwebhooks",
 	"SSxenoarch",
 	"SSzcopy",
@@ -2102,6 +2120,8 @@
 	"gas_data",
 	"gear_datums",
 	"gear_tweak_free_color_choice_",
+	"gear_tweak_free_desc",
+	"gear_tweak_free_name",
 	"gender_datums",
 	"ghost_darkness_images",
 	"ghost_sightless_images",

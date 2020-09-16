@@ -1,8 +1,5 @@
 //Shouldn't be a lot in here, only torch versions of existing machines that need a different access req or something along those lines.
 
-/obj/machinery/vending/medical/torch
-	req_access = list(access_medical)
-
 /obj/machinery/drone_fabricator/torch
 	fabricator_tag = "NTSS Dagon Maintenance"
 
@@ -92,12 +89,35 @@
 // Vending machines & dispensers
 /obj/machinery/vending/security
 	products = list(
-		/obj/item/weapon/handcuffs = 14,
-		/obj/item/weapon/grenade/flashbang = 4,
-		/obj/item/weapon/grenade/chem_grenade/teargas = 4,
-		/obj/item/device/flash = 7,
-		/obj/item/weapon/reagent_containers/spray/pepper = 4,
-		/obj/item/device/holowarrant = 4,
+		/obj/item/weapon/handcuffs = 10,
+		/obj/item/weapon/grenade/flashbang = 5,
+		/obj/item/weapon/grenade/chem_grenade/teargas = 5,
+		/obj/item/device/flash = 5,
+		/obj/item/weapon/reagent_containers/spray/pepper = 5,
+		/obj/item/device/holowarrant = 5,
 		/obj/item/weapon/reagent_containers/food/snacks/donut/normal = 12,
-		/obj/item/weapon/storage/box/evidence = 8,
+		/obj/item/weapon/storage/box/evidence = 5,
+		/obj/item/clothing/accessory/storage/holster/thigh = 5,
+		/obj/item/clothing/suit/armor/pcarrier/navy = 6,
+		/obj/item/clothing/suit/armor/pcarrier/blue = 6,
+		/obj/item/clothing/suit/armor/pcarrier/green = 6,
+		/obj/item/clothing/suit/armor/pcarrier/tan = 6,
+		/obj/item/clothing/suit/armor/pcarrier/grey = 6,
+		/obj/item/clothing/accessory/storage/pouches = 6,
+		/obj/item/clothing/accessory/storage/pouches/large = 6,
+		/obj/item/clothing/accessory/storage/pouches/navy = 6,
+		/obj/item/clothing/accessory/storage/pouches/large/navy = 6,
+		/obj/item/clothing/accessory/storage/pouches/blue = 6,
+		/obj/item/clothing/accessory/storage/pouches/large/blue = 6,
+		/obj/item/clothing/accessory/storage/pouches/green = 6,
+		/obj/item/clothing/accessory/storage/pouches/large/green = 6,
+		/obj/item/clothing/accessory/storage/pouches/tan = 6,
+		/obj/item/clothing/accessory/storage/pouches/large/tan = 6,
+		/obj/item/clothing/accessory/storage/pouches/grey = 6,
+		/obj/item/clothing/accessory/storage/pouches/large/grey = 6,
+		/obj/item/clothing/accessory/armor/helmcover/navy = 6,
+		/obj/item/clothing/accessory/armor/helmcover/blue = 6,
+		/obj/item/clothing/accessory/armor/helmcover/green = 6,
+		/obj/item/clothing/accessory/armor/helmcover/tan = 6,
+		/obj/item/clothing/accessory/armor/helmcover/grey = 6,
 		/obj/item/clothing/accessory/badge/solgov/security = 6)

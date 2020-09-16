@@ -70,7 +70,7 @@
 /datum/chemical_reaction/proc/post_reaction(var/datum/reagents/holder)
 	var/atom/container = holder.my_atom
 	if(mix_message && container && !ismob(container))
-		container.visible_message("<span class='notice'>\icon[container] [mix_message]</span>")
+		container.visible_message("<span class='notice'>[icon2html(get_turf(container))] [mix_message]</span>")
 		playsound(container, reaction_sound, 80, 1)
 
 //obtains any special data that will be provided to the reaction products
@@ -405,7 +405,7 @@
 /datum/chemical_reaction/glycerol
 	name = "Glycerol"
 	result = /datum/reagent/glycerol
-	required_reagents = list(/datum/reagent/nutriment/cornoil = 3, /datum/reagent/acid = 1)
+	required_reagents = list(/datum/reagent/nutriment/triglyceride/oil/corn = 3, /datum/reagent/acid = 1)
 	result_amount = 1
 
 /datum/chemical_reaction/sodiumchloride
@@ -958,7 +958,7 @@
 	var/obj/item/slime_extract/T = holder.my_atom
 	T.Uses--
 	if(T.Uses <= 0)
-		T.visible_message("\icon[T]<span class='notice'>\The [T]'s power is consumed in the reaction.</span>")
+		T.visible_message("[icon2html(T, viewers(get_turf(T)))]<span class='notice'>\The [T]'s power is consumed in the reaction.</span>")
 		T.SetName("used slime extract")
 		T.desc = "This extract has been used up."
 
@@ -1341,45 +1341,49 @@
 
 /* Food */
 
-/datum/chemical_reaction/tofu
-	name = "Tofu"
+/datum/chemical_reaction/food
 	result = null
+	hidden_from_codex = TRUE
+	var/atom/result_type
+
+/datum/chemical_reaction/food/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
+	. = ..()
+	var/location = get_turf(holder.my_atom)
+	for(var/i = 1, i <= created_volume, i++)
+		new result_type(location)
+
+/datum/chemical_reaction/food/tofu
+	name = "Tofu"
+	hidden_from_codex = FALSE
 	required_reagents = list(/datum/reagent/drink/milk/soymilk = 10)
 	catalysts = list(/datum/reagent/enzyme = 5)
 	result_amount = 1
 	mix_message = "The solution thickens and clumps into a yellow-white substance."
+	result_type = /obj/item/weapon/reagent_containers/food/snacks/tofu
 
-/datum/chemical_reaction/tofu/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
+/datum/chemical_reaction/food/tofu/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
 	..()
 	var/location = get_turf(holder.my_atom)
 	for(var/i = 1, i <= created_volume, i++)
 		new /obj/item/weapon/reagent_containers/food/snacks/tofu(location)
 
-/datum/chemical_reaction/chocolate_bar
+/datum/chemical_reaction/food/chocolate_bar
 	name = "Chocolate Bar"
+	hidden_from_codex = FALSE
 	result = null
 	required_reagents = list(/datum/reagent/drink/milk/soymilk = 2, /datum/reagent/nutriment/coco = 2, /datum/reagent/sugar = 2)
 	result_amount = 1
 	mix_message = "The solution thickens and hardens into a glossy brown substance."
+	result_type = /obj/item/weapon/reagent_containers/food/snacks/chocolatebar
 
-/datum/chemical_reaction/chocolate_bar/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
-	..()
-	var/location = get_turf(holder.my_atom)
-	for(var/i = 1, i <= created_volume, i++)
-		new /obj/item/weapon/reagent_containers/food/snacks/chocolatebar(location)
-
-/datum/chemical_reaction/chocolate_bar2
+/datum/chemical_reaction/food/chocolate_bar2
 	name = "Chocolate Bar"
+	hidden_from_codex = FALSE
 	result = null
 	required_reagents = list(/datum/reagent/drink/milk = 2, /datum/reagent/nutriment/coco = 2, /datum/reagent/sugar = 2)
 	result_amount = 1
 	mix_message = "The solution thickens and hardens into a glossy brown substance."
-
-/datum/chemical_reaction/chocolate_bar2/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
-	..()
-	var/location = get_turf(holder.my_atom)
-	for(var/i = 1, i <= created_volume, i++)
-		new /obj/item/weapon/reagent_containers/food/snacks/chocolatebar(location)
+	result_type = /obj/item/weapon/reagent_containers/food/snacks/chocolatebar
 
 /datum/chemical_reaction/chocolate_milk
 	name = "Chocolate Milk"
@@ -1387,6 +1391,12 @@
 	required_reagents = list(/datum/reagent/drink/milk = 5, /datum/reagent/nutriment/coco = 1)
 	result_amount = 5
 	mix_message = "The solution thickens into a creamy brown beverage."
+
+/datum/chemical_reaction/browniemix
+	name = "Brownie Mix"
+	result = /datum/reagent/browniemix
+	required_reagents = list(/datum/reagent/nutriment/flour = 5, /datum/reagent/nutriment/coco = 5, /datum/reagent/sugar = 5)
+	result_amount = 15
 
 /datum/chemical_reaction/coffee
 	name = "Coffee"
@@ -1488,12 +1498,14 @@
 /datum/chemical_reaction/garlicsauce
 	name = "Garlic Sauce"
 	result = /datum/reagent/nutriment/garlicsauce
-	required_reagents = list(/datum/reagent/drink/juice/garlic = 1, /datum/reagent/nutriment/cornoil = 1)
+	required_reagents = list(/datum/reagent/drink/juice/garlic = 1, /datum/reagent/nutriment/triglyceride/oil/corn = 1)
 	result_amount = 2
 	mix_message = "The solution thickens into a creamy white oil."
 
-/datum/chemical_reaction/cheesewheel
+/datum/chemical_reaction/food/cheesewheel
 	name = "Cheesewheel"
+	hidden_from_codex = FALSE
+	result_type = /obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel
 	result = null
 	required_reagents = list(/datum/reagent/drink/milk = 40)
 	catalysts = list(/datum/reagent/enzyme = 5)
@@ -1502,86 +1514,73 @@
 	minimum_temperature = 40 CELSIUS
 	maximum_temperature = (40 CELSIUS) + 100
 
-/datum/chemical_reaction/cheesewheel/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
-	..()
-	var/location = get_turf(holder.my_atom)
-	for(var/i = 1, i <= created_volume, i++)
-		new /obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel(location)
-
-/datum/chemical_reaction/rawmeatball
+/datum/chemical_reaction/food/rawmeatball
 	name = "Raw Meatball"
+	hidden_from_codex = FALSE
+	result_type = /obj/item/weapon/reagent_containers/food/snacks/rawmeatball
 	result = null
 	required_reagents = list(/datum/reagent/nutriment/protein = 3, /datum/reagent/nutriment/flour = 5)
 	result_amount = 3
 	mix_message = "The flour thickens the processed meat until it clumps."
 
-/datum/chemical_reaction/rawmeatball/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
-	..()
-	var/location = get_turf(holder.my_atom)
-	for(var/i = 1, i <= created_volume, i++)
-		new /obj/item/weapon/reagent_containers/food/snacks/rawmeatball(location)
-
-/datum/chemical_reaction/dough
+/datum/chemical_reaction/food/dough
 	name = "Dough"
+	hidden_from_codex = FALSE
+	result_type = /obj/item/weapon/reagent_containers/food/snacks/dough
 	result = null
 	required_reagents = list(/datum/reagent/nutriment/protein/egg = 3, /datum/reagent/nutriment/flour = 10, /datum/reagent/water = 10)
 	result_amount = 1
 	mix_message = "The solution folds and thickens into a large ball of dough."
 
-/datum/chemical_reaction/dough/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
-	..()
-	var/location = get_turf(holder.my_atom)
-	for(var/i = 1, i <= created_volume, i++)
-		new /obj/item/weapon/reagent_containers/food/snacks/dough(location)
-
-/datum/chemical_reaction/soydough
+/datum/chemical_reaction/food/dough/soydough
 	name = "Soy dough"
-	result = null
-	required_reagents = list(/datum/reagent/nutriment/softtofu = 3, /datum/reagent/nutriment/flour = 10, /datum/reagent/water = 10)
-	result_amount = 1
-	mix_message = "The solution folds and thickens into a large ball of dough."
-
-/datum/chemical_reaction/soydough/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
-	..()
-	var/location = get_turf(holder.my_atom)
-	for(var/i = 1, i <= created_volume, i++)
-		new /obj/item/weapon/reagent_containers/food/snacks/dough(location)
+	required_reagents = list(/datum/reagent/nutriment/protein/tofu = 3, /datum/reagent/nutriment/flour = 10, /datum/reagent/water = 10)
 
 //batter reaction as food precursor, for things that don't use pliable dough precursor.
 
 /datum/chemical_reaction/batter
 	name = "Batter"
-	result = /datum/reagent/nutriment/batter
-	required_reagents = list(/datum/reagent/nutriment/protein/egg = 3, /datum/reagent/nutriment/flour = 5, /datum/reagent/drink/milk = 5)
+	result = /datum/reagent/nutriment/coating/batter
+	required_reagents = list(/datum/reagent/nutriment/protein/egg = 3, /datum/reagent/nutriment/flour = 10, /datum/reagent/water = 5, /datum/reagent/sodiumchloride = 2)
+	result_amount = 10
+	mix_message = "The solution thickens into a glossy batter."
+
+/datum/chemical_reaction/beerbatter
+	name = "Beer Batter"
+	result = /datum/reagent/nutriment/coating/beerbatter
+	required_reagents = list(/datum/reagent/nutriment/protein/egg = 3, /datum/reagent/nutriment/flour = 10, /datum/reagent/ethanol/beer = 5, /datum/reagent/sodiumchloride = 2)
 	result_amount = 10
 	mix_message = "The solution thickens into a glossy batter."
 
 /datum/chemical_reaction/cakebatter
 	name = "Cake Batter"
-	result = /datum/reagent/nutriment/batter/cakebatter
-	required_reagents = list(/datum/reagent/sugar = 1, /datum/reagent/nutriment/batter = 2)
+	result = /datum/reagent/nutriment/cakebatter
+	required_reagents = list(/datum/reagent/sugar = 1, /datum/reagent/nutriment/coating/batter = 2)
 	result_amount = 3
 	mix_message = "The sugar lightens the batter and gives it a sweet smell."
 
 /datum/chemical_reaction/soybatter
 	name = "Vegan Batter"
-	result = /datum/reagent/nutriment/batter
-	required_reagents = list(/datum/reagent/nutriment/softtofu = 3, /datum/reagent/nutriment/flour = 5, /datum/reagent/drink/milk = 5)
+	result = /datum/reagent/nutriment/coating/batter
+	required_reagents = list(/datum/reagent/nutriment/protein/tofu = 3, /datum/reagent/nutriment/flour = 10, /datum/reagent/water = 5, /datum/reagent/sodiumchloride = 2)
 	result_amount = 10
 	mix_message = "The solution thickens into a glossy batter."
 
-/datum/chemical_reaction/syntiflesh
+/datum/chemical_reaction/soybeerbatter
+	name = "Vegan Beer Batter"
+	result = /datum/reagent/nutriment/coating/beerbatter
+	required_reagents = list(/datum/reagent/nutriment/protein/tofu = 3, /datum/reagent/nutriment/flour = 10, /datum/reagent/ethanol/beer = 5, /datum/reagent/sodiumchloride = 2)
+	result_amount = 10
+	mix_message = "The solution thickens into a glossy batter."
+
+/datum/chemical_reaction/food/syntiflesh
 	name = "Syntiflesh"
+	hidden_from_codex = FALSE
 	result = null
+	result_type = /obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh
 	required_reagents = list(/datum/reagent/blood = 5, /datum/reagent/clonexadone = 1)
 	result_amount = 1
 	mix_message = "The solution thickens disturbingly, taking on a meaty appearance."
-
-/datum/chemical_reaction/syntiflesh/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
-	..()
-	var/location = get_turf(holder.my_atom)
-	for(var/i = 1, i <= created_volume, i++)
-		new /obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh(location)
 
 /datum/chemical_reaction/hot_ramen
 	name = "Hot Ramen"
@@ -1597,6 +1596,19 @@
 	result_amount = 6
 	mix_message = "The broth of the noodles takes on a hellish red gleam."
 
+/datum/chemical_reaction/food/butter
+	name = "Butter"
+	hidden_from_codex = FALSE
+	result = null
+	required_reagents = list(/datum/reagent/drink/milk/cream = 20, /datum/reagent/sodiumchloride = 1)
+	result_amount = 1
+
+/datum/chemical_reaction/butter/on_reaction(var/datum/reagents/holder, var/created_volume)
+	var/location = get_turf(holder.my_atom)
+	for(var/i = 1, i <= created_volume, i++)
+		new /obj/item/weapon/reagent_containers/food/snacks/spreads/butter(location)
+	return
+
 /* Alcohol */
 
 /datum/chemical_reaction/goldschlager
@@ -1609,7 +1621,7 @@
 /datum/chemical_reaction/patron
 	name = "Patron"
 	result = /datum/reagent/ethanol/patron
-	required_reagents = list(/datum/reagent/ethanol/tequilla = 10, /datum/reagent/silver = 1)
+	required_reagents = list(/datum/reagent/ethanol/tequila = 10, /datum/reagent/silver = 1)
 	result_amount = 10
 	mix_message = "The silver flakes and settles in the tequila."
 
@@ -1698,7 +1710,7 @@
 /datum/chemical_reaction/spacebeer
 	name = "Space Beer"
 	result = /datum/reagent/ethanol/beer
-	required_reagents = list(/datum/reagent/nutriment/cornoil = 10)
+	required_reagents = list(/datum/reagent/nutriment/triglyceride/oil/corn = 10)
 	catalysts = list(/datum/reagent/enzyme = 5)
 	result_amount = 10
 	mix_message = "The solution roils as it rapidly ferments into a foaming amber liquid."
@@ -1818,13 +1830,13 @@
 /datum/chemical_reaction/brave_bull
 	name = "Brave Bull"
 	result = /datum/reagent/ethanol/coffee/brave_bull
-	required_reagents = list(/datum/reagent/ethanol/tequilla = 2, /datum/reagent/ethanol/coffee/kahlua = 1)
+	required_reagents = list(/datum/reagent/ethanol/tequila = 2, /datum/reagent/ethanol/coffee/kahlua = 1)
 	result_amount = 3
 
-/datum/chemical_reaction/tequilla_sunrise
-	name = "Tequilla Sunrise"
-	result = /datum/reagent/ethanol/tequilla_sunrise
-	required_reagents = list(/datum/reagent/ethanol/tequilla = 2, /datum/reagent/drink/juice/orange = 1)
+/datum/chemical_reaction/tequila_sunrise
+	name = "tequila Sunrise"
+	result = /datum/reagent/ethanol/tequila_sunrise
+	required_reagents = list(/datum/reagent/ethanol/tequila = 2, /datum/reagent/drink/juice/orange = 1)
 	result_amount = 3
 
 /datum/chemical_reaction/phoron_special
@@ -1886,13 +1898,13 @@
 /datum/chemical_reaction/margarita
 	name = "Margarita"
 	result = /datum/reagent/ethanol/margarita
-	required_reagents = list(/datum/reagent/ethanol/tequilla = 2, /datum/reagent/drink/juice/lime = 1)
+	required_reagents = list(/datum/reagent/ethanol/tequila = 2, /datum/reagent/drink/juice/lime = 1)
 	result_amount = 3
 
 /datum/chemical_reaction/longislandicedtea
 	name = "Long Island Iced Tea"
 	result = /datum/reagent/ethanol/longislandicedtea
-	required_reagents = list(/datum/reagent/ethanol/vodka = 1, /datum/reagent/ethanol/gin = 1, /datum/reagent/ethanol/tequilla = 1, /datum/reagent/ethanol/cuba_libre = 3)
+	required_reagents = list(/datum/reagent/ethanol/vodka = 1, /datum/reagent/ethanol/gin = 1, /datum/reagent/ethanol/tequila = 1, /datum/reagent/ethanol/cuba_libre = 3)
 	result_amount = 6
 
 /datum/chemical_reaction/threemileisland
@@ -2311,6 +2323,53 @@
 	result_amount = 10
 	mix_message = "The solution thickens into a glossy, creamy substance."
 
+/datum/chemical_reaction/caramelisation
+	name = "Caramelised Sugar"
+	result = /datum/reagent/nutriment/caramel
+	required_reagents = list(/datum/reagent/sugar = 1)
+	result_amount = 1
+	minimum_temperature = T0C + 82
+	// no maximum! i mean technically it should burn at some point but ehh
+	mix_message = "The sugar melts into a sticky, brown liquid."
+
+/datum/chemical_reaction/caramelsauce
+	name = "Caramel Sauce"
+	result = /datum/reagent/drink/caramel
+	required_reagents = list(/datum/reagent/nutriment/caramel = 2, /datum/reagent/drink/milk/cream = 1, /datum/reagent/drink/syrup_simple = 2)
+	result_amount = 5
+	mix_message = "The solution thickens into a glossy, brown sauce."
+	maximum_temperature = T0C + 82 // You don't want the syrup to crystallise/caramelise; that'd just make more caramel...
+
+/datum/chemical_reaction/simplesyrup
+	name = "Simple Syrup"
+	result = /datum/reagent/drink/syrup_simple
+	required_reagents = list(/datum/reagent/sugar = 2, /datum/reagent/water = 1) // rich simple syrup, technically, but still
+	result_amount = 3
+	minimum_temperature = T20C + 10
+	maximum_temperature = T0C + 82 // Sugar caramelises after this point.
+	mix_message = "The sugar dissolves into the solution."
+
+/datum/chemical_reaction/caramelsyrup
+	name = "Caramel Syrup"
+	result = /datum/reagent/drink/syrup_caramel
+	required_reagents = list(/datum/reagent/nutriment/caramel = 2, /datum/reagent/drink/syrup_simple = 3)
+	result_amount = 5
+	mix_message = "The solution takes on a light brown hue and the aroma of caramel."
+
+/datum/chemical_reaction/chocosyrup
+	name = "Chocolate Syrup"
+	result = /datum/reagent/drink/syrup_chocolate
+	required_reagents = list(/datum/reagent/nutriment/coco = 2, /datum/reagent/drink/syrup_simple = 3)
+	result_amount = 5
+	mix_message = "The solution takes on a brown hue and the aroma of chocolate."
+
+/datum/chemical_reaction/pumpkinsyrup
+	name = "Pumpkin Spice Syrup"
+	result = /datum/reagent/drink/syrup_pumpkin
+	required_reagents = list(/datum/reagent/drink/juice/pumpkinpulp = 2, /datum/reagent/drink/syrup_simple = 3)
+	result_amount = 5
+	mix_message = "The solution takes on an orange hue and the aroma of pumpkin spice."
+
 /datum/chemical_reaction/anfo
 	name = "EZ-ANFO"
 	result = /datum/reagent/anfo
@@ -2350,21 +2409,37 @@
 /datum/chemical_reaction/three_eye
 	name = "Three Eye"
 	result = /datum/reagent/three_eye
-	result_amount = 2
+	result_amount = 1
 	mix_message = "The surface of the oily, iridescent liquid twitches like a living thing."
 	minimum_temperature = 40 CELSIUS
 	reaction_sound = 'sound/effects/psi/power_used.ogg'
-	hidden_from_codex = TRUE
 
 	catalysts = list(
-		/datum/reagent/toxin/carpotoxin = 1,
-		/datum/reagent/enzyme = 1
+		/datum/reagent/toxin/carpotoxin = 1
 	)
 
 	required_reagents = list(
-		/datum/reagent/mindbreaker = 2,
+		/datum/reagent/mindbreaker = 1,
 		/datum/reagent/toxin/phoron = 1,
 		/datum/reagent/blood = 1
+	)
+
+/datum/chemical_reaction/jerraman
+	name = "Jerraman"
+	result = /datum/reagent/jerraman
+	result_amount = 1
+	mix_message = "The surface of the golden liquid twitches like a living thing, then calms down."
+	minimum_temperature = 40 CELSIUS
+	reaction_sound = 'sound/effects/psi/power_used.ogg'
+
+	catalysts = list(
+		/datum/reagent/crystal = 10
+	)
+
+	required_reagents = list(
+		/datum/reagent/three_eye = 10,
+		/datum/reagent/nanitefluid = 10,
+		/datum/reagent/gold = 10
 	)
 
 // tea expansion pack content - black tea drinks
@@ -2749,3 +2824,10 @@
 	required_reagents = list(/datum/reagent/drink/alien/unathijuice = 2, /datum/reagent/nutriment/protein = 1)
 	result_amount = 3
 	mix_message = "The mixture turns a dark green"
+
+/datum/chemical_reaction/mate
+	name = "Mate"
+	hidden_from_codex = FALSE
+	result = /datum/reagent/drink/mate
+	required_reagents = list(/datum/reagent/nutriment/yerba = 2, /datum/reagent/water = 1)
+	result_amount = 3

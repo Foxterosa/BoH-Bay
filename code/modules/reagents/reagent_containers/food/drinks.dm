@@ -5,6 +5,7 @@
 	name = "drink"
 	desc = "Yummy!"
 	icon = 'icons/obj/drinks.dmi'
+	matter = list(MATERIAL_PLASTIC = 100)
 	icon_state = null
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
 	amount_per_transfer_from_this = 5
@@ -137,10 +138,8 @@
 	icon_state = "milk"
 	item_state = "carton"
 	center_of_mass = "x=16;y=9"
-
-/obj/item/weapon/reagent_containers/food/drinks/milk/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/milk, 50)
+	matter = list(MATERIAL_PLASTIC = 350)
+	reagents_to_add = list(/datum/reagent/drink/milk = 50)
 
 /obj/item/weapon/reagent_containers/food/drinks/soymilk
 	name = "soymilk carton"
@@ -148,27 +147,18 @@
 	icon_state = "soymilk"
 	item_state = "carton"
 	center_of_mass = "x=16;y=9"
-
-/obj/item/weapon/reagent_containers/food/drinks/soymilk/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/milk/soymilk, 50)
+	reagents_to_add = list(/datum/reagent/drink/milk/soymilk = 50)
 
 /obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton
 	name = "small milk carton"
 	volume = 30
 	icon_state = "mini-milk"
-
-/obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/milk, 30)
+	reagents_to_add = list(/datum/reagent/drink/milk = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton/chocolate
 	name = "small chocolate milk carton"
 	desc = "It's milk! This one is in delicious chocolate flavour."
-
-/obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton/chocolate/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/milk/chocolate, 30)
+	reagents_to_add = list(/datum/reagent/drink/milk/chocolate = 30)
 
 
 /obj/item/weapon/reagent_containers/food/drinks/coffee
@@ -176,20 +166,14 @@
 	desc = "Careful, the beverage you're about to enjoy is extremely hot."
 	icon_state = "coffee"
 	center_of_mass = "x=15;y=10"
-
-/obj/item/weapon/reagent_containers/food/drinks/coffee/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/coffee, 30)
+	reagents_to_add=list(/datum/reagent/drink/coffee = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/ice
 	name = "cup of ice"
 	desc = "Careful, cold ice, do not chew."
 	icon_state = "coffee"
 	center_of_mass = "x=15;y=10"
-
-/obj/item/weapon/reagent_containers/food/drinks/ice/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/ice, 30)
+	reagents_to_add=list(/datum/reagent/drink/ice = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/h_chocolate
 	name = "cup of hot cocoa"
@@ -197,10 +181,7 @@
 	icon_state = "coffee"
 	item_state = "coffee"
 	center_of_mass = "x=15;y=13"
-
-/obj/item/weapon/reagent_containers/food/drinks/h_chocolate/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/hot_coco, 30)
+	reagents_to_add=list(/datum/reagent/drink/hot_coco = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/dry_ramen
 	name = "cup ramen"
@@ -208,10 +189,7 @@
 	desc = "Just add 10ml water, self heats! A taste that reminds you of your school years."
 	icon_state = "ramen"
 	center_of_mass = "x=16;y=11"
-
-/obj/item/weapon/reagent_containers/food/drinks/dry_ramen/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/dry_ramen, 30)
+	reagents_to_add=list(/datum/reagent/drink/dry_ramen = 30)
 
 
 /obj/item/weapon/reagent_containers/food/drinks/sillycup
@@ -228,6 +206,32 @@
 	else
 		icon_state = "water_cup_e"
 
+/obj/item/weapon/reagent_containers/food/drinks/mate
+	name = "porongo"
+	desc = "Un recipiente unicamente para tomar mate. Una bombilla sale de esta."
+	icon = 'icons/obj/drink_glasses/coffecup.dmi'
+	icon_state = "mate"
+	item_state = "mate"
+	possible_transfer_amounts = null
+	volume = 15
+	center_of_mass = "x=16;y=12"
+/obj/item/weapon/reagent_containers/food/drinks/mate/feed_sound(var/mob/user)
+	playsound(user.loc, 'sound/items/mate.ogg', rand(10, 50), 1)
+
+
+/obj/item/weapon/reagent_containers/food/drinks/mate_med
+	name = "porongo"
+	desc = "Un recipiente con una bombilla unicamente para tomar mate. Esta tiene el logo de Medbay en ella."
+	icon = 'icons/obj/drink_glasses/coffecup.dmi'
+	icon_state = "mate_med"
+	item_state = "mate_med"
+	possible_transfer_amounts = null
+	volume = 15
+	center_of_mass = "x=16;y=12"
+/obj/item/weapon/reagent_containers/food/drinks/mate_med/feed_sound(var/mob/user)
+	playsound(user.loc, 'sound/items/mate.ogg', rand(10, 50), 1)
+
+
 
 //////////////////////////pitchers, pots, flasks and cups //
 //Note by Darem: This code handles the mixing of drinks. New drinks go in three places: In Chemistry-Reagents.dm (for the drink
@@ -242,6 +246,7 @@
 	amount_per_transfer_from_this = 10
 	volume = 120
 	center_of_mass = "x=17;y=7"
+	matter = list(MATERIAL_GLASS = 500)
 
 /obj/item/weapon/reagent_containers/food/drinks/pitcher
 	name = "insulated pitcher"
@@ -252,6 +257,7 @@
 	center_of_mass = "x=16;y=9"
 	filling_states = "15;30;50;70;85;100"
 	base_icon = "pitcher"
+	matter = list(MATERIAL_STEEL = 500, MATERIAL_PLASTIC = 200, MATERIAL_ALUMINIUM = 200)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask
 	name = "\improper Captain's flask"
@@ -259,6 +265,7 @@
 	icon_state = "flask"
 	volume = 60
 	center_of_mass = "x=17;y=7"
+	matter = list(MATERIAL_ALUMINIUM = 100, MATERIAL_STEEL = 200)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/shiny
 	name = "shiny flask"
@@ -301,27 +308,19 @@
 	filling_states = "100"
 	base_name = "cup"
 	base_icon = "cup"
+	matter = list(MATERIAL_PLASTIC = 150)
 
 /obj/item/weapon/reagent_containers/food/drinks/tea/black
 	name = "cup of black tea"
 	desc = "A tall plastic cup of hot black tea."
-
-/obj/item/weapon/reagent_containers/food/drinks/tea/black/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/tea, 30)
+	reagents_to_add = list(/datum/reagent/drink/tea = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/tea/green
 	name = "cup of green tea"
 	desc = "A tall plastic cup of hot green tea."
-
-/obj/item/weapon/reagent_containers/food/drinks/tea/green/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/tea/green, 30)
+	reagents_to_add = list(/datum/reagent/drink/tea/green = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/tea/chai
 	name = "cup of chai tea"
 	desc = "A tall plastic cup of hot chai tea."
-
-/obj/item/weapon/reagent_containers/food/drinks/tea/chai/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/tea/chai, 30)
+	reagents_to_add = list(/datum/reagent/drink/tea/chai = 30)

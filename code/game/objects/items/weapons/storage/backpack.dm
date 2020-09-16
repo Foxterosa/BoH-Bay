@@ -249,7 +249,7 @@
 		/obj/item/weapon/extinguisher,
 		/obj/item/clothing/gloves/fire,
 		/obj/item/clothing/accessory/fire_overpants,
-		/obj/item/weapon/tank/oxygen/red,
+		/obj/item/weapon/tank/emergency/oxygen/double/red,
 		/obj/item/clothing/head/hardhat/firefighter,
 		/obj/item/weapon/extinguisher
 	)
@@ -417,6 +417,15 @@
 	name = "emergency response team backpack"
 	desc = "A spacious backpack with lots of pockets, used by members of the Emergency Response Team."
 	icon_state = "ert_commander"
+	item_state_slots = list(
+		slot_l_hand_str = "securitypack",
+		slot_r_hand_str = "securitypack",
+		)
+
+/obj/item/weapon/storage/backpack/bs_mochila
+	name = "mochila de blueshield"
+	desc = "Una mochila peteneciente a los blueshield."
+	icon_state = "blueshieldpack"
 	item_state_slots = list(
 		slot_l_hand_str = "securitypack",
 		slot_r_hand_str = "securitypack",

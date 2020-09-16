@@ -18,7 +18,7 @@
 	var/mode = 0
 	var/useramount = 30 // Last used amount
 	var/pillamount = 10
-	var/bottlesprite = "bottle-1" //yes, strings
+	var/bottlesprite = "bottle-4" //yes, strings
 	var/pillsprite = "1"
 	var/client/has_sprites = list()
 	var/max_pill_count = 20
@@ -212,7 +212,7 @@
 		if(prob(user.skill_fail_chance(core_skill, 100)))
 			. += reagent
 
-/obj/machinery/chem_master/proc/get_chem_info(datum/reagent/reagent, heading = "Chemical infos", detailed_blood = 1)
+/obj/machinery/chem_master/proc/get_chem_info(datum/reagent/reagent, heading = "Chemical analysis", detailed_blood = 1)
 	if(!beaker || !reagent)
 		return
 	. = list()
@@ -313,7 +313,7 @@
 	core_skill = SKILL_COOKING
 
 /obj/machinery/chem_master/condimaster/get_chem_info(datum/reagent/reagent)
-	return ..(reagent, "Condiment infos", 0)
+	return ..(reagent, "Condiments", 0)
 
 /obj/machinery/chem_master/condimaster/create_bottle(mob/user)
 	var/obj/item/weapon/reagent_containers/food/condiment/P = new/obj/item/weapon/reagent_containers/food/condiment(src.loc)

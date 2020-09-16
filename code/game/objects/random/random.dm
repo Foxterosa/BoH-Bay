@@ -50,6 +50,52 @@
 /obj/random/single/spawn_choices()
 	return list(spawn_object)
 
+/obj/random/produce
+	name = "random produce"
+	icon = 'icons/obj/seeds.dmi'
+	icon_state = ""
+	var/list/produce_list = list( //When adding produce, use the .name variable of the /datum/seed/
+		"chili" = 1,
+		"berries" = 0.25,
+		"blueberries" = 0.25,
+		"tomato" = 2,
+		"eggplant" = 0.5,
+		"apple" = 0.25,
+		"mushrooms" = 0.25,
+		"grapes" = 0.25,
+		"greengrapes" = 0.25,
+		"peanut" = 0.5,
+		"cabbage" = 2,
+		"banana" = 0.5,
+		"corn" = 2,
+		"potato" = 2,
+		"soybean" = 0.5,
+		"rice" = 2,
+		"carrot" = 1,
+		"whitebeet" = 1,
+		"watermelon" = 0.1,
+		"pumpkin" = 0.1,
+		"lime" = 0.25,
+		"lemon" = 0.25,
+		"orange" = 0.25,
+		"cacao" = 0.5,
+		"cherry" = 0.25,
+		"garlic" = 0.5,
+		"onion" = 0.5
+	)
+
+/obj/random/produce/spawn_item()
+	for(var/i=1,i<=spawn_attempts,i++)
+		if(prob(spawn_nothing_percentage))
+			continue
+		var/seed_chosen = pickweight(produce_list)
+		var/datum/seed/chosen_seed = SSplants.seeds[seed_chosen]
+		if(chosen_seed)
+			chosen_seed.spawn_seed(src.loc)
+		else
+			log_debug("Cannot spawn random produce [seed_chosen]! Fix this by editing [type]'s produce_list!")
+
+
 /obj/random/tool
 	name = "random tool"
 	desc = "This is a random tool."
@@ -245,7 +291,7 @@
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/gin,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
-				/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla,
+				/obj/item/weapon/reagent_containers/food/drinks/bottle/tequila,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/wine,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac,
@@ -335,10 +381,8 @@
 	icon_state = "assistant"
 
 /obj/random/action_figure/spawn_choices()
-	return list(/obj/item/toy/figure/cmo,
-				/obj/item/toy/figure/assistant,
+	return list(/obj/item/toy/figure/assistant,
 				/obj/item/toy/figure/atmos,
-				/obj/item/toy/figure/bartender,
 				/obj/item/toy/figure/borg,
 				/obj/item/toy/figure/gardener,
 				/obj/item/toy/figure/captain,
@@ -353,7 +397,6 @@
 				/obj/item/toy/figure/dsquad,
 				/obj/item/toy/figure/engineer,
 				/obj/item/toy/figure/geneticist,
-				/obj/item/toy/figure/hop,
 				/obj/item/toy/figure/hos,
 				/obj/item/toy/figure/qm,
 				/obj/item/toy/figure/janitor,
@@ -361,18 +404,46 @@
 				/obj/item/toy/figure/librarian,
 				/obj/item/toy/figure/md,
 				/obj/item/toy/figure/mime,
-				/obj/item/toy/figure/miner,
 				/obj/item/toy/figure/ninja,
-				/obj/item/toy/figure/wizard,
 				/obj/item/toy/figure/rd,
-				/obj/item/toy/figure/roboticist,
-				/obj/item/toy/figure/scientist,
 				/obj/item/toy/figure/syndie,
 				/obj/item/toy/figure/secofficer,
 				/obj/item/toy/figure/warden,
-				/obj/item/toy/figure/psychologist,
 				/obj/item/toy/figure/paramedic,
-				/obj/item/toy/figure/ert)
+				/obj/item/toy/figure/ert,
+				/obj/item/toy/figure/aleph,
+				/obj/item/toy/figure/alicia,
+				/obj/item/toy/figure/alysson,
+				/obj/item/toy/figure/ana,
+				/obj/item/toy/figure/angelina,
+				/obj/item/toy/figure/area,
+				/obj/item/toy/figure/ariel,
+				/obj/item/toy/figure/arkin,
+				/obj/item/toy/figure/bruno,
+				/obj/item/toy/figure/camilo,
+				/obj/item/toy/figure/connor,
+				/obj/item/toy/figure/dana,
+				/obj/item/toy/figure/darkness,
+				/obj/item/toy/figure/duck,
+				/obj/item/toy/figure/franco,
+				/obj/item/toy/figure/hal,
+				/obj/item/toy/figure/honkito,
+				/obj/item/toy/figure/jr,
+				/obj/item/toy/figure/kans,
+				/obj/item/toy/figure/louie,
+				/obj/item/toy/figure/manuel,
+				/obj/item/toy/figure/priscilla,
+				/obj/item/toy/figure/sam,
+				/obj/item/toy/figure/slimy,
+				/obj/item/toy/figure/smug,
+				/obj/item/toy/figure/suki,
+				/obj/item/toy/figure/sydney1,
+				/obj/item/toy/figure/sydney2,
+				/obj/item/toy/figure/uzume,
+				/obj/item/toy/figure/vaum,
+				/obj/item/toy/figure/vlad,
+				/obj/item/toy/figure/wh,
+				/obj/item/toy/figure/zsle)
 
 
 /obj/random/plushie
@@ -385,7 +456,8 @@
 	return list(/obj/item/toy/plushie/nymph,
 				/obj/item/toy/plushie/mouse,
 				/obj/item/toy/plushie/kitten,
-				/obj/item/toy/plushie/lizard)
+				/obj/item/toy/plushie/lizard,
+				/obj/item/toy/plushie/kobold)
 
 /obj/random/plushie/large
 	name = "random large plushie"
@@ -439,7 +511,8 @@ obj/random/closet //A couple of random closets to spice up maint
 	var/list/locker_vermin = list(
 		/mob/living/simple_animal/mouse,
 		/mob/living/simple_animal/opossum,
-		/mob/living/carbon/alien/diona
+		/mob/living/carbon/alien/diona,
+		/mob/living/simple_animal/hostile/voxslug
 	)
 
 /obj/random/closet/spawn_choices()
@@ -529,7 +602,7 @@ obj/random/closet //A couple of random closets to spice up maint
 /obj/random/tank/spawn_choices()
 	return list(/obj/item/weapon/tank/oxygen = 5,
 				/obj/item/weapon/tank/oxygen/yellow = 4,
-				/obj/item/weapon/tank/oxygen/red = 4,
+				/obj/item/weapon/tank/emergency/oxygen/double/red = 4,
 				/obj/item/weapon/tank/air = 3,
 				/obj/item/weapon/tank/emergency/oxygen = 4,
 				/obj/item/weapon/tank/emergency/oxygen/engi = 3,
@@ -931,41 +1004,43 @@ something, make sure it's not in one of the other lists.*/
 /obj/random/maintenance/clean/spawn_choices()
 	return list(
 		/obj/random/accessory = 20,
-		/obj/random/action_figure = 1, // 2 to 1
+		/obj/random/action_figure = 1,
 		/obj/random/advdevice = 50,
 		/obj/random/bomb_supply = 80,
 		/obj/random/cash = 10,
 		/obj/random/clothing = 30,
 		/obj/random/coin = 5,
-		/obj/random/contraband = 1,
+		/obj/random/contraband = 15,
 		/obj/random/drinkbottle = 5,
 		/obj/random/firstaid = 20,
-		/obj/random/glasses = 10, //20 to 10
+		/obj/random/glasses = 10,
 		/obj/random/gloves = 10,
-		/obj/random/shoes = 10, // 20 to 10
-		/obj/random/hardsuit = 1, //Added
-		/obj/random/hat = 5, //10 to 5
-		/obj/random/hostile/maint = 20, //Added
-		/obj/random/illegal = 5, //Added
-		/obj/random/junk = 1, //Added
-		/obj/random/loot = 1,
+		/obj/random/shoes = 10,
+		/obj/random/hardsuit = 1,
+		/obj/random/hat = 5,
+		/obj/random/hostile/maint = 35,
+		/obj/random/hostile/maint_severe = 25,
+		/obj/random/illegal = 5,
+		/obj/random/junk = 1,
+		/obj/random/loot = 25,
 		/obj/random/masks = 10,
 		/obj/random/material = 40,
-		/obj/random/medical = 20, //40 to 20.
+		/obj/random/medical = 20,
 		/obj/random/medical/lite = 80,
-		/obj/random/mre = 1, //Added
-		/obj/random/plushie = 1, //2 to 1.
-		/obj/random/shoes = 5, //Added
-		/obj/random/smokes = 20, //30 to 20
-		/obj/random/snack = 30, //60 to 30
+		/obj/random/mre = 1,
+		/obj/random/plushie = 1,
+		/obj/random/shoes = 5,
+		/obj/random/smokes = 20,
+		/obj/random/snack = 30,
 		/obj/random/soap = 5,
 		/obj/random/storage = 30,
 		/obj/random/suit = 20,
 		/obj/random/tank = 20,
 		/obj/random/tech_supply = 100,
 		/obj/random/technology_scanner = 80,
-		/obj/random/toolbox = 30, //Added
-		/obj/random/toy = 10
+		/obj/random/toolbox = 30,
+		/obj/random/toy = 10,
+		/obj/random/illegaltwo = 2
 	)
 
 /obj/random/loot /*Better loot for away missions and salvage */
@@ -982,18 +1057,18 @@ something, make sure it's not in one of the other lists.*/
 				/obj/random/hardsuit = 10,
 				/obj/item/clothing/mask/muzzle = 7,
 				/obj/item/clothing/mask/gas/vox = 8,
-				/obj/item/clothing/mask/gas/syndicate = 10,
+				/obj/item/clothing/mask/gas/syndicate = 8,
 				/obj/item/clothing/glasses/night = 3,
 				/obj/item/clothing/glasses/thermal = 1,
 				/obj/item/clothing/glasses/welding/superior = 7,
 				/obj/item/clothing/head/collectable/petehat = 4,
 				/obj/item/clothing/suit/storage/vest/merc = 3,
-				/obj/item/clothing/suit/straight_jacket = 6,
 				/obj/item/clothing/head/helmet/merc = 3,
 				/obj/item/stack/material/diamond/ten = 7,
 				/obj/item/stack/material/glass/phoronrglass/ten = 7,
-				/obj/item/stack/material/marble/ten = 8,
+				/obj/item/stack/material/marble/ten = 7,
 				/obj/item/stack/material/phoron/ten = 7,
+				/obj/item/stack/material/uranium/ten = 7,
 				/obj/item/stack/material/gold/ten = 7,
 				/obj/item/stack/material/silver/ten = 7,
 				/obj/item/stack/material/osmium/ten = 7,
@@ -1019,8 +1094,8 @@ something, make sure it's not in one of the other lists.*/
 				/obj/item/weapon/bonegel = 7,
 				/obj/item/weapon/circular_saw = 7,
 				/obj/item/weapon/scalpel = 7,
-				/obj/item/weapon/melee/baton/loaded = 9,
-				/obj/item/device/radio/headset/syndicate = 6)
+				/obj/item/weapon/melee/baton/loaded = 6,
+				/obj/item/device/radio/headset/syndicate = 5)
 
 /obj/random/voidhelmet
 	name = "Random Voidsuit Helmet"
@@ -1104,11 +1179,51 @@ obj/random/hostile/spawn_choices()
 		/mob/living/simple_animal/hostile/retaliate/goat = 1,
 		/mob/living/simple_animal/hostile/retaliate/goose = 1,
 		/mob/living/simple_animal/hostile/retaliate/parrot = 1,
+		/mob/living/simple_animal/hostile/retaliate/Kanguro = 1,
 		/mob/living/simple_animal/hostile/rogue_drone = 8,
-		/mob/living/simple_animal/hostile/scarybat = 4
+		/mob/living/simple_animal/hostile/scarybat = 4,
 	)
 
+/obj/random/hostile/maint_severe
+	name = "Random Deadly Maint Mob"
+	desc = "This is a random DEADLY hostile mob suitable to be found in maintenance."
+	icon = 'icons/mob/amorph.dmi'
+	icon_state = "standing"
+	spawn_nothing_percentage = 0
 
+/obj/random/hostile/maint_severe/spawn_choices()
+	return list(
+		/mob/living/simple_animal/hostile/voxslug = 6,
+		/mob/living/simple_animal/hostile/leech = 3,
+		/mob/living/simple_animal/hostile/viscerator = 1
+	)
+
+//bodies
+/obj/random/remains
+	name = "Random Remains"
+	desc = "This is a random body, set of remains or a pile of gibs."
+	icon = 'icons/effects/blood.dmi'
+	icon_state = "remains"
+	spawn_nothing_percentage = 0
+
+/obj/random/remains/spawn_choices()
+	return list(
+		/obj/item/remains/human = 12,
+		/obj/item/remains/xeno = 6,
+		/obj/item/remains/robot = 6,
+		/obj/item/remains/mouse = 6,
+		/obj/item/remains/lizard = 6,
+		/obj/effect/gibspawner/robot = 3,
+		/obj/effect/gibspawner/human = 3,
+		/obj/effect/landmark/corpse/chef = 1,
+		/obj/effect/landmark/corpse/doctor = 1,
+		/obj/effect/landmark/corpse/engineer = 1,
+		/obj/effect/landmark/corpse/scientist = 1,
+		/obj/effect/landmark/corpse/clown = 1,
+		/obj/effect/landmark/corpse/miner = 1,
+		/obj/effect/landmark/corpse/russian = 1,
+		/obj/effect/landmark/corpse/syndicate = 1
+	)
 
 /*
 	Selects one spawn point out of a group of points with the same ID and asks it to generate its items
@@ -1408,12 +1523,12 @@ Unlike what normally spawns, this material will be dangerous, or just outright b
 				/obj/item/weapon/gun/projectile/manualcycle/imprifle = 1,
 				/obj/item/weapon/reagent_containers/glass/beaker/vial/random/toxin = 14,
 				/obj/item/weapon/reagent_containers/glass/beaker/sulphuric = 14,
-				/obj/item/weapon/reagent_containers/glass/beaker/vial/hfc = 1,
+				/obj/item/weapon/reagent_containers/glass/beaker/vial/hfp = 1,
 				/obj/item/weapon/storage/box/ammo/shotgunammo/birdshot/full = 3,
 				/obj/item/weapon/melee/baton/cattleprod = 6,
 				/obj/item/weapon/arrow = 16,
 				/obj/item/weapon/gun/magnetic = 1,
-				/obj/item/weapon/gun/projectile/pirate/unloaded = 7, //Reduced
+				/obj/item/weapon/gun/projectile/pirate/unloaded = 7,
 				/obj/item/weapon/storage/firstaid/combat = 4,
 				/obj/item/stack/telecrystal = 1,
 				/obj/item/clothing/under/syndicate = 2,
@@ -1431,7 +1546,10 @@ Unlike what normally spawns, this material will be dangerous, or just outright b
 				/obj/item/weapon/reagent_containers/pill/three_eye = 1,
 				/obj/item/weapon/storage/lockbox/vials/random = 1,
 				/obj/item/weapon/storage/toolbox/syndicate = 6,
-				/obj/item/weapon/reagent_containers/food/snacks/egg/lizard = 1
+				/obj/item/weapon/reagent_containers/food/snacks/egg/lizard = 3,
+				/obj/random/hostile/maint_severe = 25,
+				/obj/random/hostile/maint = 35
+
 			)
 
 //100% Illegal
@@ -1443,5 +1561,7 @@ Unlike what normally spawns, this material will be dangerous, or just outright b
 
 /obj/random/illegaltwo/spawn_choices()
 	return list(/obj/item/weapon/gun/magnetic = 1,
+				/obj/random/hostile/maint_severe = 25,
+				/obj/random/hostile/maint = 35,
 				/obj/item/weapon/gun/projectile/pirate/unloaded = 4,
 				/obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn/empty = 2)

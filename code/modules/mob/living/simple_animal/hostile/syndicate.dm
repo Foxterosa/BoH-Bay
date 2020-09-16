@@ -6,11 +6,11 @@
 	icon_dead = "syndicate_dead"
 	icon_gib = "syndicate_gib"
 	speak_chance = 0
-	turns_per_move = 5
+	turns_per_move = 6
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
-	speed = 4
+	speed = 2
 	stop_automated_movement_when_pulled = 0
 	maxHealth = 100
 	health = 100
@@ -22,7 +22,6 @@
 	a_intent = I_HURT
 	var/corpse = /obj/effect/landmark/corpse/syndicate
 	var/weapon1
-	var/weapon2
 	unsuitable_atmos_damage = 15
 	environment_smash = 1
 	faction = "syndicate"
@@ -34,8 +33,6 @@
 		new corpse (src.loc)
 	if(weapon1)
 		new weapon1 (src.loc)
-	if(weapon2)
-		new weapon2 (src.loc)
 	qdel(src)
 	return
 
@@ -47,7 +44,6 @@
 	icon_state = "syndicatemelee"
 	icon_living = "syndicatemelee"
 	weapon1 = /obj/item/weapon/melee/energy/sword/red
-	weapon2 = /obj/item/weapon/shield/energy
 	attacktext = "slashed"
 	status_flags = 0
 

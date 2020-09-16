@@ -150,15 +150,6 @@
 
 	update_clothing_icon()	//so our overlays update
 
-/obj/item/clothing/accessory/toggleable/vest
-	name = "vest"
-	desc = "A slick suit vest."
-	icon_state = "det_vest"
-
-/obj/item/clothing/accessory/toggleable/vest/black
-	name = "black vest"
-	color = COLOR_GRAY15
-
 /obj/item/clothing/accessory/toggleable/tan_jacket
 	name = "tan suit jacket"
 	desc = "Cozy suit jacket."
@@ -172,6 +163,26 @@
 	name = "charcoal suit jacket"
 	desc = "Strict suit jacket."
 	icon_state = "charcoal_jacket"
+
+/obj/item/clothing/accessory/toggleable/redsuit_vest
+	name = "chaleco de traje"
+	desc = "Un chaleco, bastante elegantes en el traje adecuado."
+	icon_state = "redsuit_vest"
+
+	/obj/item/clothing/accessory/toggleable/redsuit_vest/modified
+	item_flags = ITEM_FLAG_PREMODIFIED
+
+/obj/item/clothing/accessory/toggleable/redsuit_vest/black
+	name = "chaleco de traje negro"
+	color = COLOR_GRAY15
+
+/obj/item/clothing/accessory/toggleable/redsuit_jacket
+	name = "chaqueta de traje"
+	desc = "Una chaqueta, bastante elegantes en el traje adecuado."
+	icon_state = "redsuit_jacket"
+
+	/obj/item/clothing/accessory/toggleable/redsuit_jacket/modified
+	item_flags = ITEM_FLAG_PREMODIFIED
 
 /obj/item/clothing/accessory/toggleable/navy_jacket
 	name = "navy suit jacket"
@@ -326,13 +337,13 @@
 	icon_state = "fire_overpants"
 	gas_transfer_coefficient = 0.90
 	permeability_coefficient = 0.50
-	body_parts_covered = LEG_LEFT | LEG_RIGHT | LOWER_TORSO
-	cold_protection = LOWER_TORSO | LEG_LEFT | LEG_RIGHT
-	heat_protection = LOWER_TORSO | LEG_LEFT | LEG_RIGHT
+
+	armor = list(laser = ARMOR_LASER_MINOR, energy = ARMOR_ENERGY_MINOR, bomb = ARMOR_BOMB_MINOR)
+	body_parts_covered = LOWER_TORSO | LEGS
+	slowdown = 0.2
+
+	heat_protection = LOWER_TORSO | LEGS
+	cold_protection = LOWER_TORSO | LEGS
+
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	max_pressure_protection = FIRESUIT_MAX_PRESSURE
-	armor = list(melee = 0, bullet = 0, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0)
-
-/obj/item/clothing/accessory/fire_overpants/Initialize()
-	. = ..()
-	slowdown_per_slot[slot_wear_suit] = 0.2

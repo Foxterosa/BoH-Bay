@@ -10,11 +10,6 @@
 	item_cost = 1
 	path = /obj/item/clothing/mask/fakemoustache
 
-/datum/uplink_item/item/stealth_items/balaclava
-	name = "Balaclava"
-	item_cost = 1
-	path = /obj/item/clothing/mask/balaclava
-
 /datum/uplink_item/item/stealth_items/syndigaloshes
 	name = "No-Slip Shoes"
 	desc = "These shoes have a non-slip grip on them, so those pesky janitors can't ruin your operations!"
@@ -30,21 +25,21 @@
 /datum/uplink_item/item/stealth_items/id
 	name = "Agent ID card"
 	desc = "A unique ID card that is completely configurable. Scan another ID card with it to clone its access capabilities."
-	item_cost = 12
+	item_cost = 8
 	path = /obj/item/weapon/card/id/syndicate
 
 /datum/uplink_item/item/stealth_items/chameleon_kit
 	name = "Chameleon Kit"
 	desc = "Comes with a full set of appearance changing clothing you need to impersonate most people.  \
 	Accessories, backpack, and gun included!"
-	item_cost = 20
+	item_cost = 10
 	path = /obj/item/weapon/storage/backpack/chameleon/sydie_kit
 
 /datum/uplink_item/item/stealth_items/voice
 	name = "Modified Gas Mask"
-	desc = "A fully functioning gas mask that is able to conceal your face and has a built in voice modulator, \
-	so you can become a true shadow operative!"
-	item_cost = 20
+	desc = "A gas mask that is able to conceal your face and has a built in voice modulator, \
+	so you can become a true shadow operative! Filters not included."
+	item_cost = 10
 	path = /obj/item/clothing/mask/chameleon/voice
 
 /datum/uplink_item/item/stealth_items/chameleon_projector
@@ -64,5 +59,5 @@
 	name = "Smuggler's Satchel"
 	desc = "This satchel is thin enough to be hidden in the gap between plating and tiling, \
 	great for stashing your stolen goods. Comes with a crowbar and a floor tile."
-	item_cost = 20
+	item_cost = 10
 	path = /obj/item/weapon/storage/backpack/satchel/flat

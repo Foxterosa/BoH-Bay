@@ -1,4 +1,3 @@
-
 /datum/gear/accessory
 	sort_category = "Accessories"
 	category = /datum/gear/accessory
@@ -37,12 +36,11 @@
 /datum/gear/accessory/locket
 	display_name = "locket"
 	path = /obj/item/clothing/accessory/locket
-	flags = GEAR_HAS_CUSTOM_SELECTION
 
 /datum/gear/accessory/necklace
 	display_name = "necklace, colour select"
 	path = /obj/item/clothing/accessory/necklace
-	flags = GEAR_HAS_COLOR_SELECTION | GEAR_HAS_CUSTOM_SELECTION
+	flags = GEAR_HAS_COLOR_SELECTION
 
 /datum/gear/accessory/bowtie
 	display_name = "bowtie, horrible"
@@ -126,5 +124,4 @@
 	display_name = "bracelet, color select"
 	path = /obj/item/clothing/accessory/bracelet
 	cost = 1
-	flags = GEAR_HAS_COLOR_SELECTION | GEAR_HAS_CUSTOM_SELECTION
-
+	flags = GEAR_HAS_COLOR_SELECTION

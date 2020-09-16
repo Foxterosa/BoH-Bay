@@ -42,6 +42,7 @@ Class Variables:
 	  Possible bit flags:
 		 BROKEN:1 -- Machine is broken
 		 NOPOWER:2 -- No power is being supplied to machine.
+		 POWEROFF:4 -- The machine is disabled.
 		 MAINT:8 -- machine is currently under going maintenance.
 		 EMPED:16 -- temporary broken by EMP pulse
 
@@ -247,7 +248,7 @@ Class Procs:
 	if(stat & BROKEN)
 		return STATUS_CLOSE
 
-	return GLOB.physical_state.can_use_topic(nano_host(), user)
+	return GLOB.physical_state.can_use_topic(ui_host(), user)
 
 /obj/machinery/CouldUseTopic(var/mob/user)
 	..()
@@ -283,7 +284,7 @@ Class Procs:
 /obj/machinery/attack_ghost(mob/user)
 	interface_interact(user)
 
-// If you don't call parent in this proc, you must make all appropriate checks yourself. 
+// If you don't call parent in this proc, you must make all appropriate checks yourself.
 // If you do, you must respect the return value.
 /obj/machinery/attack_hand(mob/user)
 	if((. = ..())) // Buckling, climbers; unlikely to return true.
@@ -337,7 +338,7 @@ Class Procs:
 
 /obj/machinery/proc/state(var/msg)
 	for(var/mob/O in hearers(src, null))
-		O.show_message("\icon[src] <span class = 'notice'>[msg]</span>", 2)
+		O.show_message("[icon2html(src, O)] <span class = 'notice'>[msg]</span>", 2)
 
 /obj/machinery/proc/ping(text=null)
 	if (!text)
@@ -436,7 +437,7 @@ Class Procs:
 
 /obj/machinery/Move()
 	. = ..()
-	if(. && !CanFluidPass())
+	if(. && !CanPass())
 		fluid_update()
 
 /obj/machinery/get_cell()

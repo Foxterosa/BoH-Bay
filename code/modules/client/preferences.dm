@@ -14,6 +14,7 @@ datum/preferences
 
 	//game-preferences
 	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change
+	var/toggles = TOGGLES_DEFAULT
 
 		//Mob preview
 	var/icon/preview_icon = null
@@ -289,6 +290,7 @@ datum/preferences
 	character.flavor_texts["hands"] = flavor_texts["hands"]
 	character.flavor_texts["legs"] = flavor_texts["legs"]
 	character.flavor_texts["feet"] = flavor_texts["feet"]
+	character.flavor_texts["NSFW/OOC"] = flavor_texts["NSFW/OOC"]
 
 	character.public_record = public_record
 	character.med_record = med_record

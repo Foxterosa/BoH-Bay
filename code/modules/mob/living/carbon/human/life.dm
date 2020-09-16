@@ -119,7 +119,7 @@
 		update_skin(1)
 	if(client && client.is_afk())
 		if(old_stat == UNCONSCIOUS && stat == CONSCIOUS)
-			playsound_local(null, 'sound/effects/bells.ogg', 100, is_global=TRUE)
+			playsound_simple(null, 'sound/effects/bells.ogg', 100, is_global=TRUE)
 
 /mob/living/carbon/human/proc/handle_some_updates()
 	if(life_tick > 5 && timeofdeath && (timeofdeath < 5 || world.time - timeofdeath > 6000))	//We are long dead, or we're junk mobs spawned like the clowns on the clown shuttle
@@ -147,7 +147,7 @@
 		var/list/covers = get_covering_equipped_items(zone)
 		var/zone_exposure = 1
 		for(var/obj/item/clothing/C in covers)
-			zone_exposure = min(zone_exposure, C.get_pressure_weakness(pressure))
+			zone_exposure = min(zone_exposure, C.get_pressure_weakness(pressure,zone))
 		if(zone_exposure >= 1)
 			return 1
 		pressure_adjustment_coefficient = max(pressure_adjustment_coefficient, zone_exposure)
@@ -285,7 +285,7 @@
 		damage = Floor(damage * species.get_radiation_mod(src))
 		if(damage)
 			adjustToxLoss(damage * RADIATION_SPEED_COEFFICIENT)
-			immunity = max(0, immunity - damage * 15 * RADIATION_SPEED_COEFFICIENT) 
+			immunity = max(0, immunity - damage * 15 * RADIATION_SPEED_COEFFICIENT)
 			updatehealth()
 			if(!isSynthetic() && organs.len)
 				var/obj/item/organ/external/O = pick(organs)
@@ -873,7 +873,7 @@
 	if(isturf(loc) && rand(1,1000) == 1)
 		var/turf/T = loc
 		if(T.get_lumcount() <= LIGHTING_SOFT_THRESHOLD)
-			playsound_local(src,pick(GLOB.scarySounds),50, 1, -1)
+			playsound_simple(src,pick(GLOB.scarySounds),50, 1, -1)
 
 	var/area/A = get_area(src)
 	if(client && world.time >= client.played + 600)
@@ -1129,7 +1129,7 @@
 			reset_view(null)
 	else
 		var/isRemoteObserve = 0
-		if(bound_overlay && client.eye == bound_overlay && !is_physically_disabled())
+		if(z_eye)
 			isRemoteObserve = 1
 		else if((mRemote in mutations) && remoteview_target)
 			if(remoteview_target.stat == CONSCIOUS)

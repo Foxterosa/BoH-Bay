@@ -47,6 +47,9 @@
 	real_name = name
 	add_language(LANGUAGE_CULT)
 	add_language(LANGUAGE_CULT_GLOBAL)
+
+/mob/living/simple_animal/construct/Initialize()
+	. = ..()
 	for(var/spell in construct_spells)
 		src.add_spell(new spell, "const_spell_ready")
 	update_icon()
@@ -74,7 +77,7 @@
 
 /mob/living/simple_animal/construct/examine(mob/user)
 	. = ..(user)
-	var/msg = "<span cass='info'>*---------*\nThis is \icon[src] \a <EM>[src]</EM>!\n"
+	var/msg = "<span cass='info'>*---------*\nThis is [icon2html(src, user)] \a <EM>[src]</EM>!\n"
 	if (src.health < src.maxHealth)
 		msg += "<span class='warning'>"
 		if (src.health >= src.maxHealth/2)
@@ -124,7 +127,7 @@
 /mob/living/simple_animal/construct/armoured/Life()
 	weakened = 0
 	if ((. = ..()))
-		return 
+		return
 
 /mob/living/simple_animal/construct/armoured/bullet_act(var/obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
@@ -261,7 +264,6 @@
 	eye_glow.plane = EFFECTS_ABOVE_LIGHTING_PLANE
 	eye_glow.layer = EYE_GLOW_LAYER
 	overlays += eye_glow
-	set_light(-2, 0.1, 1.5, l_color = "#ffffff")
 
 ////////////////HUD//////////////////////
 

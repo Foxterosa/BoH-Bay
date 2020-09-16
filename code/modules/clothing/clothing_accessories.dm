@@ -64,7 +64,7 @@
 /obj/item/clothing/examine(mob/user)
 	. = ..()
 	for(var/obj/item/clothing/accessory/A in accessories)
-		to_chat(user, "\icon[A] \A [A] is attached to it.")
+		to_chat(user, "[icon2html(A, user)] \A [A] is attached to it.")
 	switch(ironed_state)
 		if(WRINKLES_WRINKLY)
 			to_chat(user, "<span class='bad'>It's wrinkly.</span>")
@@ -75,7 +75,7 @@
 			to_chat(user, "<span class='notice'>It smells clean!</span>")
 		if(SMELL_STINKY)
 			to_chat(user, "<span class='bad'>It's quite stinky!</span>")
-	
+
 
 /obj/item/clothing/proc/update_accessory_slowdown()
 	slowdown_accessory = 0
@@ -116,15 +116,14 @@
 	var/list/removables = list()
 	for(var/obj/item/clothing/accessory/ass in accessories)
 		if(ass.removable)
-			removables |= ass
-	if(accessories.len > 1)
-		A = input("Select an accessory to remove from [src]") as null|anything in removables
-	else
-		A = accessories[1]
-	src.remove_accessory(usr,A)
+			removables[ass] = ass
+	A = removables[1]
+	if(removables.len > 1)
+		A = show_radial_menu(usr, src, removables)
+	remove_accessory(usr,A)
 	removables -= A
 	if(!removables.len)
-		src.verbs -= /obj/item/clothing/proc/removetie_verb
+		verbs -= /obj/item/clothing/proc/removetie_verb
 
 /obj/item/clothing/emp_act(severity)
 	if(accessories.len)

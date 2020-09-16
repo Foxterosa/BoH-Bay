@@ -13,6 +13,7 @@
 	sprite_sheets = list(
 		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
+		SPECIES_OLDUNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi'
 		)
 	species_restricted = null
 
@@ -27,13 +28,24 @@
 
 /obj/item/clothing/shoes/magboots/rig
 	name = "boots"
-	item_flags = ITEM_FLAG_THICKMATERIAL | ITEM_FLAG_AIRTIGHT
+	item_flags = ITEM_FLAG_THICKMATERIAL | ITEM_FLAG_AIRTIGHT | ITEM_FLAG_SILENT
 	body_parts_covered = FEET
 	cold_protection = FEET
 	heat_protection = FEET
 	species_restricted = null
 	gender = PLURAL
 	icon_base = null
+	var/footstep = 1
+
+/obj/item/clothing/shoes/magboots/rig/handle_movement(var/turf/walking, var/running)
+	if(running)
+		if(footstep >= 2)
+			footstep = 0
+			playsound(src, "sound/machines/rigstep.ogg", 50, 1) // this will get annoying very fast.
+		else
+			footstep++
+	else
+		playsound(src, "sound/machines/rigstep.ogg", 20, 1)
 
 /obj/item/clothing/suit/space/rig
 	name = "chestpiece"
@@ -49,7 +61,7 @@
 	resilience = 0.2
 	can_breach = 1
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
+		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi'
 		)
 	var/list/supporting_limbs = list() //If not-null, automatically splints breaks. Checked when removing the suit.
 

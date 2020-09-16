@@ -52,7 +52,9 @@
 /mob/living/simple_animal/borer/roundstart
 	roundstart = TRUE
 
-/mob/living/simple_animal/borer/neutered
+/mob/living/simple_animal/borer/symbiote
+	name = "symbiote"
+	real_name = "symbiote"
 	neutered = TRUE
 
 /mob/living/simple_animal/borer/Login()
@@ -91,7 +93,7 @@
 	generation = gen
 	set_borer_name()
 
-	if(!roundstart) 
+	if(!roundstart)
 		request_player()
 
 	aura_image = create_aura_image(src)
@@ -165,7 +167,7 @@
 					docile = 0
 
 			if(chemicals < 250 && host.nutrition >= (neutered ? 200 : 50))
-				host.nutrition--
+				host.adjust_nutrition(-1)
 				chemicals++
 
 			if(controlling)

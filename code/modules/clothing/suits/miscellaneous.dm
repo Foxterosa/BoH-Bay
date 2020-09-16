@@ -74,9 +74,10 @@
 
 
 /obj/item/clothing/suit/judgerobe
-	name = "judge's robe"
-	desc = "This robe commands authority."
-	icon_state = "judge"
+	name = "tunica de juez"
+	desc = "Esta túnica transmite autoridad"
+	icon_state = "jwig_s"
+	item_state = "jwig_s"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	allowed = list(/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/spacecash)
 	flags_inv = HIDEJUMPSUIT
@@ -484,7 +485,7 @@
 	icon_closed = "trackjacketwhite"
 
 /obj/item/clothing/suit/storage/toggle/track/gcc
-	name = "GCC track jacket"
+	name = "UCG track jacket"
 	desc = "An Independent track jacket, for the truly cheeki breeki."
 	icon_state = "trackjackettcc"
 	icon_open = "trackjackettcc_open"

@@ -1,19 +1,18 @@
 /datum/job/senior_doctor
-	title = "Physician"
-	department = "Medical"
+	title = "Medico"
+	department = "Medicina"
 	department_flag = MED
 	minimal_player_age = 0
 	minimum_character_age = list(SPECIES_HUMAN = 29)
-	ideal_character_age = 45
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the Chief Medical Officer"
+	supervisors = "El Oficial Medico en Jefe"
 	selection_color = "#013d3b"
 	economic_power = 8
 	alt_titles = list(
-		"Surgeon",
-		"Resident",
-		"Coroner"
+		"Cirujano",
+		"Residente",
+		"Forense"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/senior
 	allowed_branches = list(
@@ -36,7 +35,7 @@
 	max_skill = list(   SKILL_MEDICAL     = SKILL_MAX,
 	                    SKILL_ANATOMY     = SKILL_MAX,
 	                    SKILL_CHEMISTRY   = SKILL_MAX)
-	skill_points = 25
+	skill_points = 20
 
 	access = list(access_medical, access_morgue, access_virology, access_maint_tunnels, access_emergency_storage,
 			            access_crematorium, access_chemistry, access_surgery,
@@ -46,17 +45,17 @@
 							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/doctor
-	title = "Medical Technician"
+	title = "Tecnico Medico"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "Physicians and the Chief Medical Officer"
+	supervisors = "Medicos y el Oficial Medico en Jefe"
 	economic_power = 7
 	minimum_character_age = list(SPECIES_HUMAN = 19)
-	ideal_character_age = 40
 	minimal_player_age = 0
 	alt_titles = list(
-		"Paramedic",
-		"Corpsman")
+		"Paramedico",
+		"Corpsman",
+		"Enfermero")
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/doctor
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
@@ -88,23 +87,25 @@
 	skill_points = 22
 
 /datum/job/medical_trainee
-	title = "Trainee Medical Technician"
-	department = "Medical"
+	title = "Aprendiz de Medico"
+	department = "Medicina"
 	department_flag = MED
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Medical personnel, and the Chief Medical Officer"
+	supervisors = "Personal medico, and the Chief Medical Officer"
 	selection_color = "#013d3b"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 20
 	alt_titles = list(
-		"Corpsman Trainee")
+		"Aprendiz de Tecnico Medico",
+		"Aprendiz de Medico Militar",
+		"Aprendiz de Enfermero")
 
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/doctor
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/medical/doctor/fleet
 	)
+
 	allowed_ranks = list(
 		/datum/mil_rank/ec/e3,
 		/datum/mil_rank/fleet/e2
@@ -129,20 +130,24 @@
 							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/medical_trainee/get_description_blurb()
-	return "You are a Trainee Medical Technician. You are learning how to treat and recover wounded crew from the more experienced medical personnel aboard. You are subordinate to the rest of the medical team."
+	return "Eres un aprendiz de Medico Tecnico. Estas aprendiendo como tratar y sanar a la tripulacion del personal medico mas experimentado, sigues las ordenes del resto del equipo medico."
 
 /datum/job/chemist
-	title = "Laboratory Technician"
-	department = "Medical"
+	title = "Tecnico de Laboratorio"
+	department = "Medicina"
 	department_flag = MED
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Chief Medical Officer, the Corporate Liaison and Medical Personnel"
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "Oficial Medico en Jefe, the Corporate Liaison y Personal Medico"
+
 	selection_color = "#013d3b"
 	economic_power = 4
 	minimum_character_age = list(SPECIES_HUMAN = 25)
-	ideal_character_age = 30
 	minimal_player_age = 0
+	alt_titles = list(
+		"Quimico",
+		"Farmaceutico")
+
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/contractor/chemist
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/contractor)
@@ -159,21 +164,17 @@
 	minimal_access = list()
 
 /datum/job/chemist/get_description_blurb()
-	return "You are a Laboratory Technician. You make medicine, and work in the virology lab. You are not a doctor or medic, but have surface level knowledge in those fields. You should not be treating patients, but rather providing the the medicine to do so. You are subordinate to Physicians and Medical Techncians."
+	return "Eres un Tecnico de Laboratorio. Haces medicina y trabajas en el laboratorio de medicina. No eres un doctor o un medico, pero tienes conocimientos basicos en esos campos. No deberias de tratar pacientes si no, proporcionar la medicina necesaria para hacerlo. sigues las ordenes de los Medicos y Tecnicos Medicos."
 
 /datum/job/psychiatrist
-	title = "Counselor"
+	title = "Consejero"
 	total_positions = 1
 	spawn_positions = 1
-	ideal_character_age = 40
 	economic_power = 5
 	minimum_character_age = list(SPECIES_HUMAN = 24)
 	minimal_player_age = 0
-	supervisors = "the Chief Medical Officer"
+	supervisors = "Oficial Medico en Jefe"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/counselor
-	alt_titles = list(
-		"Mentalist" = /decl/hierarchy/outfit/job/torch/crew/medical/counselor/mentalist
-	)
 
 	allowed_branches = list(
 		/datum/mil_branch/civilian,
@@ -190,21 +191,32 @@
 	max_skill = list(
 		SKILL_MEDICAL     = SKILL_MAX
 	)
-	access = list(access_medical, access_psychiatrist, access_solgov_crew, access_medical_equip, access_virology)
+	access = list(access_medical, access_psychiatrist, access_maint_tunnels, access_solgov_crew, access_medical_equip, access_virology)
 	minimal_access = list()
 	software_on_spawn = list(
 		/datum/computer_file/program/suit_sensors,
 		/datum/computer_file/program/camera_monitor
 	)
-	give_psionic_implant_on_join = FALSE
+
+	alt_titles = list(
+		"Psiquiatra",
+		"Psiquiatra Psiconico" = /decl/hierarchy/outfit/job/torch/crew/medical/counselor/mentalist,
+		"Mentalista" = /decl/hierarchy/outfit/job/torch/crew/medical/counselor/mentalist
+
+	)
+
+/datum/job/psychiatrist/get_description_blurb()
+	return "Eres el Psiquiatra. Tu responsabilidad principal es la salud mental y bienestar de la tripulacion. Sigues las ordenes del Oficial Medico en Jefe. A parte del Asesor Psiconico, eres el unico miembro abordo con habilidades Psiconicas."
 
 /datum/job/psychiatrist/equip(var/mob/living/carbon/human/H)
-	if(H.mind.role_alt_title == "Counselor")
+	psi_faculties = list("[PSI_COERCION]" = PSI_RANK_OPERANT)
+	return ..()
+
+/datum/job/psychiatrist/equip(var/mob/living/carbon/human/H)
+	if(H.mind.role_alt_title == "Psychiatrist")
+		psi_faculties = list("[PSI_REDACTION]" = PSI_RANK_OPERANT)
+	if(H.mind.role_alt_title == "Psionic Psychiatrist")
 		psi_faculties = list("[PSI_REDACTION]" = PSI_RANK_OPERANT)
 	if(H.mind.role_alt_title == "Mentalist")
 		psi_faculties = list("[PSI_COERCION]" = PSI_RANK_OPERANT)
 	return ..()
-
-
-/datum/job/psychiatrist/get_description_blurb()
-	return "You are the Counselor. You are psionically awakened, part of a tiny minority, and you are the first and only exposure most of the crew will have to the mentally gifted. Your main responsibility is the mental health and wellbeing of the crew. You are subordinate to the Chief Medical Officer."

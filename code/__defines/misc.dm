@@ -114,9 +114,8 @@
 #define BOMBCAP_FLASH_RADIUS (GLOB.max_explosion_range*1.5)
 									// NTNet module-configuration values. Do not change these. If you need to add another use larger number (5..6..7 etc)
 #define NTNET_SOFTWAREDOWNLOAD 1 	// Downloads of software from NTNet
-#define NTNET_PEERTOPEER 2			// P2P transfers of files between devices
-#define NTNET_COMMUNICATION 3		// Communication (messaging)
-#define NTNET_SYSTEMCONTROL 4		// Control of various systems, RCon, air alarm control, etc.
+#define NTNET_COMMUNICATION 2		// Communication (messaging)
+#define NTNET_SYSTEMCONTROL 3		// Control of various systems, RCon, air alarm control, etc.
 
 // NTNet transfer speeds, used when downloading/uploading a file/program.
 #define NTNETSPEED_LOWSIGNAL 0.5	// GQ/s transfer speed when the device is wirelessly connected and on Low signal
@@ -271,3 +270,42 @@
 #ifndef HTTP_POST_DLL_LOCATION
 #define HTTP_POST_DLL_LOCATION (world.system_type == MS_WINDOWS ? WINDOWS_HTTP_POST_DLL_LOCATION : UNIX_HTTP_POST_DLL_LOCATION)
 #endif
+
+#define FALLOFF_SOUNDS 0.5
+#define SOUND_Z_FACTOR 100
+// Maximum number of Zs away you can be from a sound before it stops being audible.
+#define MAX_SOUND_Z_TRAVERSAL 2
+
+//Recipe type defines. Used to determine what machine makes them
+#define MICROWAVE			0x1
+#define FRYER				0x2
+#define OVEN				0x4
+#define CANDYMAKER			0x8
+#define CEREALMAKER			0x10
+#define PAN					0x20
+
+//Used to get recipes.
+#define RECIPE_LIST(T) (SScuisine.recipe_datums["[T]"])
+
+// Used for creating soft references to objects. A manner of storing an item reference
+// as text so you don't necessarily fuck with an object's ability to be garbage collected.
+// Ported from Aurora.
+#if DM_VERSION < 513
+
+#define SOFTREF(A) "\ref[A]"
+
+#else
+
+#define SOFTREF(A) ref(A)
+
+#endif
+
+// Span define, ported from Aurora
+#define span(class, text) ("<span class='[class]'>[text]</span>")
+
+// NULL_OR_EQUAL define, ported from Aurora
+#define NULL_OR_EQUAL(self,other) (!(self) || (self) == (other))
+
+//Misc text define. Does 4 spaces. Used as a makeshift tabulator.
+#define FOURSPACES "&nbsp;&nbsp;&nbsp;&nbsp;"
+#define CLIENT_FROM_VAR(I) (ismob(I) ? I:client : (isclient(I) ? I : (istype(I, /datum/mind) ? I:current?:client : null)))

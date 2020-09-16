@@ -20,7 +20,9 @@
 	#include "torch_submaps.dm"
 	#include "torch_turfs.dm"
 	#include "torch_unit_testing.dm"
+	#include "torch_misc_overrides.dm"
 
+	#include "datums/access.dm"
 	#include "datums/uniforms.dm"
 	#include "datums/uniforms_expedition.dm"
 	//#include "datums/uniforms_fleet.dm"
@@ -48,6 +50,11 @@
 	#include "game/antagonist/outsider/mercenary.dm"
 	#include "game/antagonist/outsider/raider.dm"
 
+	#include "infantry/firearms.dm"
+	#include "infantry/outfits.dm"
+	#include "infantry/storage.dm"
+	#include "infantry/vending.dm"
+
 	#include "items/cards_ids.dm"
 	#include "items/encryption_keys.dm"
 	#include "items/headsets.dm"
@@ -55,12 +62,14 @@
 	#include "items/machinery.dm"
 	#include "items/manuals.dm"
 	#include "items/stamps.dm"
+	#include "items/storage.dm"
 	#include "items/uniform_vendor.dm"
 	#include "items/uniform_vendor_boh.dm"
 	#include "items/rigs.dm"
 	#include "items/solbanner.dm"
 	#include "items/explo_shotgun.dm"
 	#include "items/mecha.dm"
+	#include "items/rewards.dm"
 
 	#include "items/clothing/ec_skillbadges.dm"
 	#include "items/clothing/solgov-accessory.dm"
@@ -80,8 +89,11 @@
 	#include "items/clothing/boh_accessory.dm"
 	#include "items/clothing/boh_clothing.dm"
 
+	#include "items/psyker/agent_items.dm"
+
 	#include "items/weapon/storage/wallets.dm"
 
+	#include "job/torch_departments.dm"
 	#include "job/torch_access.dm"
 	#include "job/torch_jobs.dm"
 	#include "job/command_jobs.dm"
@@ -95,6 +107,7 @@
 	#include "job/service_jobs.dm"
 	#include "job/supply_jobs.dm"
 	#include "job/torch_jobs_boh.dm"
+	#include "job/hestia_jobs.dm"
 
 	#include "job/outfits/torch_outfits.dm"
 	#include "job/outfits/command_outfits.dm"
@@ -109,6 +122,7 @@
 	#include "job/outfits/supply_outfits.dm"
 	#include "job/outfits/boh_outfits.dm"
 	#include "job/outfits/unused_outfits.dm"
+	#include "job/outfits/hestia_outfits.dm"
 
 	#include "language/human/euro.dm"
 	#include "language/human/misc/spacer.dm"
@@ -157,6 +171,8 @@
 	#include "torch6_bridge.dmm"
 	#include "z1_admin.dmm"
 	#include "z2_transit.dmm"
+	#include "z3_espacio.dmm"
+	#include "z4_eventos.dmm"
 
 	#include "../away/empty.dmm"
 	#include "../away/ascent/ascent.dm"
@@ -175,10 +191,9 @@
 	#include "../away/errant_pisces/errant_pisces.dm"
 	#include "../away/lar_maria/lar_maria.dm"
 	#include "../away/unishi/unishi.dm"
-	#include "../away/voxship/voxship.dm"
+	//#include "../away/voxship/voxship.dm"
 	#include "../away/skrellscoutship/skrellscoutship.dm"
 
-	#include "../../code/datums/music_tracks/chasing_time.dm"
 
 	#define using_map_DATUM /datum/map/torch
 

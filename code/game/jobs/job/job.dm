@@ -7,8 +7,8 @@
 	var/list/access = list()              // Useful for servers which either have fewer players, so each person needs to fill more than one role, or servers which like to give more access, so players can't hide forever in their super secure departments (I'm looking at you, chemistry!)
 	var/list/software_on_spawn = list()   // Defines the software files that spawn on tablets and labtops
 	var/department_flag = 0
-	var/total_positions = 0               // How many players can be this job
-	var/spawn_positions = 0               // How many players can spawn in as this job
+	var/total_positions = 0               // How many players can be this job. Set to -1 to be unlimited.
+	var/spawn_positions = 0               // How many players can spawn in as this job. Set to -1 to be unlimited.
 	var/current_positions = 0             // How many players have this job
 	var/availablity_chance = 100          // Percentage chance job is available each round
 
@@ -50,10 +50,13 @@
 	var/defer_roundstart_spawn = FALSE // If true, the job will be put off until all other jobs have been populated.
 	var/list/species_branch_rank_cache_ = list()
 	var/list/psi_faculties                // Starting psi faculties, if any.
-	var/psi_latency_chance = 0            // Chance of an additional psi latency, if any.
-	var/give_psionic_implant_on_join = TRUE // If psionic, will be implanted for control.
+	var/can_be_psionic = TRUE             // If true, joining in has a chance to give you latent psionics. Chance set in psi_latency_chance.
+	var/psi_latency_chance = 10            // Chance of an additional psi latency, if any.
+	var/give_psionic_implant_on_join = FALSE // If psionic, will be implanted for control when set to TRUE.
 
 	var/required_language
+	var/is_whitelisted = FALSE
+	var/max_pow_cat = 0 //If the rank pow_cat is great then this, set to this.  This is used for Galilei Convention IDs
 
 /datum/job/New()
 
@@ -79,8 +82,10 @@
 		H.add_language(LANGUAGE_SPACER)
 		H.set_default_language(all_languages[LANGUAGE_SPACER])
 
-	if(psi_latency_chance && prob(psi_latency_chance))
-		H.set_psi_rank(pick(PSI_COERCION, PSI_REDACTION, PSI_ENERGISTICS, PSI_PSYCHOKINESIS), 1, defer_update = TRUE)
+	if(can_be_psionic && prob(psi_latency_chance))
+		var/list/faculties = list("[PSI_COERCION]", "[PSI_REDACTION]", "[PSI_ENERGISTICS]", "[PSI_PSYCHOKINESIS]")
+		for(var/i = 1 to 2)
+			H.set_psi_rank(pick_n_take(faculties), 1)
 	if(islist(psi_faculties))
 		for(var/psi in psi_faculties)
 			H.set_psi_rank(psi, psi_faculties[psi], take_larger = TRUE, defer_update = TRUE)
@@ -92,11 +97,11 @@
 			imp.forceMove(H)
 			imp.imp_in = H
 			imp.implanted = TRUE
-			var/obj/item/organ/external/affected = H.get_organ(BP_HEAD)
+			var/obj/item/organ/external/affected = H.get_organ(BP_CHEST)
 			if(affected)
 				affected.implants += imp
 				imp.part = affected
-			to_chat(H, SPAN_DANGER("As a registered psionic, you are fitted with a psi-dampening control implant. Using psi-power while the implant is active will result in neural shocks and your violation being reported."))
+			to_chat(H, SPAN_DANGER("Como un psionico registrado, usted esta equipado con un implante de control de amortiguacion psionica. Usar el poder psionico mientras el implante esta activado resultara en shocks neuronales y en tu violacion siendo reportada."))
 
 	var/decl/hierarchy/outfit/outfit = get_outfit(H, alt_title, branch, grade)
 	if(outfit) . = outfit.equip(H, title, alt_title)
@@ -142,13 +147,13 @@
 	var/datum/money_account/M = create_account("[H.real_name]'s account", H.real_name, money_amount)
 	if(H.mind)
 		var/remembered_info = ""
-		remembered_info += "<b>Your account number is:</b> #[M.account_number]<br>"
-		remembered_info += "<b>Your account pin is:</b> [M.remote_access_pin]<br>"
-		remembered_info += "<b>Your account funds are:</b> [GLOB.using_map.local_currency_name_short][M.money]<br>"
+		remembered_info += "<b>El numero de tu cuenta es:</b> #[M.account_number]<br>"
+		remembered_info += "<b>El PIN de tu cuenta es:</b> [M.remote_access_pin]<br>"
+		remembered_info += "<b>Los fondos de tu cuenta son:</b> [GLOB.using_map.local_currency_name_short][M.money]<br>"
 
 		if(M.transaction_log.len)
 			var/datum/transaction/T = M.transaction_log[1]
-			remembered_info += "<b>Your account was created:</b> [T.time], [T.date] at [T.get_source_name()]<br>"
+			remembered_info += "<b>Tu cuenta ha sido creada:</b> [T.time], [T.date] en [T.get_source_name()]<br>"
 		H.StoreMemory(remembered_info, /decl/memory_options/system)
 		H.mind.initial_account = M
 
@@ -193,35 +198,41 @@
 /datum/job/proc/has_alt_title(var/mob/H, var/supplied_title, var/desired_title)
 	return (supplied_title == desired_title) || (H.mind && H.mind.role_alt_title == desired_title)
 
-/datum/job/proc/is_restricted(var/datum/preferences/prefs, var/feedback)
+/datum/job/proc/is_restricted(var/client/caller, var/datum/preferences/prefs, var/feedback) //Feedback can be anything that can recieve a message.
+	//caller is the client that calls this. this value doesn't always exist.
+	//pref is the preferences
+	//feedback is the person we want to send feedback messages to, if any.
 
 
 	if(!isnull(allowed_branches) && (!prefs.branches[title] || !is_branch_allowed(prefs.branches[title])))
-		to_chat(feedback, "<span class='boldannounce'>Wrong branch of service for [title]. Valid branches are: [get_branches()].</span>")
+		to_chat(feedback, "<span class='boldannounce'>Rama de servicio equivocada para [title]. Ramas validas son: [get_branches()].</span>")
 		return TRUE
 
 	if(!isnull(allowed_ranks) && (!prefs.ranks[title] || !is_rank_allowed(prefs.branches[title], prefs.ranks[title])))
-		to_chat(feedback, "<span class='boldannounce'>Wrong rank for [title]. Valid ranks in [prefs.branches[title]] are: [get_ranks(prefs.branches[title])].</span>")
+		to_chat(feedback, "<span class='boldannounce'>Rango equivocado para [title]. Rangos validos en [prefs.branches[title]] son: [get_ranks(prefs.branches[title])].</span>")
 		return TRUE
 
 	var/datum/species/S = all_species[prefs.species]
 	if(!is_species_allowed(S))
-		to_chat(feedback, "<span class='boldannounce'>Restricted species, [S], for [title].</span>")
+		to_chat(feedback, "<span class='boldannounce'>Especie restringida, [S], para [title].</span>")
 		return TRUE
 
 	if(LAZYACCESS(minimum_character_age, S.get_bodytype()) && (prefs.age < minimum_character_age[S.get_bodytype()]))
-		to_chat(feedback, "<span class='boldannounce'>Not old enough. Minimum character age is [minimum_character_age[S.get_bodytype()]].</span>")
+		to_chat(feedback, "<span class='boldannounce'>No lo suficientemente viejo. La minima edad del personaje es [minimum_character_age[S.get_bodytype()]].</span>")
 		return TRUE
 
 	if(!S.check_background(src, prefs))
-		to_chat(feedback, "<span class='boldannounce'>Incompatible background for [title].</span>")
+		to_chat(feedback, "<span class='boldannounce'>Background incompatible para [title].</span>")
+		return TRUE
+	if(caller && !has_job_whitelist(caller, src))
+		to_chat(feedback, "<span class='boldannounce'>[title] es whitelisteado.</span>")
 		return TRUE
 
 	return FALSE
 
 /datum/job/proc/get_join_link(var/client/caller, var/href_string, var/show_invalid_jobs)
 	if(is_available(caller))
-		if(is_restricted(caller.prefs))
+		if(is_restricted(caller, caller.prefs))
 			if(show_invalid_jobs)
 				return "<tr><td><a style='text-decoration: line-through' href='[href_string]'>[title]</a></td><td>[current_positions]</td><td>(Active: [get_active_count()])</td></tr>"
 		else
@@ -353,23 +364,25 @@
 /datum/job/proc/get_unavailable_reasons(var/client/caller)
 	var/list/reasons = list()
 	if(jobban_isbanned(caller, title))
-		reasons["You are jobbanned."] = TRUE
+		reasons["Estas jobbaneado."] = TRUE
+	if(!has_job_whitelist(caller, src)) //This is fine.
+		reasons["No estas whitelisteado para este trabajo."] = TRUE
 	if(is_semi_antagonist && jobban_isbanned(caller, MODE_MISC_AGITATOR))
-		reasons["You are semi-antagonist banned."] = TRUE
+		reasons["Tu estas baneado de semi-antagonista."] = TRUE
 	if(!player_old_enough(caller))
-		reasons["Your player age is too low."] = TRUE
+		reasons["La edad de tu personaje es muy baja."] = TRUE
 	if(!is_position_available())
-		reasons["There are no positions left."] = TRUE
+		reasons["No hay posiciones disponibles."] = TRUE
 	if(!isnull(allowed_branches) && (!caller.prefs.branches[title] || !is_branch_allowed(caller.prefs.branches[title])))
-		reasons["Your branch of service does not allow it."] = TRUE
+		reasons["Tu rama de servicio no lo permite."] = TRUE
 	else if(!isnull(allowed_ranks) && (!caller.prefs.ranks[title] || !is_rank_allowed(caller.prefs.branches[title], caller.prefs.ranks[title])))
-		reasons["Your rank choice does not allow it."] = TRUE
+		reasons["Tu eleccion de rango no lo permite."] = TRUE
 	var/datum/species/S = all_species[caller.prefs.species]
 	if(S)
 		if(!is_species_allowed(S))
-			reasons["Your species choice does not allow it."] = TRUE
+			reasons["Tu eleccion de especie no lo permite."] = TRUE
 		if(!S.check_background(src, caller.prefs))
-			reasons["Your background choices do not allow it."] = TRUE
+			reasons["Tu eleccion de background no lo permite."] = TRUE
 	if(LAZYLEN(reasons))
 		. = reasons
 

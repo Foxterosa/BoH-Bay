@@ -20,10 +20,10 @@
 
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
 
-	description = "This is a genemodded species - either human or some of established ones. It can also work as \
-	subspecies or hybrid of some sorts. Here you can assign various gene traits to them as you wish, to create \
-	a (hopefully) balanced genemodder. You will see the options to customize them on the Genemods tab once \
-	you select and set this species as your species, so please, look into here if you select this."
+	description = "Este es una especia modificada geneticamente - puede ser humano o una raza pre-establecida. Puede ser tambien \
+	una sub-especie o un hibrido de alguna forma u otra. Aqui puedes asignar varios rasgos geneticos como desees, para crear \
+	un personaje modificador genetico balanceado. Puedes ver estas opciones en la ventana de Genemods cuando selecciones \
+	esto y selecciones especie personalizada como tu especie."
 
 	min_age = 18
 	max_age = 200
@@ -60,6 +60,7 @@
 			CULTURE_SKRELL_TALUM,
 			CULTURE_SKRELL_RASKINTA,
 			CULTURE_UNATHI,
+			CULTURE_SYMBIOTIC
 		),
 		TAG_FACTION = list(
 			FACTION_SOL_CENTRAL,
@@ -113,7 +114,7 @@
 			RELIGION_UNATHI_PRECURSOR,
 			RELIGION_UNATHI_STRATAGEM,
 			RELIGION_UNATHI_LIGHTS
-		),		
+		),
 		TAG_HOMEWORLD = list(
 			HOME_SYSTEM_MARS,
 			HOME_SYSTEM_EARTH,
@@ -140,8 +141,8 @@
 			HOME_SYSTEM_SKRELLSPACE,
 			HOME_SYSTEM_ROOT
 		)
-	)				
-	
+	)
+
 /datum/species/custom/get_bodytype()
 	var/datum/species/real = all_species[base_species]
 	return real.name
@@ -159,7 +160,8 @@
 	if(H && istype(E))
 		E.custom_species_override = H.species.base_species
 		E.species = H.species
-		E.force_icon = H.species.get_icobase()
+		if(!BP_IS_ROBOTIC(E))	//Check if the limb is robotic
+			E.force_icon = H.species.get_icobase()
 
 /datum/species/custom/proc/produceCopy(var/datum/species/to_copy,var/list/traits,var/mob/living/carbon/human/H)
 	ASSERT(to_copy)

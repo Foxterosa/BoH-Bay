@@ -5,11 +5,11 @@
 	icon_living = "piratemelee"
 	icon_dead = "piratemelee_dead"
 	speak_chance = 0
-	turns_per_move = 5
+	turns_per_move = 6
 	response_help = "pushes"
 	response_disarm = "shoves"
 	response_harm = "hits"
-	speed = 4
+	speed = 2
 	stop_automated_movement_when_pulled = 0
 	maxHealth = 100
 	health = 100
@@ -34,10 +34,10 @@
 	icon_dead = "piratemelee_dead"
 	projectilesound = 'sound/weapons/laser.ogg'
 	ranged = 1
-	rapid = 1
+	rapid = 0
 	projectiletype = /obj/item/projectile/beam
 	corpse = /obj/effect/landmark/corpse/pirate/ranged
-	weapon1 = /obj/item/weapon/gun/energy/laser
+	weapon1 = /obj/item/weapon/gun/energy/retro
 
 
 /mob/living/simple_animal/hostile/pirate/death(gibbed, deathmessage, show_dead_message)

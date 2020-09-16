@@ -55,6 +55,9 @@ client/verb/JoinResponseTeam()
 		if(GLOB.ert.current_antagonists.len >= GLOB.ert.hard_cap)
 			to_chat(usr, "The emergency response team is already full!")
 			return
+		if(!length(GLOB.ert.starting_locations))
+			to_chat(usr, "The emergency response team base is still loading!")
+			return
 		GLOB.ert.create_default(usr)
 	else
 		to_chat(usr, "You need to be an observer or new player to use this.")
@@ -126,7 +129,7 @@ proc/trigger_armed_response_team(var/force = 0)
 
 /datum/evacuation_predicate/ert/New()
 	..()
-	prevent_until = world.time + 30 MINUTES
+	prevent_until = world.time + 5 MINUTES
 
 /datum/evacuation_predicate/ert/is_valid()
 	return world.time < prevent_until

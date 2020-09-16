@@ -44,7 +44,7 @@
 		to_chat(user, "<span class='warning'>You are already hacking!</span>")
 		return 1
 	if(!is_type_in_list(target, supported_types))
-		to_chat(user, "\icon[src] <span class='warning'>Unable to hack this target.</span>")
+		to_chat(user, "[icon2html(src, user)] <span class='warning'>Unable to hack this target.</span>")
 		return 0
 	var/found = known_targets.Find(target)
 	if(found)
@@ -59,7 +59,7 @@
 
 	if(hack_result && in_hack_mode)
 		to_chat(user, "<span class='notice'>Your hacking attempt was succesful!</span>")
-		user.playsound_local(get_turf(src), 'sound/piano/A#6.ogg', 50)
+		user.playsound_simple(get_turf(src), 'sound/piano/A#6.ogg', 50)
 		known_targets.Insert(1, target)	// Insert the newly hacked target first,
 		GLOB.destroyed_event.register(target, src, /obj/item/device/multitool/hacktool/proc/on_target_destroy)
 	else

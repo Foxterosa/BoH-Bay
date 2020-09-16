@@ -93,16 +93,16 @@
  */
 
 /obj/item/weapon/card/emag_broken
-	desc = "It's a card with a magnetic strip attached to some circuitry. It looks too busted to be used for anything but salvage."
-	name = "broken cryptographic sequencer"
+	desc = "It's a card with a magnetic strip and shorted RFID circuitry. It looks too busted to be used for anything but salvage."
+	name = "broken ID card"
 	icon_state = "emag"
 	item_state = "card-id"
 	origin_tech = list(TECH_MAGNET = 2, TECH_ESOTERIC = 2)
 
 /obj/item/weapon/card/emag
-	desc = "It's a card with a magnetic strip attached to some circuitry."
-	name = "cryptographic sequencer"
-	icon_state = "emag"
+	desc = "It's a boring old ID card. It looks blank and broken."
+	name = "blank ID"
+	icon_state = "data_1"
 	item_state = "card-id"
 	origin_tech = list(TECH_MAGNET = 2, TECH_ESOTERIC = 2)
 	var/uses = 15
@@ -185,6 +185,8 @@ var/const/NO_EMAG_ACT = -50
 
 	var/datum/mil_branch/military_branch = null //Vars for tracking branches and ranks on multi-crewtype maps
 	var/datum/mil_rank/military_rank = null
+	var/pow_cat = 0
+	var/max_pow_cat = 0
 
 	var/formal_name_prefix
 	var/formal_name_suffix
@@ -198,6 +200,7 @@ var/const/NO_EMAG_ACT = -50
 		var/datum/job/j = SSjobs.get_by_path(job_access_type)
 		if(j)
 			rank = j.title
+			max_pow_cat = j.max_pow_cat
 			assignment = rank
 			access |= j.get_access()
 			if(!detail_color)
@@ -290,6 +293,9 @@ var/const/NO_EMAG_ACT = -50
 		id_card.military_branch = char_branch
 	if(GLOB.using_map.flags & MAP_HAS_RANK)
 		id_card.military_rank = char_rank
+		id_card.pow_cat = char_rank.pow_cat
+		if(id_card.pow_cat > id_card.max_pow_cat)
+			id_card.pow_cat = id_card.max_pow_cat
 
 /obj/item/weapon/card/id/proc/dat()
 	var/list/dat = list("<table><tr><td>")
@@ -305,15 +311,30 @@ var/const/NO_EMAG_ACT = -50
 	dat += text("Assignment: []</A><BR>\n", assignment)
 	dat += text("Fingerprint: []</A><BR>\n", fingerprint_hash)
 	dat += text("Blood Type: []<BR>\n", blood_type)
-	dat += text("DNA Hash: []<BR><BR>\n", dna_hash)
+	dat += text("DNA Hash: []<BR>\n", dna_hash)
+	if(pow_cat && GLOB.using_map.flags & MAP_HAS_RANK)
+		var/pow_roman = ""
+		switch(pow_cat)
+			if(1)
+				pow_roman = "I"
+			if(2)
+				pow_roman = "II"
+			if(3)
+				pow_roman = "III"
+			if(4)
+				pow_roman = "IV"
+			if(5)
+				pow_roman = "V"
+		dat += text("Galilei Convention: Cat []<BR>\n", pow_roman)
+	dat += text("<BR>\n")
 	if(front && side)
 		dat +="<td align = center valign = top>Photo:<br><img src=front.png height=80 width=80 border=4><img src=side.png height=80 width=80 border=4></td>"
 	dat += "</tr></table>"
 	return jointext(dat,null)
 
 /obj/item/weapon/card/id/attack_self(mob/user as mob)
-	user.visible_message("\The [user] shows you: \icon[src] [src.name]. The assignment on the card: [src.assignment]",\
-		"You flash your ID card: \icon[src] [src.name]. The assignment on the card: [src.assignment]")
+	user.visible_message("\The [user] shows you: [icon2html(src, viewers(get_turf(src)))] [src.name]. The assignment on the card: [src.assignment]",\
+		"You flash your ID card: [icon2html(src, viewers(get_turf(src)))] [src.name]. The assignment on the card: [src.assignment]")
 
 	src.add_fingerprint(user)
 	return
@@ -329,7 +350,7 @@ var/const/NO_EMAG_ACT = -50
 	set category = "Object"
 	set src in usr
 
-	to_chat(usr, text("\icon[] []: The current assignment on the card is [].", src, src.name, src.assignment))
+	to_chat(usr, text("[icon2html(src, usr)] []: The current assignment on the card is [].", src.name, src.assignment))
 	to_chat(usr, "The blood type on the card is [blood_type].")
 	to_chat(usr, "The DNA hash on the card is [dna_hash].")
 	to_chat(usr, "The fingerprint hash on the card is [fingerprint_hash].")
@@ -567,10 +588,6 @@ var/const/NO_EMAG_ACT = -50
 
 /obj/item/weapon/card/id/civilian/librarian
 	job_access_type = /datum/job/librarian
-
-/obj/item/weapon/card/id/civilian/internal_affairs_agent
-	job_access_type = /datum/job/lawyer
-	detail_color = COLOR_NAVY_BLUE
 
 /obj/item/weapon/card/id/civilian/chaplain
 	job_access_type = /datum/job/chaplain
