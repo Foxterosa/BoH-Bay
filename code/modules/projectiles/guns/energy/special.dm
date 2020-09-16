@@ -161,6 +161,25 @@
 	self_recharge = 1
 	var/datum/effect/effect/system/spark_spread/spark_system
 
+/obj/item/weapon/gun/energy/plasmacutter/kinetic
+	name = "proto-kinetic accelerator"
+	desc = "Una herramienta de minería a distancia que se recarga automáticamente y aumenta el daño a baja presión."
+	charge_meter = 0
+	icon = 'icons/obj/guns/ka.dmi'
+	icon_state = "kineticgun"
+	item_state = "kineticgun"
+	fire_sound = 'sound/weapons/kenetic_accel.ogg'
+	slot_flags = SLOT_BELT
+	w_class = ITEM_SIZE_NORMAL
+	force = 4
+	origin_tech = list(TECH_MATERIAL = 2, TECH_PHORON = 2, TECH_ENGINEERING = 3, TECH_COMBAT = 1)
+	matter = list(MATERIAL_STEEL = 2000)
+	projectile_type = /obj/item/projectile/beam/kinetic
+	max_shots = 1
+	recharge_time = 4
+	self_recharge = 1
+	var/recharge_sound = 'sound/weapons/kenetic_reload.ogg'
+
 /obj/item/weapon/gun/energy/plasmacutter/mounted
 	name = "mounted plasma cutter"
 	use_external_power = 1
