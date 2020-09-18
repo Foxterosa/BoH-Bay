@@ -126,6 +126,9 @@
 		else if(M.r_hand == src)
 			M.update_inv_r_hand()
 
+/datum/armor/proc/getRating(rating)
+	return vars[rating]
+
 /obj/item/proc/is_held_twohanded(mob/living/M)
 
 	if(istype(loc, /obj/item/rig_module) || istype(loc, /obj/item/weapon/rig))

@@ -67,6 +67,10 @@
 #define DROPLIMB_BLUNT 1
 #define DROPLIMB_BURN 2
 
+//Health Defines
+#define HEALTH_THRESHOLD_CRIT 0
+#define HEALTH_THRESHOLD_DEAD -100
+
 // Robotics hatch_state defines.
 #define HATCH_CLOSED 0
 #define HATCH_UNSCREWED 1
