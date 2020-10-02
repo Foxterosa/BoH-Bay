@@ -39,12 +39,13 @@
 
 /obj/item/gunbox/inftech
 	name = "Technician Kit"
-	desc = "A secure box containing a sidearm and primary."
+	desc = "A secure box containing everything you may need."
 
 /obj/item/gunbox/inftech/attack_self(mob/living/user)
 	var/list/options = list()
 //	options["Rocket Launcher"] = list(/obj/item/weapon/gun/launcher/rocket/recoilless/sec,/obj/item/ammo_casing/rocket/rcr,/obj/item/ammo_casing/rocket/rcr,/obj/item/weapon/gun/projectile/pistol/military/sec)
-	options["Combat Medic"] = list(/obj/item/weapon/storage/firstaid/stab,/obj/item/weapon/storage/belt/medical/emt,/obj/item/bodybag/cryobag)
+//Activar cuando quiten estas cosas del locker en el mapa	options["Combat Technician"] =list(/obj/item/device/multitool,/obj/item/weapon/storage/belt/utility/full,obj/item/clothing/gloves/insulated,obj/item/weapon/plastique,obj/item/weapon/plastique,obj/item/weapon/plastique,obj/item/weapon/plastique)
+	options["Combat Medic"] = list(/obj/item/weapon/storage/firstaid/adv,/obj/item/weapon/storage/firstaid/combat,/obj/item/device/scanner/health,/obj/item/clothing/glasses/hud/health/sun,/obj/item/weapon/storage/belt/medical/emt,/obj/item/bodybag/cryobag,/obj/item/weapon/storage/box/autoinjectors/advanced)
 	var/choice = input(user,"What type of equipment?") as null|anything in options
 	if(src && choice)
 		var/list/things_to_spawn = options[choice]
